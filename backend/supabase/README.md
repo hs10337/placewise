@@ -1,9 +1,10 @@
 # Supabase Backend Blueprint
 
 ## Functions
-- `functions/resolve` resolve tap/long-press to place context
-- `functions/place` fetch full brief by id
-- `functions/search` search by place name
+- Runtime functions live in `../../supabase/functions`
+- `resolve` resolves a tap or long-press to place context
+- `place` fetches a full brief by id
+- `search` searches by place name
 
 ## Local workflow
 ```bash

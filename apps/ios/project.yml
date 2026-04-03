@@ -28,4 +28,12 @@ targets:
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone:
           - UIInterfaceOrientationPortrait
     scheme:
-      testTargets: []
+      testTargets:
+        - PlacewiseTests
+  PlacewiseTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: PlacewiseTests
+    dependencies:
+      - target: Placewise

@@ -9,11 +9,11 @@ enum APIClientError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidURL:
-            return "The Placewise API URL is invalid."
+            "The Placewise API URL is invalid."
         case .invalidResponse:
-            return "The server returned an unexpected response."
+            "The server returned an unexpected response."
         case let .server(message):
-            return message
+            message
         }
     }
 }

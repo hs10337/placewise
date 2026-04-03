@@ -39,6 +39,17 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "31C12FA7CFE1FBCF87393EC2"
+               BuildableName = "PlacewiseTests.xctest"
+               BlueprintName = "PlacewiseTests"
+               ReferencedContainer = "container:Placewise.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <CommandLineArguments>
       </CommandLineArguments>

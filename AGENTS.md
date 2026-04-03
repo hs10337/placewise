@@ -52,7 +52,7 @@ Current MVP scope:
 ## Repo Map
 - `apps/ios/Placewise`: iOS app source
 - `apps/ios/Placewise.xcodeproj`: Xcode project
-- `backend/supabase/functions`: Edge Functions such as `resolve`, `search`, and `place`
+- `supabase/functions`: Edge Functions such as `resolve`, `search`, and `place`
 - `backend/sql`: schema, extensions, and SQL functions
 - `backend/seeds`: seed data
 - `docs`: architecture and API contracts
@@ -80,6 +80,8 @@ Current MVP scope:
 - Regenerate iOS project: `make ios-project`
 - Format Swift: `make fmt`
 - Lint Swift: `make lint`
+- Build iOS for simulator: `make ios-build`
+- Run iOS tests: `make test`
 - Start local Supabase: `supabase start`
 
 ## iOS Conventions

@@ -1,5 +1,6 @@
 included:
   - apps/ios/Placewise
+  - apps/ios/PlacewiseTests
 
 opt_in_rules:
   - empty_count

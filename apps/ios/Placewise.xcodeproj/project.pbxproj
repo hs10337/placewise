@@ -10,16 +10,29 @@
 		0D40772E0B83E34512FC0F7F /* MapScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EDBF289B9A08E03D8DB95D /* MapScreenViewModel.swift */; };
 		27F75AD106B57287B83B58F0 /* PlaceResolutionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3FE62F7A8A674DCEFBD7CE /* PlaceResolutionSheet.swift */; };
 		604588AF8A7873E7EEDB6256 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D76F88F40AA5300AD1ACB29 /* APIClient.swift */; };
+		627D8F974E756EBCDBBC251F /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB1FBE53741EB9907A73AE /* APIClientTests.swift */; };
 		A9A3788928B017002F56A7F4 /* PlacewiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE6B58D1145071148E6B087 /* PlacewiseApp.swift */; };
 		F130CBA99C646BC84D5073D1 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ACBA17CFDB288C14673032 /* MapScreen.swift */; };
 		FBCF8ECA1382AF8A44FDA2D0 /* PlaceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D140F9BD6B43B32B7595C9 /* PlaceModels.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		25CBA69456BAFF7C0266D3D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3EDF8311E9746200995DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECBD6FC7FE563AE0AFE7B791;
+			remoteInfo = Placewise;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		02EDBF289B9A08E03D8DB95D /* MapScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenViewModel.swift; sourceTree = "<group>"; };
+		091CC786CADDE43D8ADC9684 /* PlacewiseTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PlacewiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E849BCB43B52083D8256F6 /* Placewise.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Placewise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D76F88F40AA5300AD1ACB29 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		57D140F9BD6B43B32B7595C9 /* PlaceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModels.swift; sourceTree = "<group>"; };
+		61EB1FBE53741EB9907A73AE /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		9CE6B58D1145071148E6B087 /* PlacewiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacewiseApp.swift; sourceTree = "<group>"; };
 		A5ACBA17CFDB288C14673032 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		CACAC234A6E2040A020EC3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				14E849BCB43B52083D8256F6 /* Placewise.app */,
+				091CC786CADDE43D8ADC9684 /* PlacewiseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				F87E375E6CDA9D828983D5B3 /* Placewise */,
+				A08E4CFBEBEA7A3C2EE4FC82 /* PlacewiseTests */,
 				05D92AA7847B2FFDA83BEE04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +100,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A08E4CFBEBEA7A3C2EE4FC82 /* PlacewiseTests */ = {
+			isa = PBXGroup;
+			children = (
+				61EB1FBE53741EB9907A73AE /* APIClientTests.swift */,
+			);
+			path = PlacewiseTests;
+			sourceTree = "<group>";
+		};
 		DD66747EB7E09B7ECA1AC83E /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +131,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		31C12FA7CFE1FBCF87393EC2 /* PlacewiseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C31D5F95D54B6E11DC2D230 /* Build configuration list for PBXNativeTarget "PlacewiseTests" */;
+			buildPhases = (
+				66CC2CA21D13501AF65EF60F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280A9DC434C93D7EFAE93DC6 /* PBXTargetDependency */,
+			);
+			name = PlacewiseTests;
+			packageProductDependencies = (
+			);
+			productName = PlacewiseTests;
+			productReference = 091CC786CADDE43D8ADC9684 /* PlacewiseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ECBD6FC7FE563AE0AFE7B791 /* Placewise */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6A5F2B3CE178B629325E17B /* Build configuration list for PBXNativeTarget "Placewise" */;
@@ -151,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				ECBD6FC7FE563AE0AFE7B791 /* Placewise */,
+				31C12FA7CFE1FBCF87393EC2 /* PlacewiseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -169,7 +211,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66CC2CA21D13501AF65EF60F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627D8F974E756EBCDBBC251F /* APIClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280A9DC434C93D7EFAE93DC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECBD6FC7FE563AE0AFE7B791 /* Placewise */;
+			targetProxy = 25CBA69456BAFF7C0266D3D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		328D2004B47F4AB980E0D5FD /* Debug */ = {
@@ -187,6 +245,21 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		690E2E919AC6B8B10A418497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Placewise.app/Placewise";
 			};
 			name = Debug;
 		};
@@ -253,6 +326,21 @@
 				SWIFT_VERSION = 5.1;
 			};
 			name = Debug;
+		};
+		9F7B0FD30DD3BA2E4666342B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Placewise.app/Placewise";
+			};
+			name = Release;
 		};
 		AF3386A6200BA67E25D8E8E1 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -337,6 +425,15 @@
 			buildConfigurations = (
 				92354F17EC09277F6FC07AC9 /* Debug */,
 				BB2F2AC46C3366D30EBC14CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9C31D5F95D54B6E11DC2D230 /* Build configuration list for PBXNativeTarget "PlacewiseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				690E2E919AC6B8B10A418497 /* Debug */,
+				9F7B0FD30DD3BA2E4666342B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -2,7 +2,7 @@
 
 ## 1) System Modules
 - iOS app (`apps/ios/Placewise`): map interaction, bottom sheet UI, search UI, local cache.
-- API layer (`backend/supabase/functions`): request validation and DB orchestration.
+- API layer (`supabase/functions`): request validation and DB orchestration.
 - Data layer (`backend/sql`): PostGIS-enabled place entities, search indexes, confidence/resolution functions.
 
 ## 2) API Surface (MVP)

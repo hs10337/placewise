@@ -25,6 +25,14 @@ Map-first iOS app for discovering why a place matters.
 6. Seed San Francisco sample data: `scripts/db-seed.sh`.
 7. Serve local functions: `supabase functions serve --env-file .env.local --no-verify-jwt`.
 
+## Verification
+- `make fmt`
+- `make lint`
+- `make ios-build`
+- `make test`
+
+`make ios-build` compiles the app for the iOS Simulator without requiring a development team. `make test` runs the unit test target on a local simulator runtime.
+
 ## Prototype Milestone
 1. Open map in San Francisco.
 2. Tap a highlighted place or long-press any point.
