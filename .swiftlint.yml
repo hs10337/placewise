@@ -1,0 +1,12 @@
+included:
+  - apps/ios/Placewise
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - first_where
+  - joined_default_parameter
+  - sorted_first_last
+
+disabled_rules:
+  - trailing_whitespace
