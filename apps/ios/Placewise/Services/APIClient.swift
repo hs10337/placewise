@@ -47,7 +47,7 @@ struct APIClient {
         components.queryItems = [
             URLQueryItem(name: "lat", value: String(coordinate.latitude)),
             URLQueryItem(name: "lng", value: String(coordinate.longitude)),
-            URLQueryItem(name: "city", value: city),
+            URLQueryItem(name: "city", value: city)
         ]
 
         guard let url = components.url else {

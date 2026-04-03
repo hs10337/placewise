@@ -25,7 +25,7 @@ final class MapScreenViewModel: ObservableObject {
             placeType: "landmark",
             coverageType: "exact_place",
             confidence: "high"
-        ),
+        )
     ]
 
     private let apiClient: APIClient
