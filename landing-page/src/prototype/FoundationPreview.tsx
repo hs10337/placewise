@@ -1,12 +1,13 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
-import { Button } from '../components/ui/button'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { IPhoneFrame } from './IPhoneFrame'
 import { useAppearance } from '../lib/use-appearance'
 import { WorkspaceDrawer, type WorkspaceView } from './WorkspaceDrawer'
-import LiveMap, { initialMapViewport, type MapLocation } from '../studio/LiveMap'
+import FoundationMap from './FoundationMap'
 import { readMockupFlow } from '../lib/user-flows'
 
 const DesignSystem = lazy(() => import('../studio/DesignSystem'))
+const ProductPresentation = lazy(() => import('./ProductPresentation'))
+const BrandPresentation = lazy(() => import('./BrandPresentation'))
 
 export default function FoundationPreview() {
   const { preference, setPreference, mode } = useAppearance()
@@ -16,6 +17,8 @@ export default function FoundationPreview() {
   }
   const [view, setView] = useState<WorkspaceView>(readView)
   const [flow, setFlow] = useState(readMockupFlow)
+  const [productChapter, setProductChapter] = useState(0)
+  const [brandChapter, setBrandChapter] = useState(0)
   function changeView(next: WorkspaceView) {
     const url = new URL(location.href)
     if (next === 'mockup') url.searchParams.delete('view')
@@ -41,9 +44,6 @@ export default function FoundationPreview() {
     return () => { window.removeEventListener('popstate', update); window.removeEventListener('hashchange', update) }
   }, [])
   useEffect(() => { document.title = `Placewise Studio | ${view === 'mockup' ? flow?.title || 'Mockup' : view === 'design-system' ? 'Design system' : view[0].toUpperCase() + view.slice(1)}` }, [view, flow])
-  const [framed, setFramed] = useState(true)
-  const mapViewport = useRef(initialMapViewport())
-  const [selectedLocation, setSelectedLocation] = useState<MapLocation>()
   useEffect(() => {
     const url = new URL(location.href)
     if (url.searchParams.has('keyboard')) {
@@ -52,29 +52,20 @@ export default function FoundationPreview() {
     }
   }, [])
   return <main className={`foundation-workspace ios-foundation workspace-view-${view}`}>
-    <WorkspaceDrawer view={view} onViewChange={changeView} theme={preference} onThemeChange={setPreference} disabled={false}>
-      {view === 'mockup' && <div className="workspace-preview-controls"><p>Preview</p><Button variant="ghost" aria-pressed={!framed} onClick={() => setFramed(value => !value)}>{framed ? 'Hide phone frame' : 'Show phone frame'}</Button></div>}
-    </WorkspaceDrawer>
+    <WorkspaceDrawer view={view} onViewChange={changeView} theme={preference} onThemeChange={setPreference} disabled={false} productChapter={productChapter} brandChapter={brandChapter} />
     {view === 'landpage' && <iframe className="workspace-project-view" title="Placewise landing page" src="./index.html" />}
     {view === 'design-system' && <Suspense fallback={<p role="status">Loading design system…</p>}><DesignSystem embedded mode={mode} themePreference={preference} onThemeChange={setPreference} /></Suspense>}
-    {(view === 'product' || view === 'brand') && <section className="workspace-flow-heading">
-      <p>Placewise Studio</p>
-      <h1>{view === 'product' ? 'Product' : 'Brand'}</h1>
-      <p>{view === 'product' ? 'Product direction, audience and scope.' : 'Brand identity, voice and visual direction.'}</p>
-      <Button asChild variant="secondary"><a href={`./source/docs/${view === 'product' ? 'product.md' : 'brand_guidelines.md'}`} download>{view === 'product' ? 'Download product brief' : 'Download brand guidelines'}</a></Button>
-    </section>}
+    {view === 'product' && <Suspense fallback={<p role="status">Loading product presentation…</p>}><ProductPresentation active={productChapter} onChapterChange={setProductChapter} /></Suspense>}
+    {view === 'brand' && <Suspense fallback={<p role="status">Loading brand presentation…</p>}><BrandPresentation active={brandChapter} onChapterChange={setBrandChapter} /></Suspense>}
     {view === 'mockup' && flow && <header className="workspace-flow-heading">
       <p>Mockup / User flow · To design</p>
       <h1 id="workspace-flow-title" tabIndex={-1}>{flow.title}</h1>
       <p>{flow.description}</p>
     </header>}
     <div className="workspace-mockup" hidden={view !== 'mockup'}>
-      <IPhoneFrame framed={framed}>
+      <IPhoneFrame framed>
         <div className="ios-screen foundation-map-screen">
-          <div className="pi-map foundation-map">
-            <LiveMap mode={mode} viewport={mapViewport} selectedLocation={selectedLocation} onSelectLocation={setSelectedLocation} />
-            <span className="sr-only" role="status">{selectedLocation ? `Selected ${selectedLocation.place?.name || 'map location'}` : ''}</span>
-          </div>
+          <FoundationMap mode={mode} active={view === 'mockup'} />
         </div>
       </IPhoneFrame>
     </div>

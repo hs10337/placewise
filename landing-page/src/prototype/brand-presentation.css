@@ -1,0 +1,146 @@
+/* A numbered editorial guide, using Placewise's existing theme and type tokens. */
+.brand-guideline-chapter { padding-bottom: 64px; }
+.brand-chapter-heading { display: grid; grid-template-columns: 104px 1fr; gap: 24px; margin-bottom: 48px; }
+.brand-chapter-number { font: 400 22px/1.4 var(--font-body); color: var(--text-brand); padding-top: 12px; }
+.brand-story .brand-chapter-heading h1, .brand-story .brand-chapter-heading h2 { font-size: clamp(48px, 6.4vw, 88px); line-height: 1.02; letter-spacing: -.055em; }
+.brand-chapter-heading p { margin-top: 24px; max-width: 660px; font-size: 18px; line-height: 1.6; color: var(--muted-foreground); }
+.brand-introduction { display: grid; grid-template-columns: 1.4fr 1fr; gap: 80px; padding: 48px 0; border-top: 1px solid var(--border-strong); }
+.brand-values > p { font: 600 clamp(40px, 5.8vw, 80px)/1.1 var(--font-display); letter-spacing: -.045em; margin: 32px 0; color: var(--text-brand); }
+.brand-values > p > span { color: var(--muted-foreground); }
+.brand-purpose { font-size: 14px; color: var(--muted-foreground); }
+.brand-intro-aside { align-self: center; }
+.brand-intro-aside .brand-placeholder { min-height: 176px; align-items: flex-start; text-align: left; }
+.brand-purpose-note { font-size: 15px; line-height: 1.6; color: var(--muted-foreground); margin: 24px 0 16px; max-width: 360px; }
+.brand-intro-aside .button { margin-left: -16px; }
+.brand-placeholder { border: 1px dashed var(--border-strong); background: var(--secondary); min-height: 224px; padding: 32px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 16px; border-radius: var(--radius); }
+.brand-placeholder-label { color: var(--muted-foreground); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.brand-placeholder > strong { font: 500 24px/1.2 var(--font-body); color: var(--text-brand); }
+.brand-placeholder > p { max-width: 280px; font-size: 14px; line-height: 1.6; color: var(--muted-foreground); }
+.brand-logo-specimen { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.brand-logo-main { min-height: 472px; }
+.brand-logo-main > strong { font-size: clamp(28px, 4vw, 48px); letter-spacing: -.04em; }
+.brand-logo-aside { display: grid; gap: 24px; }
+.brand-specimen-caption { grid-column: 1 / -1; margin-top: 24px; max-width: 880px; font-size: 12px; line-height: 1.6; color: var(--muted-foreground); }
+.brand-logo-specimen > .brand-specimen-caption { margin-top: 0; }
+.brand-palette { display: grid; grid-template-columns: 1.25fr 1.1fr 1fr .9fr; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.brand-swatch { display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; padding: 24px; }
+.brand-swatch > span { font-size: 12px; }
+.brand-story .brand-swatch h3 { color: inherit; font-size: 28px; margin-bottom: 8px; }
+.brand-swatch code { font-family: var(--font-mono); font-size: 12px; }
+.brand-swatch p { font-size: 13px; line-height: 1.6; margin-top: 24px; }
+/* Fixed primitives are documentary identity swatches, not product UI colors. */
+.brand-swatch-glacier { background: var(--primitive-color-glacier-100); color: var(--primitive-color-oxblood-800); }
+.brand-swatch-oxblood { background: var(--primitive-color-oxblood-800); color: var(--primitive-color-white); }
+.brand-swatch-white { background: var(--primitive-color-white); color: var(--primitive-color-oxblood-800); }
+.brand-swatch-peach { background: var(--primitive-color-peach-400); color: var(--primitive-color-oxblood-900); }
+.brand-type-specimens { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.brand-type-specimens > div { border-top: 1px solid var(--border-strong); padding-top: 24px; }
+.brand-type-glyph { font: 600 128px/1.15 var(--font-display); color: var(--text-brand); letter-spacing: -.06em; margin: 24px 0; }
+.brand-type-glyph span { color: var(--muted-foreground); }
+.brand-type-body .brand-type-glyph { font-family: var(--font-body); font-weight: 400; }
+.brand-story .brand-type-display h3 { font-size: 40px; }
+.brand-story .brand-type-body h3 { font: 600 24px/1.3 var(--font-body); }
+.brand-type-specimens p { font-size: 16px; line-height: 1.6; color: var(--muted-foreground); margin-top: 24px; max-width: 480px; }
+.brand-weight-row { display: flex; flex-wrap: wrap; gap: 16px; font-size: 12px; margin-top: 24px; }
+.brand-weight-row span:nth-child(2) { font-weight: 500; }
+.brand-weight-row span:nth-child(3) { font-weight: 600; }
+.brand-serif-placeholder { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px 32px; margin-top: 48px; padding: 24px; background: var(--secondary); border: 1px dashed var(--border-strong); border-radius: var(--radius); font-size: 14px; }
+.brand-serif-placeholder > p { color: var(--muted-foreground); line-height: 1.6; }
+.brand-icon-specimens { display: grid; grid-template-columns: repeat(6, 1fr); padding: 48px 24px; background: var(--secondary); border-radius: var(--radius); gap: 24px; }
+.brand-icon-specimens > div { display: flex; flex-direction: column; align-items: center; gap: 32px; color: var(--text-brand); }
+.brand-icon-specimens span { font-size: 12px; color: var(--muted-foreground); }
+.brand-icon-notes { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 32px; margin-top: 32px; }
+.brand-icon-notes p { color: var(--muted-foreground); font-size: 14px; line-height: 1.6; }
+.brand-icon-notes strong { display: block; font-size: 20px; color: var(--text-brand); font-weight: 500; margin-bottom: 8px; }
+.brand-photo-specimens { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px; align-items: end; }
+.brand-photo-specimens figure { margin: 0; min-width: 0; }
+.brand-photo-frame { min-height: 296px; border: 1px dashed var(--border-strong); background: var(--secondary); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 24px; border-radius: var(--radius); color: var(--muted-foreground); text-align: center; }
+.brand-photo-specimens figure:first-child .brand-photo-frame { min-height: 376px; }
+.brand-photo-frame > span { font-size: 11px; }
+.brand-photo-specimens figcaption { display: flex; flex-direction: column; gap: 8px; margin-top: 24px; }
+.brand-photo-specimens figcaption strong { color: var(--text-brand); font: 600 24px/1.2 var(--font-display); }
+.brand-photo-specimens figcaption span { font-size: 14px; color: var(--muted-foreground); line-height: 1.5; }
+.brand-photo-specimens figcaption small { font-size: 11px; color: var(--muted-foreground); line-height: 1.5; }
+.brand-data-specimen { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; align-items: center; padding-block: 32px; }
+.brand-data-caption h3 { margin-top: 32px; font-size: 36px; }
+.brand-data-caption p { margin-top: 24px; color: var(--muted-foreground); font-size: 16px; line-height: 1.6; }
+.brand-data-specimen .brand-placeholder { min-height: 320px; }
+.brand-specifications { margin-top: 56px; border-top: 1px solid var(--border-strong); }
+.brand-spec-label { display: flex; justify-content: space-between; gap: 24px; padding: 24px 0 16px; color: var(--muted-foreground); font-size: 12px; }
+.brand-spec { border-bottom: 1px solid var(--border); }
+.brand-spec summary { display: flex; align-items: center; min-height: 64px; padding: 16px 8px; gap: 24px; cursor: pointer; list-style: none; color: var(--foreground); font-size: 16px; border-radius: 4px; transition: background-color 150ms; }
+.brand-spec summary::-webkit-details-marker { display: none; }
+.brand-spec summary:hover { background: var(--secondary); }
+.brand-spec summary:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+.brand-spec summary > svg { flex-shrink: 0; margin-left: auto; color: var(--muted-foreground); transition: transform 150ms; }
+.brand-spec[open] summary > svg { transform: rotate(180deg); }
+.brand-spec-number { font-size: 12px; color: var(--muted-foreground); min-width: 40px; font-variant-numeric: tabular-nums; }
+.brand-spec-status { margin-left: auto; color: var(--muted-foreground); font-size: 11px; white-space: nowrap; }
+.brand-spec-status + svg { margin-left: 0 !important; }
+.brand-spec-copy { max-width: 880px; padding: 8px 64px 32px; }
+.brand-spec-copy p { font-size: 16px; line-height: 1.7; color: var(--muted-foreground); margin-top: 16px; overflow-wrap: anywhere; }
+.brand-spec-copy p:first-child { margin-top: 0; }
+.brand-spec-copy strong { color: var(--foreground); font-weight: 600; }
+.brand-spec-copy code { font: 12px/1.6 var(--font-mono); }
+.brand-status-key { margin-top: 32px; color: var(--muted-foreground); font-size: 12px; line-height: 1.7; max-width: 720px; }
+.brand-status-key strong { display: block; color: var(--foreground); font-weight: 500; margin-bottom: 8px; }
+.brand-appendix { background: var(--secondary); }
+.brand-appendix-heading { display: grid; grid-template-columns: 1.5fr 1fr; gap: 64px; align-items: end; }
+.brand-appendix-heading p { font-size: 16px; line-height: 1.6; color: var(--muted-foreground); }
+.brand-appendix .brand-spec summary:hover { background: var(--background); }
+.brand-final-note { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 48px; padding-block: 32px; }
+.brand-final-note p { font-size: 22px; line-height: 1.5; color: var(--muted-foreground); }
+.brand-final-note strong { color: var(--text-brand); font-weight: 500; }
+@media (max-width: 900px) {
+  .brand-chapter-heading { grid-template-columns: 64px 1fr; }
+  .brand-introduction, .brand-data-specimen, .brand-appendix-heading { gap: 32px; }
+  .brand-palette { grid-template-columns: 1fr 1fr; }
+  .brand-swatch { min-height: 256px; }
+  .brand-type-specimens { gap: 32px; }
+  .brand-photo-specimens { gap: 16px; }
+  .brand-photo-frame { padding: 16px; }
+}
+@media (max-width: 650px) {
+  .brand-story .product-section-top { gap: 16px; }
+  .brand-chapter-heading { grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
+  .brand-chapter-number { font-size: 16px; padding: 0; }
+  .brand-story .brand-chapter-heading h1, .brand-story .brand-chapter-heading h2 { font-size: clamp(40px, 11.5vw, 64px); }
+  .brand-chapter-heading p { font-size: 16px; margin-top: 16px; }
+  .brand-introduction, .brand-type-specimens, .brand-data-specimen, .brand-appendix-heading { grid-template-columns: 1fr; gap: 40px; }
+  .brand-introduction { padding-top: 32px; padding-bottom: 0; }
+  .brand-values > p { font-size: 56px; }
+  .brand-logo-specimen { grid-template-columns: 1fr; }
+  .brand-logo-main { min-height: 280px; }
+  .brand-logo-aside { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .brand-logo-aside .brand-placeholder { min-height: 184px; padding: 16px; }
+  .brand-logo-aside .brand-placeholder strong { font-size: 20px; }
+  .brand-logo-aside .brand-placeholder p { font-size: 12px; }
+  .brand-swatch { padding: 20px; min-height: 232px; }
+  .brand-story .brand-swatch h3 { font-size: 24px; }
+  .brand-swatch p { font-size: 12px; }
+  .brand-type-glyph { font-size: 104px; margin-block: 16px; }
+  .brand-icon-specimens { grid-template-columns: repeat(3, 1fr); row-gap: 40px; padding: 32px 16px; }
+  .brand-icon-specimens > div { gap: 16px; }
+  .brand-icon-notes { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .brand-icon-notes > p:last-child { grid-column: 1 / -1; }
+  .brand-photo-specimens { grid-template-columns: 1fr; gap: 32px; }
+  .brand-photo-frame, .brand-photo-specimens figure:first-child .brand-photo-frame { min-height: 248px; }
+  .brand-specifications { margin-top: 40px; }
+  .brand-spec-label { align-items: flex-start; }
+  .brand-spec-label > span:last-child { max-width: 152px; text-align: right; }
+  .brand-spec summary { gap: 12px; font-size: 14px; padding-inline: 0; }
+  .brand-spec-number { min-width: 30px; }
+  .brand-spec-status { font-size: 10px; }
+  .brand-spec-copy { padding: 8px 0 24px; }
+  .brand-spec-copy p { font-size: 15px; }
+  .brand-final-note { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 550px) {
+  .brand-story .product-masthead .button { gap: 6px; }
+  .brand-story .product-wordmark { font-size: 23px; }
+  .brand-story .product-masthead { padding-left: 72px; gap: 8px; }
+  .brand-story .product-masthead .button span { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-spec summary, .brand-spec summary > svg { transition: none; }
+}

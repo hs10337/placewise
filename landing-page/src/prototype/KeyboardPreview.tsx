@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { IosButton } from '../components/ui/ios-button'
 
 /** Desktop simulation of the inspected iOS 18 keyboard, never an OS keyboard. */
-export function KeyboardPreview({ onType }: { onType: (key: string) => void }) {
+export function KeyboardPreview({ onType, returnLabel = 'return' }: { onType: (key: string) => void; returnLabel?: string }) {
   const [shift, setShift] = useState(false)
   const [layout, setLayout] = useState<'letters' | 'numbers' | 'emoji'>('letters')
   const rows = layout === 'emoji' ? ['😀😊😂😍😎🤔😮', '👍👎👏🙌👋🙏💪', '🏠🌳🌸🍕☕🎉✨'] : layout === 'numbers' ? ['1234567890', '-/:;()$&@"', ".,?!'"] : ['qwertyuiop', 'asdfghjkl', 'zxcvbnm']
@@ -15,7 +15,7 @@ export function KeyboardPreview({ onType }: { onType: (key: string) => void }) {
     <div className="foundation-key-row foundation-key-bottom">
       <IosButton variant="secondary" className="foundation-key-modifier" onClick={() => setLayout(layout === 'letters' ? 'numbers' : 'letters')}>{layout === 'letters' ? '123' : 'ABC'}</IosButton>
       <IosButton variant="secondary" className="foundation-key-space" onClick={() => onType(' ')}>space</IosButton>
-      <IosButton variant="secondary" className="foundation-key-modifier" onClick={() => onType('\n')}>return</IosButton>
+      <IosButton variant="secondary" className="foundation-key-modifier" onClick={() => onType('\n')}>{returnLabel}</IosButton>
     </div>
     <div className="foundation-key-accessories">
       <IosButton variant="ghost" aria-label={layout === 'emoji' ? 'Show letter keyboard' : 'Show emoji keyboard'} onClick={() => setLayout(layout === 'emoji' ? 'letters' : 'emoji')}><span className="foundation-key-symbol foundation-key-emoji" aria-hidden="true" /></IosButton>

@@ -23,12 +23,13 @@ type Props = {
   onSelectLocation: (location: MapLocation) => void
   viewport: RefObject<MapViewport>
   mode?: 'light' | 'dark'
+  focusSelection?: boolean
 }
 
 const minZoom = 3
 const maxZoom = 19
 
-export default function LiveMap({ selectedLocation, onSelectLocation, viewport, mode = 'light' }: Props) {
+export default function LiveMap({ selectedLocation, onSelectLocation, viewport, mode = 'light', focusSelection = false }: Props) {
   const container = useRef<HTMLDivElement>(null)
   const map = useRef<mapboxgl.Map | null>(null)
   const locationPin = useRef<mapboxgl.Marker | null>(null)
@@ -261,7 +262,8 @@ export default function LiveMap({ selectedLocation, onSelectLocation, viewport, 
     if (locationPin.current) locationPin.current.setLngLat(coordinate)
     else locationPin.current = new mapboxgl.Marker({ element: locationHost, anchor: 'bottom' }).setLngLat(coordinate).addTo(map.current)
     locationHost.setAttribute('aria-label', selectedLocation.place?.name || 'Selected location')
-  }, [selectedLocation, status, locationHost])
+    if (focusSelection) map.current.easeTo({ center: coordinate, duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 350 })
+  }, [selectedLocation, status, locationHost, focusSelection])
 
   useEffect(() => {
     if (!map.current || appliedMode.current === mode) return

@@ -63,7 +63,7 @@ export function makeUploadAttachment(file: { name: string; type: string; size: n
   }
 }
 
-const sampleMapPlaces: { subject: SubjectId; aliases: string[]; coordinates: Coordinates; radius: number }[] = [
+export const sampleMapPlaces: { subject: SubjectId; aliases: string[]; coordinates: Coordinates; radius: number }[] = [
   { subject: 'station', aliases: ['grand central terminal', 'grand central'], coordinates: { latitude: 40.7527, longitude: -73.9772 }, radius: 180 },
   { subject: 'graybar', aliases: ['graybar building', 'graybar'], coordinates: { latitude: 40.7527, longitude: -73.9756 }, radius: 80 },
   { subject: 'chrysler', aliases: ['chrysler building', 'chrysler'], coordinates: { latitude: 40.7516, longitude: -73.9755 }, radius: 80 },

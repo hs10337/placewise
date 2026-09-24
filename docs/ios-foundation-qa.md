@@ -55,3 +55,39 @@ Verified all 14 grouped section links appear in the workspace drawer. Colors and
 ## Live map replacement
 
 Confirmed real Mapbox tiles load around Grand Central in light and dark. Exercised Zoom in, Recenter and Enter-to-select at the map center, confirming a selected-location pin appears. Verified 402 × 874 outer dimensions, the circular cursor on the canvas, and absence of Foundation demo content and keyboard. Inspected both map appearances; reset test selection/camera and returned to System appearance. TypeScript and the three-entry production build passed with existing large-bundle warnings.
+
+## Edge-to-edge map system layers
+
+The live map now extends behind transparent status-bar and home-indicator layers. Desktop browser measurements confirm the canvas matches the full 382 × 854 inner display and the outer frame remains 402 × 874. Both chrome backgrounds resolve to transparent, with black glyphs in light appearance and white in dark; both appearances were visually inspected. Controls and attribution retain safe-area clearance. System theme was restored after checking. TypeScript and the foundation production build passed in the temporary dependency environment; the existing large-bundle warning remains. Real-device Safari was not tested.
+
+## Map toolbar and chat composer
+
+Verified top-left menu and top-right search controls, the bottom attachment/message/microphone row, 44px targets, and unchanged 402 × 874 outer frame. Inspected light and dark appearances and a 390px browser viewport with no horizontal overflow. Search filtering finds Chrysler Building, reports an empty result, and selecting a result adds its map marker and message context. Submitting a message opens the in-memory conversation with its selected-place context. Menu New chat clears the conversation and context. Verified Shift+Tab wraps from Close to the last panel action and Escape returns focus to the original menu trigger. TypeScript, production build and diff whitespace checks pass; the existing bundle-size warning remains. Native file-picker selection and real microphone transcription/permissions were not exercised, and real-device Safari remains untested.
+
+## Phone focus appearance and transparent chrome default
+
+Removed visual focus styling inside the phone. Browser inspection confirms the message input remains focused while its outline and shadow are none; Tab reaches the microphone native button with outline none and Ionic focus-overlay opacity zero. Status and home layers both resolve to transparent. The desktop workspace focus rules remain scoped separately. Installed skill and runtime reference were updated and skill validation passed. This supersedes earlier requirements for visible phone focus rings and opaque system surfaces.
+
+## Map message keyboard
+
+Verified clicking Message opens the simulated keyboard, virtual h/i keys insert text, emoji deletion removes the full character, and a key inserts at the moved caret. Keyboard Send submits to the conversation. Escape removes the keyboard; the frame remains 402 × 874 open and closed. Composer bottom sits 12px above the measured keyboard top; the keyboard extends to the screen bottom under the transparent home indicator. Native coarse-pointer keyboard behavior requires real-device testing.
+
+## Left-side app menu
+
+Measured the drawer at 304 × 854, aligned exactly to the inner phone left/top with zero corner radius. Verified inert map content, left-aligned actions, keyboard focus wrapping, Escape dismissal and return to the menu trigger. New chat closes the drawer before focusing Message and opening the keyboard. Inspected light and dark appearances and confirmed transparent status/home layers. Foundation build, diff whitespace check and installed skill validation passed.
+
+## Full-screen conversation and replies
+
+Verified Send immediately opens a page (no dialog) with a pending reply, followed by a sourced Chrysler sample answer. A follow-up retained place context and received the existing detail response. The page measures 382 × 854, matching the entire inner display. Back to map and menu Conversation reopen the same two-message history. The shared keyboard opens in chat, reduces the scrollable transcript height, and preserves the 402 × 874 frame. Send and microphone use separate keyed controls to prevent a submit click from triggering the replacement microphone action.
+
+## Sent message attachments
+
+Selected Chrysler Building through search and sent a question. Its attachment card appears inside that message and the composer context clears. A follow-up receives the Chrysler detail answer without duplicating the attachment. Selecting Grand Central for a later message preserves the first message's Chrysler attachment. TypeScript and the foundation production build passed with the existing bundle-size warning. Uploaded file metadata rendering is implemented; native file-picker interaction was not exercised.
+
+## Persistent chat actions
+
+Replaced the title/back header with the shared app-menu control and right-aligned New chat and three-dot controls. Verified the left drawer, Escape dismissal, options-sheet View map, conversation reopening, sending, and clearing a populated conversation with New chat. All three buttons measure 44 × 44; the frame remains 402 × 874 and navigation stays visible with the keyboard. Inspected the toolbar in light and dark and the bottom sheet in light. Added a neutral raised dark surface for the sheet. TypeScript and production build pass; real-device behavior remains untested.
+
+## Library navigation and recent conversations
+
+The app drawer now contains Places, Routes, and Recent. Created two separate chats, verified most-recent-first ordering, reopened the older chat with its original message and attachment, and sent a follow-up that moved it to the top. Places returns to the map. Routes shows an empty page with the composer hidden. Empty new chats are excluded from Recent; history currently lasts for the open preview session. TypeScript and the foundation production build passed.

@@ -37,6 +37,7 @@
   /* Simulated OS chrome is independent of the app brand palette. */
   --ios-system-foreground: #000;
   --ios-system-background: #fff;
+  --ios-system-elevated-background: #fff;
   --ios-device-width: 402px;
   --ios-device-height: 874px;
   --ios-device-radius: 48px;
@@ -57,4 +58,5 @@
 [data-theme="dark"] .ios-foundation {
   --ios-system-foreground: #fff;
   --ios-system-background: #000;
+  --ios-system-elevated-background: #1c1c1e;
 }
