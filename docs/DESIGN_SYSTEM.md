@@ -155,10 +155,16 @@ The phone uses a local 40 × 40 SVG mouse cursor with a centered 20/20 hotspot. 
 
 ### Workspace drawer
 
-The foundation entry now has a left modal drawer outside the phone. Its top selector switches between Mockup (the current foundation), Landpage (the existing marketing page), and Design system (the existing documentation) using the view query parameter. Landpage runs in a titled same-origin iframe. Design system renders directly in the workspace with its own sidebar and mobile menu omitted; the shared workspace drawer contains every section link. The foundation build includes all three HTML entries. Mockup state stays mounted across view switches.
+The foundation entry now has a left modal drawer outside the phone. Its top selector switches between Mockup (the live Grand Central map), Landpage (the existing marketing page), and Design system (the existing documentation) using the view query parameter. Landpage runs in a titled same-origin iframe. Design system renders directly in the workspace with its own sidebar and mobile menu omitted; the shared workspace drawer contains every section link. The foundation build includes all three HTML entries. Mockup state stays mounted across view switches.
 
 Light, Dark, and System controls are pinned to the drawer bottom. The shared useAppearance hook reuses placewise.studio.theme, follows system color-scheme changes, and syncs across same-origin documents through storage events. The drawer uses the existing shadcn-style Button and native dialog/select, with Escape, backdrop dismissal, focus trapping/restoration, scroll locking, and reduced-motion support. Phone hover/cursor rules remain scoped inside its display.
 
 Design direction: the existing Placewise palette/buttons are the visual target; drawer layout and control placement come from the user's brief. Refero live research was unavailable (subscription inactive); bundled craft guidance informed labeled native controls, focus behavior, and URL navigation. No new dependencies were added.
 
 Design-system section metadata lives in src/design-system/navigation.ts and serves both standalone documentation and the workspace drawer. Selecting Design system keeps the drawer open to reveal its grouped section list. Section links use #ds- hashes, expose the active page, and close the drawer with focus on the documentation heading. The section list scrolls independently between the pinned view selector and theme controls. Standalone design-preview.html retains its original navigation.
+
+### Current mockup: live map
+
+The workspace Mockup screen now reuses studio/LiveMap.tsx from the existing map/chat prototype. The Foundation catalog, About header, composer and keyboard test are removed from this screen; the workspace drawer no longer offers Show keyboard. Existing keyboard primitives remain available for future flows. Legacy keyboard query parameters are discarded.
+
+The map fills the usable area between the independent status bar and home indicator. The outer frame remains 402 × 874, with the circular mouse cursor and no-hover controls. Map appearance follows the shared theme; zoom, north reset, recenter and point selection reuse the existing implementation. The blue location marker remains a simulated Grand Central position. Shared canvas and marker styles now live with LiveMap in studio/live-map.css, also used by the original mockup. The existing public Mapbox browser token is used by the local preview; no secret credentials were copied.

@@ -51,3 +51,7 @@ Verified Mockup, Landpage, and Design system selections load their existing view
 ## Unified Design system navigation
 
 Verified all 14 grouped section links appear in the workspace drawer. Colors and Accordion load directly in the parent page; no iframe, separate ds-sidebar, or ds-mobile-bar is rendered. Accordion receives aria-current and section heading focus on selection. Browser Back returns to Colors. At 390 × 844, the section list scrolls to its final entry while selector top stays 104px and theme bottom 820px, with no horizontal overflow. Full TypeScript and production build passed in the temporary dependency environment.
+
+## Live map replacement
+
+Confirmed real Mapbox tiles load around Grand Central in light and dark. Exercised Zoom in, Recenter and Enter-to-select at the map center, confirming a selected-location pin appears. Verified 402 × 874 outer dimensions, the circular cursor on the canvas, and absence of Foundation demo content and keyboard. Inspected both map appearances; reset test selection/camera and returned to System appearance. TypeScript and the three-entry production build passed with existing large-bundle warnings.

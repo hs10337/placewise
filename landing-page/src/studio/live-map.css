@@ -1,0 +1,18 @@
+.pi-map { position: relative; isolation: isolate; z-index: 0; flex: 1; min-height: 180px; background: var(--wf-canvas); container: pi-map / size; --wf-location: #1673e6; }
+.ios-mockup[data-mode="dark"] .pi-map { --wf-location: #65aeff; }
+.pi-live-map { position: absolute; inset: 0; z-index: 0; background: var(--wf-canvas); font: inherit; }
+.pi-live-map:focus-visible { outline: 2px solid var(--wf-accent); outline-offset: -3px; }
+.pi-selected-pin { display: flex; filter: drop-shadow(0 2px 3px #0003); }
+.pi-user-location-marker { pointer-events: none; }
+.pi-user-location { position: relative; width: 24px; height: 24px; }
+.pi-user-heading { position: absolute; width: 88px; height: 88px; left: -32px; top: -32px; border-radius: 50%; background: conic-gradient(from -34deg, color-mix(in srgb, var(--wf-location) 38%, transparent) 0deg 68deg, transparent 68deg); mask-image: radial-gradient(circle, #000 12%, #0009 42%, transparent 70%); transform-origin: center; }
+.pi-user-dot { position: absolute; inset: 3px; border: 3px solid #fff; border-radius: 50%; background: var(--wf-location); box-shadow: 0 1px 4px #1027444d, 0 0 0 1px color-mix(in srgb, var(--wf-location) 30%, transparent); }
+.pi-compass-needle { flex-shrink: 0; transform-origin: center; }
+.pi-map-zoom { position: absolute; z-index: 1; bottom: 104px; right: 16px; display: flex; flex-direction: column; padding: 2px; gap: 2px; border-radius: 24px; background: var(--wf-surface); border: 1px solid var(--wf-border); box-shadow: var(--wf-shadow); }
+@container pi-map (max-height: 344px) { .pi-map-zoom { display: none; } }
+.pi-live-map .mapboxgl-ctrl-bottom-left { bottom: 8px; left: 8px; }
+.pi-live-map .mapboxgl-ctrl-bottom-right { bottom: 8px; right: 8px; }
+.pi-live-map .mapboxgl-ctrl-attrib { font: 10px/20px -apple-system, BlinkMacSystemFont, sans-serif; }
+.pi-live-map .mapboxgl-ctrl-attrib-button { min-width: 44px; min-height: 44px; top: -10px; right: -10px; background-size: 20px; background-repeat: no-repeat; background-position: center; }
+.pi-map-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--wf-muted); background: var(--wf-canvas); }
+.pi-map-error { position: absolute; z-index: 2; top: 136px; left: 16px; right: 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; border: 1px solid var(--wf-border); border-radius: 16px; background: var(--wf-surface); box-shadow: var(--wf-shadow); }

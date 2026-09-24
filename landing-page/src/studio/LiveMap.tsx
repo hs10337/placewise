@@ -4,6 +4,7 @@ import mapboxgl from 'mapbox-gl'
 import { IonIcon, IonSpinner } from '@ionic/react'
 import { addOutline, compassOutline, locationSharp, mapOutline, navigateOutline, removeOutline } from 'ionicons/icons'
 import 'mapbox-gl/dist/mapbox-gl.css'
+import './live-map.css'
 import { IosButton as Button } from '../components/ui/ios-button'
 import { mapboxAccessToken, mapboxStyle, mapboxTokenConfigured } from '../lib/mapbox'
 import { namedMapLocation } from '../lib/map-place'
@@ -294,7 +295,7 @@ export default function LiveMap({ selectedLocation, onSelectLocation, viewport, 
   return <>
     <div ref={container} className="pi-live-map" role="region" aria-label="Neighborhood map" />
     {status === 'ready' && createPortal(
-      <div className="pi-user-location" role="img" aria-label="Simulated current location near Grand Central, facing northeast" title="Demo location near Grand Central">
+      <div className="pi-user-location" role="img" aria-label="Simulated current location near Grand Central, facing northeast">
         <span className="pi-user-heading" style={{ transform: `rotate(${demoLocation.heading - bearing}deg)` }} aria-hidden="true" />
         <span className="pi-user-dot" aria-hidden="true" />
       </div>,
@@ -309,10 +310,10 @@ export default function LiveMap({ selectedLocation, onSelectLocation, viewport, 
       <Button type="button" variant="ghost" size="icon" aria-label="Zoom out" disabled={zoom <= minZoom + .01} onClick={() => changeZoom(-1)}><IonIcon slot="icon-only" icon={removeOutline} aria-hidden="true" /></Button>
     </div>}
     {status === 'ready' && <>
-      <Button type="button" variant="secondary" size="icon" className="pi-map-compass" aria-label="Reset map to north" title="Reset map to north" disabled={Math.abs(bearing) < .5} onClick={resetNorth}>
+      <Button type="button" variant="secondary" size="icon" className="pi-map-compass" aria-label="Reset map to north" disabled={Math.abs(bearing) < .5} onClick={resetNorth}>
         <IonIcon slot="icon-only" icon={compassOutline} className="pi-compass-needle" style={{ transform: `rotate(${-45 - bearing}deg)` }} aria-hidden="true" />
       </Button>
-      <Button type="button" variant="secondary" size="icon" className="pi-map-recenter" aria-label="Recenter on current location" aria-description="Uses a simulated walking location near Grand Central in this mockup." title="Recenter on current location" onClick={recenter}><IonIcon slot="icon-only" icon={navigateOutline} aria-hidden="true" /></Button>
+      <Button type="button" variant="secondary" size="icon" className="pi-map-recenter" aria-label="Recenter on current location" aria-description="Uses a simulated walking location near Grand Central in this mockup." onClick={recenter}><IonIcon slot="icon-only" icon={navigateOutline} aria-hidden="true" /></Button>
     </>}
     {(status === 'missing-token' || status === 'loading') && <div className="pi-map-placeholder" role="status">{status === 'loading' ? <IonSpinner name="lines" aria-hidden="true" /> : <IonIcon icon={mapOutline} aria-hidden="true" />}<span>{status === 'loading' ? 'Loading map…' : 'Mapbox'}</span></div>}
     {status === 'failed' && <div className="pi-map-error" role="status"><span>Map couldn’t load.</span><Button type="button" variant="secondary" size="sm" onClick={() => setAttempt(value => value + 1)}>Retry</Button></div>}

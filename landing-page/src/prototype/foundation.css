@@ -199,3 +199,32 @@ body { font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
 .workspace-section-group a { display: flex; align-items: center; min-height: 44px; padding: 8px 12px; border-radius: 6px; font-size: 14px; color: var(--foreground); }
 .workspace-section-group a:hover { background: var(--secondary); }
 .workspace-section-group a[aria-current="page"] { background: var(--secondary); color: var(--text-brand); font-weight: 600; }
+
+/* Reuse the existing live map within this screen's safe-area contract. */
+.foundation-map {
+  --wf-canvas: var(--ios-grouped-background);
+  --wf-surface: var(--ios-system-background);
+  --wf-muted: var(--ios-secondary-label);
+  --wf-border: var(--ios-separator);
+  --wf-accent: var(--ios-tint);
+  --wf-shadow: var(--shadow-md);
+  min-height: 0;
+}
+[data-theme="dark"] .foundation-map { --wf-location: #65aeff; }
+.ios-foundation .foundation-map ion-button.pi-ios-button {
+  width: 44px; height: 44px; min-height: 44px; margin: 0;
+  --padding-start: 0; --padding-end: 0; --border-radius: 50%;
+  --background: var(--wf-surface); --color: var(--ios-system-foreground);
+  --background-hover-opacity: 0; --background-activated: var(--ios-fill);
+}
+.foundation-map ion-button:is(.pi-map-compass, .pi-map-recenter) { position: absolute; z-index: 1; right: 16px; --box-shadow: var(--wf-shadow); }
+.foundation-map ion-button.pi-map-compass { top: 16px; }
+.foundation-map ion-button.pi-map-recenter { bottom: 48px; }
+.foundation-map .pi-map-error ion-button { width: auto; --padding-start: 12px; --padding-end: 12px; }
+.foundation-map .pi-selected-pin ion-icon { font-size: 32px; color: var(--ios-tint); }
+.foundation-map .pi-map-placeholder > ion-icon { font-size: 32px; }
+.foundation-map .pi-map-placeholder ion-spinner { color: var(--ios-secondary-label); }
+.foundation-map .mapboxgl-ctrl-logo { opacity: 1; }
+.foundation-map .mapboxgl-ctrl-attrib-button:hover { background-color: transparent; }
+
+.ios-foundation .foundation-map ion-button.button-disabled { opacity: .4; }
