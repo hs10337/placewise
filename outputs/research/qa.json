@@ -1,0 +1,12 @@
+{
+  "result": "passed",
+  "assessed": 20,
+  "top": 5,
+  "lower": 5,
+  "external_links": 346,
+  "external_runtime_dependencies": 0,
+  "score_math": "verified",
+  "internal_links": "verified",
+  "external_link_status": "URLs and evidence association checked; not a new full network availability audit",
+  "visual_QA": "Desktop and 390x844 CSS-pixel mobile preview inspected in Chrome; filters and disclosure navigation exercised; no page-level horizontal overflow at mobile width."
+}

@@ -1,0 +1,118 @@
+/* Ionic supplies the iOS components. Keep Placewise's palette and typography;
+   leave each control's native anatomy, spacing and interaction states intact. */
+.ios-mockup, .dse-ionic-preview {
+  --ion-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --ion-background-color: var(--wf-surface);
+  --ion-text-color: var(--wf-text);
+  --ion-color-primary: var(--wf-accent);
+  --ion-color-primary-contrast: var(--wf-on-accent);
+  --ion-color-primary-shade: var(--wf-accent);
+  --ion-color-primary-tint: var(--wf-accent-hover);
+  --ion-item-background: var(--wf-surface);
+  --ion-item-color: var(--wf-text);
+  --ion-border-color: var(--wf-border);
+  --ion-item-border-color: var(--wf-border);
+  --ion-toolbar-background: var(--wf-surface);
+  --ion-toolbar-color: var(--wf-text);
+  --ion-toolbar-border-color: var(--wf-border);
+  --ion-backdrop-color: #171016;
+}
+:is(.pi-phone, .dse-ionic-preview) :is(ion-list, ion-item, ion-toolbar, ion-content, ion-footer, ion-header) {
+  font-family: inherit;
+  font-size: inherit;
+  --background: var(--wf-surface);
+  --color: var(--wf-text);
+  --border-color: var(--wf-border);
+}
+:is(.pi-phone, .dse-ionic-preview) ion-item {
+  --background-hover: var(--wf-hover);
+  --background-focused: var(--wf-hover);
+  --background-activated: var(--wf-active);
+  --color-hover: var(--wf-text);
+  --color-focused: var(--wf-text);
+  --color-activated: var(--wf-text);
+  --detail-icon-color: var(--wf-muted);
+}
+:is(.pi-phone, .dse-ionic-preview) ion-item::part(native):focus-visible {
+  outline: 2px solid var(--wf-accent);
+  outline-offset: -2px;
+}
+:is(.pi-phone, .dse-ionic-preview) ion-label { font-family: inherit; }
+:is(.pi-phone, .dse-ionic-preview) ion-note { font-family: inherit; font-size: 12px; color: var(--wf-muted); }
+:is(.pi-phone, .dse-ionic-preview) ion-icon { flex-shrink: 0; }
+:is(.pi-phone, .dse-ionic-preview) ion-list-header { color: var(--wf-muted); font: 500 12px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; }
+:is(.pi-phone, .dse-ionic-preview) ion-badge.pi-stop-number { --background: var(--wf-selected); --color: var(--wf-accent); font: 600 12px/1.4 -apple-system, BlinkMacSystemFont, sans-serif; }
+:is(.pi-phone, .dse-ionic-preview) .pi-history-item ion-label strong { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; font-size: 13px; line-height: 1.4; }
+:is(.pi-phone, .dse-ionic-preview) .pi-history-item ion-label p { font-size: 11px; line-height: 1.4; color: var(--wf-muted); }
+:is(.pi-phone, .dse-ionic-preview) .pi-route-stop ion-label { white-space: normal; font-weight: 600; }
+:is(.pi-phone, .dse-ionic-preview) ion-item.pi-history-item[data-current="true"] { --background: var(--wf-selected); --color: var(--wf-accent); }
+:is(.pi-phone, .dse-ionic-preview) ion-item.pi-history-item ion-icon { color: var(--wf-muted); }
+:is(.pi-phone, .dse-ionic-preview) ion-item.pi-history-item[data-current="true"] ion-icon { color: var(--wf-accent); }
+:is(.pi-phone, .dse-ionic-preview) ion-item.pi-context { --background: var(--wf-selected); --color: var(--wf-accent); --min-height: 44px; }
+:is(.pi-phone, .dse-ionic-preview) .pi-context ion-label { font-size: 12px; white-space: normal; overflow-wrap: anywhere; }
+:is(.pi-phone, .dse-ionic-preview) .pi-context ion-note, :is(.pi-phone, .dse-ionic-preview) .pi-context small, :is(.pi-phone, .dse-ionic-preview) .pi-context ion-label p { display: block; font-size: 11px; color: var(--wf-muted); }
+:is(.pi-phone, .dse-ionic-preview) .pi-context ion-icon { color: var(--wf-accent); }
+:is(.pi-phone, .dse-ionic-preview) ion-menu.pi-side-menu { --background: var(--wf-surface); }
+:is(.pi-phone, .dse-ionic-preview) ion-menu.pi-side-menu > ion-header { padding-top: 54px; background: var(--wf-surface); }
+:is(.pi-phone, .dse-ionic-preview) ion-menu.pi-side-menu > ion-footer { padding-bottom: 26px; background: var(--wf-surface); }
+:is(.pi-phone, .dse-ionic-preview) ion-menu .pi-menu-resume ion-label { white-space: normal; }
+:is(.pi-phone, .dse-ionic-preview) ion-menu .pi-menu-resume strong { display: block; }
+:is(.pi-phone, .dse-ionic-preview) ion-menu .pi-menu-resume small { display: block; overflow-wrap: anywhere; }
+:is(.pi-phone, .dse-ionic-preview) ion-menu .pi-empty { padding-inline: 16px; }
+:is(.pi-phone, .dse-ionic-preview) ion-button.pi-menu-view-all { font-size: 12px; --color: var(--wf-muted); }
+
+:is(.pi-phone, .dse-ionic-preview) :is(ion-radio, ion-checkbox) {
+  font: inherit;
+  font-weight: 500;
+  --color: var(--wf-strong);
+  --color-checked: var(--wf-accent);
+  --checkbox-background: var(--wf-surface);
+  --checkbox-background-checked: var(--wf-accent);
+  --border-color: var(--wf-strong);
+  --border-color-checked: var(--wf-accent);
+  --checkmark-color: var(--wf-on-accent);
+}
+:is(.pi-phone, .dse-ionic-preview) .pi-selection-list :is(ion-radio, ion-checkbox) { width: 100%; min-height: 44px; }
+:is(.pi-phone, .dse-ionic-preview) :is(ion-radio, ion-checkbox)::part(label) { white-space: normal; font: inherit; }
+:is(.pi-phone, .dse-ionic-preview) :is(ion-radio, ion-checkbox, ion-toggle):focus-visible { outline: 2px solid var(--wf-accent); outline-offset: 2px; }
+:is(.pi-phone, .dse-ionic-preview) ion-toggle { font: inherit; font-weight: 500; --track-background: var(--wf-strong); --track-background-checked: var(--wf-accent); --handle-background: var(--wf-surface); --handle-background-checked: var(--wf-surface); }
+:is(.pi-phone, .dse-ionic-preview) ion-toggle.pi-switch-row { width: 100%; min-height: 44px; }
+:is(.pi-phone, .dse-ionic-preview) :is(ion-input.pi-native-input, ion-select.pi-native-select) { font: inherit; font-size: 15px; --color: var(--wf-text); --highlight-color-focused: var(--wf-accent); --placeholder-color: var(--wf-muted); }
+:is(.pi-phone, .dse-ionic-preview) :is(ion-input.pi-native-input, ion-select.pi-native-select)::part(label) { font-size: 13px; font-weight: 500; }
+:is(.pi-phone, .dse-ionic-preview) ion-select.pi-native-select::part(icon) { color: var(--wf-muted); }
+
+/* The only text-control geometry override protects the approved composer. */
+:is(.pi-phone, .dse-ionic-preview) .pi-composer-row ion-textarea { flex: 1; min-width: 0; min-height: 22px; font: inherit; font-size: 16px; line-height: 22px; --padding-top: 0; --padding-bottom: 0; --padding-start: 0; --padding-end: 0; --color: var(--wf-text); --placeholder-color: var(--wf-muted); --placeholder-opacity: 1; }
+:is(.pi-phone, .dse-ionic-preview) .pi-composer-row ion-textarea textarea { overflow-y: auto; }
+@media (prefers-reduced-motion: reduce) { :is(.pi-phone, .dse-ionic-preview) ion-button { --transition: none; } :is(.pi-phone, .dse-ionic-preview) ion-toggle::part(handle), :is(.pi-phone, .dse-ionic-preview) ion-toggle::part(track) { transition: none; } }
+
+/* Documentation previews use their existing semantic palette, not phone colors. */
+.dse-ionic-preview {
+  --wf-surface: var(--card); --wf-canvas: var(--secondary); --wf-text: var(--foreground); --wf-muted: var(--muted-foreground); --wf-border: var(--border); --wf-strong: var(--input); --wf-hover: var(--secondary-hover); --wf-active: var(--secondary-active); --wf-selected: var(--accent); --wf-accent: var(--primary); --wf-accent-hover: var(--primary-hover); --wf-on-accent: var(--primary-foreground); --wf-disabled: var(--disabled); --wf-disabled-text: var(--disabled-foreground);
+  --ion-font-family: var(--font-body);
+}
+.dse-ionic-preview :is(ion-input, ion-select) { font: inherit; --color: var(--foreground); --placeholder-color: var(--muted-foreground); --highlight-color-focused: var(--ring); --highlight-color-invalid: var(--destructive); }
+.dse-ionic-preview ion-input .label-text, .dse-ionic-preview ion-select::part(label) { font-size: var(--type-label-size); font-weight: var(--type-label-weight); }
+.dse-ionic-preview ion-item :is(ion-radio, ion-checkbox, ion-toggle) { width: 100%; min-height: 44px; }
+.dse-ionic-preview ion-select:focus-visible { outline: var(--focus-width) solid var(--ring); outline-offset: var(--focus-offset); }
+.dse-ionic-preview .dse-form > ion-button { align-self: flex-start; }
+.dse-ionic-preview .dse-icon-sm { font-size: var(--icon-sm); }
+.dse-ionic-preview .dse-icon-md { font-size: var(--icon-md); }
+.dse-ionic-preview .dse-icon-lg { font-size: var(--icon-lg); }
+.dse-ionic-preview ion-spinner { color: var(--primary); }
+
+/* Geometry verified against the supplied iOS 18 rows and navigation bar. */
+:is(.pi-phone, .dse-ionic-preview) ion-item {
+  --min-height: 44px;
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  --inner-border-width: 0 0 .5px 0;
+}
+:is(.pi-phone, .dse-ionic-preview) ion-item[lines="none"] { --inner-border-width: 0; }
+:is(.pi-phone, .dse-ionic-preview) ion-item.pi-history-item { --min-height: 60px; }
+:is(.pi-phone, .dse-ionic-preview) ion-item ion-icon[slot="start"] { margin-inline-end: 12px; }
+:is(.pi-phone, .dse-ionic-preview) ion-toolbar { --min-height: 44px; --padding-top: 0; --padding-bottom: 0; }
+:is(.pi-phone, .dse-ionic-preview) ion-toggle { --handle-width: 27px; --handle-height: 27px; --handle-spacing: 2px; }
+:is(.pi-phone, .dse-ionic-preview) ion-toggle::part(track) { width: 51px; height: 31px; }
+.pi-phone :is(ion-input.pi-native-input, ion-select.pi-native-select) { min-height: 44px; }
+.pi-phone :is(ion-input.pi-native-input, ion-select.pi-native-select)::part(label) { min-width: 100px; }

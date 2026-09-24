@@ -1,0 +1,58 @@
+[
+  {
+    "key": "website",
+    "label": "Website quality",
+    "weight": 30,
+    "weak": "Cluttered hierarchy, unclear focal point, difficult text or competing navigation.",
+    "solid": "Readable type, coherent palette, usable hierarchy and a clear product example.",
+    "exceptional": "Distinctive composition with strong mobile hierarchy, purposeful spatial storytelling and clear interaction states."
+  },
+  {
+    "key": "conversion",
+    "label": "Conversion journey",
+    "weight": 20,
+    "weak": "Unclear next step, generic signup or missing cost/coverage context.",
+    "solid": "Clear discovery/download path with basic coverage and use instructions.",
+    "exceptional": "Easy destination choice, specific preview, transparent cost and objections addressed before commitment."
+  },
+  {
+    "key": "positioning",
+    "label": "Positioning",
+    "weight": 15,
+    "weak": "Generic exploration promises or poorly separated audiences.",
+    "solid": "Clear activity, audience and geographical scope.",
+    "exceptional": "Specific visitor motivation and differentiated experience demonstrated by content."
+  },
+  {
+    "key": "reputation",
+    "label": "Customer reputation",
+    "weight": 15,
+    "weak": "Low-volume or materially mixed external app feedback.",
+    "solid": "Positive verified storefront feedback at meaningful but limited volume.",
+    "exceptional": "Strong rating at substantial volume with credible relevant feedback. Tiny perfect samples cannot score exceptionally."
+  },
+  {
+    "key": "visibility",
+    "label": "Observed search visibility",
+    "weight": 10,
+    "weak": "No owned-domain appearance in the eight-query sample (1); one query (2).",
+    "solid": "Owned-domain appearance in two queries (3).",
+    "exceptional": "Appearance in at least four queries (5); three queries score 4. This is sample presence, not market-wide SEO strength."
+  },
+  {
+    "key": "authority",
+    "label": "Independent authority",
+    "weight": 5,
+    "weak": "Only weak or tangential independent attribution.",
+    "solid": "Independently identifiable expertise or relevant recognition.",
+    "exceptional": "Strong directly verified editorial or institutional recognition. Unverified logo walls remain Unknown."
+  },
+  {
+    "key": "proof",
+    "label": "Public product proof",
+    "weight": 5,
+    "weak": "Offer claims with little actual content to inspect.",
+    "solid": "Specific local tour/experience or usable example with basic details.",
+    "exceptional": "Rich route/story examples, clear authorship and source context, maps or previews. This is delivery evidence, not revenue or conversion proof."
+  }
+]

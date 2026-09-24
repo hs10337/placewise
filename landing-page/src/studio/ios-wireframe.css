@@ -1,0 +1,127 @@
+/* A quiet map canvas with compact, touch-friendly controls. */
+.studio-main.studio-main--wireframe { max-width: none; padding: 48px 24px 64px; min-height: 100svh; background: var(--preview-background); --preview-background: #f5f4f1; }
+:root[data-theme="dark"] .studio-main--wireframe { --preview-background: #151516; }
+.studio-main--docs .ds-shell { --ds-header-height: 0px; }
+.studio-mockup-page { display: flex; flex-direction: column; align-items: center; gap: 32px; max-width: 1280px; margin: 0 auto; }
+.studio-preview-heading { width: 100%; max-width: 672px; text-align: center; }
+.studio-preview-eyebrow { font-size: 11px; font-weight: 500; line-height: 1.4; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground); }
+.studio-preview-heading h1 { margin-top: 8px; font: 500 36px/1.15 var(--font-display); letter-spacing: -.04em; color: var(--foreground); }
+.studio-preview-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 24px; margin-top: 16px; }
+.studio-preview-actions .button { min-height: 44px; border-radius: 12px; background: transparent; border: 1px solid color-mix(in srgb, var(--foreground) 16%, transparent); color: var(--foreground); padding-inline: 16px; }
+.studio-preview-actions .button:hover:not(:disabled) { background: color-mix(in srgb, var(--foreground) 5%, transparent); border-color: var(--border-strong); }
+.studio-preview-actions a { display: inline-flex; gap: 6px; min-height: 44px; align-items: center; font-size: 13px; color: var(--text-brand); text-decoration: none; }
+.studio-preview-actions a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.studio-preview-theme { margin-top: 24px; }
+.studio-preview-theme > div { display: inline-flex; padding: 4px; gap: 2px; border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent); border-radius: 16px; margin-top: 8px; background: color-mix(in srgb, var(--foreground) 4%, transparent); }
+.studio-preview-theme .button { min-height: 44px; border: 1px solid transparent; border-radius: 12px; padding: 8px 16px; background: transparent; color: var(--muted-foreground); font-size: 12px; }
+.studio-preview-theme .button:hover:not(:disabled) { background: color-mix(in srgb, var(--background) 65%, transparent); color: var(--foreground); }
+.studio-preview-theme .button[aria-pressed="true"] { background: var(--background); color: var(--foreground); border-color: color-mix(in srgb, var(--foreground) 8%, transparent); box-shadow: 0 1px 4px #0000000d; }
+.studio-map-setup { max-width: 424px; margin: 16px auto 0; color: var(--muted-foreground); text-align: center; font-size: 12px; }
+.studio-map-setup a { text-decoration: underline; text-underline-offset: 3px; }
+.ds-mockup-link { display: inline-flex; min-height: 44px; align-items: center; margin-top: 8px; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; color: var(--text-brand); }
+
+.ios-mockup { width: 100%; padding: 0; color: var(--wf-text); --foreground: var(--wf-text); --muted-foreground: var(--wf-muted); --ring: var(--wf-accent); --focus-width: 2px; --wf-surface: #fffdfa; --wf-canvas: #eeede9; --wf-text: #282527; --wf-muted: #70696b; --wf-border: #dcd7d2; --wf-strong: #887b80; --wf-hover: #f1eeea; --wf-active: #e9e2e1; --wf-selected: #f3e8ec; --wf-accent: #622039; --wf-accent-hover: #792d49; --wf-on-accent: #fff9fb; --wf-disabled: #e9e5e1; --wf-disabled-text: #97908e; --wf-shadow: 0 4px 16px #28201c14, 0 1px 3px #28201c0a; }
+.ios-mockup[data-mode="dark"] { --wf-surface: #242123; --wf-canvas: #1c1b1e; --wf-text: #f5efef; --wf-muted: #b6abad; --wf-border: #494145; --wf-strong: #a2949a; --wf-hover: #322b2f; --wf-active: #423138; --wf-selected: #453039; --wf-accent: #e7a9bf; --wf-accent-hover: #f1bed0; --wf-on-accent: #3d1525; --wf-disabled: #3b3438; --wf-disabled-text: #96888d; --wf-shadow: 0 4px 16px #0003, 0 1px 3px #0002; }
+
+.ios-mockup-stage { display: flex; justify-content: center; }
+.pi-device { width: 424px; max-width: 100%; padding: 10px; border: 1px solid #59575a; border-radius: 56px; background: #101012; box-shadow: 0 2px 0 #ffffff20 inset, 0 32px 64px -32px #2b242550, 0 8px 20px -12px #0005; animation: pi-appear 400ms ease-out both; }
+.pi-phone { width: 402px; max-width: 100%; height: 874px; position: relative; overflow: hidden; border-radius: 45px; color: var(--wf-text); background: var(--wf-surface); font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 1.45; }
+.pi-phone ion-app.pi-app { position: absolute; inset: 0; display: flex; flex-direction: column; contain: layout size style; --ion-safe-area-top: 0px; --ion-safe-area-bottom: 0px; --ion-safe-area-left: 0px; --ion-safe-area-right: 0px; }
+.pi-main { position: relative; display: flex; flex-direction: column; width: 100%; height: 100%; min-height: 0; overflow: hidden; }
+.pi-status-bar { position: absolute; inset: 0 0 auto; height: 54px; z-index: 1000; display: grid; grid-template-columns: 1fr 124px 1fr; align-items: start; padding-top: 21px; font-size: 13px; font-weight: 700; line-height: 22px; pointer-events: none; background: linear-gradient(var(--wf-surface), transparent); }
+.pi-status-time { grid-column: 1; text-align: center; padding-left: 16px; padding-right: 6px; }
+.pi-status-island { position: absolute; width: 126px; height: 36px; left: 50%; top: 10px; transform: translateX(-50%); border-radius: 24px; background: #080808; }
+.pi-status-icons { grid-column: 3; height: 22px; display: flex; align-items: center; justify-content: center; gap: 7px; padding-left: 6px; padding-right: 16px; }
+.pi-system-symbol { display: block; flex: none; background: currentColor; mask: var(--pi-symbol) center / 100% 100% no-repeat; }
+.pi-status-cellular { width: 19.2px; height: 12.226px; --pi-symbol: url('../assets/ios18/cellular.svg'); }
+.pi-status-wifi { width: 17.142px; height: 12.328px; --pi-symbol: url('../assets/ios18/wifi.svg'); }
+.pi-status-battery { width: 27.328px; height: 13px; --pi-symbol: url('../assets/ios18/battery.svg'); }
+.pi-home-indicator { flex: 0 0 26px; display: flex; justify-content: center; align-items: flex-end; padding-bottom: 8px; background: var(--wf-surface); }
+.pi-home-indicator span { width: 144px; height: 5px; border-radius: 3px; background: var(--wf-text); }
+.pi-phone[data-keyboard="true"][data-native-keyboard="false"] .pi-home-indicator { background: var(--wf-canvas); }
+.pi-phone h2:focus, .pi-phone ion-title:focus { outline: none; }
+.pi-phone h2, .pi-phone ion-title.pi-title { color: var(--wf-text); font: 600 24px/1.2 -apple-system, BlinkMacSystemFont, sans-serif; letter-spacing: -.025em; }
+.pi-phone h3 { color: var(--wf-text); font: inherit; font-weight: 600; letter-spacing: 0; }
+.pi-phone strong { font-weight: 600; }
+.pi-phone a:focus-visible { outline: 2px solid var(--wf-accent); outline-offset: 3px; }
+
+/* The map and persistent composer are an app composition, not a modal sheet. */
+.pi-map { position: relative; isolation: isolate; z-index: 0; flex: 1; min-height: 180px; background: var(--wf-canvas); container: pi-map / size; --wf-location: #1673e6; }
+.ios-mockup[data-mode="dark"] .pi-map { --wf-location: #65aeff; }
+.pi-live-map { position: absolute; inset: 0; z-index: 0; background: var(--wf-canvas); font: inherit; }
+.pi-live-map:focus-visible { outline: 2px solid var(--wf-accent); outline-offset: -3px; }
+.pi-selected-pin { display: flex; filter: drop-shadow(0 2px 3px #0003); }
+.pi-user-location-marker { pointer-events: none; }
+.pi-user-location { position: relative; width: 24px; height: 24px; }
+.pi-user-heading { position: absolute; width: 88px; height: 88px; left: -32px; top: -32px; border-radius: 50%; background: conic-gradient(from -34deg, color-mix(in srgb, var(--wf-location) 38%, transparent) 0deg 68deg, transparent 68deg); mask-image: radial-gradient(circle, #000 12%, #0009 42%, transparent 70%); transform-origin: center; }
+.pi-user-dot { position: absolute; inset: 3px; border: 3px solid #fff; border-radius: 50%; background: var(--wf-location); box-shadow: 0 1px 4px #1027444d, 0 0 0 1px color-mix(in srgb, var(--wf-location) 30%, transparent); }
+.pi-compass-needle { flex-shrink: 0; transform-origin: center; }
+.pi-map-zoom { position: absolute; z-index: 1; bottom: 104px; right: 16px; display: flex; flex-direction: column; padding: 2px; gap: 2px; border-radius: 24px; background: var(--wf-surface); border: 1px solid var(--wf-border); box-shadow: var(--wf-shadow); }
+@container pi-map (max-height: 344px) { .pi-map-zoom { display: none; } }
+.pi-live-map .mapboxgl-ctrl-bottom-left { bottom: 8px; left: 8px; }
+.pi-live-map .mapboxgl-ctrl-bottom-right { bottom: 8px; right: 8px; }
+.pi-live-map .mapboxgl-ctrl-attrib { font: 10px/20px -apple-system, BlinkMacSystemFont, sans-serif; }
+.pi-live-map .mapboxgl-ctrl-attrib-button { min-width: 44px; min-height: 44px; top: -10px; right: -10px; background-size: 20px; background-repeat: no-repeat; background-position: center; }
+.pi-map-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--wf-muted); background: var(--wf-canvas); }
+.pi-map-error { position: absolute; z-index: 2; top: 136px; left: 16px; right: 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; border: 1px solid var(--wf-border); border-radius: 16px; background: var(--wf-surface); box-shadow: var(--wf-shadow); }
+.pi-sheet { min-height: 0; flex: 1; display: flex; flex-direction: column; background: var(--wf-surface); }
+.pi-phone:is([data-view="plan"],[data-view="camera"],[data-view="photo"],[data-view="recent"]) .pi-sheet-header { padding-top: 54px; }
+.pi-phone:is([data-view="home"],[data-view="chat"]) .pi-sheet { padding: 16px 16px 8px; border-top: 1px solid var(--wf-border); }
+.pi-phone[data-view="home"] .pi-sheet { flex: 0 0 auto; }
+.pi-phone[data-view="home"] .pi-content { display: none; }
+.pi-phone[data-view="chat"] .pi-sheet { flex: 0 0 66%; max-height: calc(100% - 204px); border-radius: 24px 24px 0 0; }
+.pi-phone[data-view="chat"][data-keyboard="true"] .pi-map { flex: 0 0 180px; }
+.pi-phone[data-view="chat"][data-keyboard="true"] .pi-sheet { flex: 1; max-height: none; min-height: 228px; }
+.pi-phone[data-view="chat"][data-keyboard="true"][data-native-keyboard="true"] .pi-sheet { flex: 0 0 66%; }
+.pi-phone:is([data-view="route"],[data-view="walk"]) .pi-map { flex: 0 0 280px; }
+.pi-phone ion-content.pi-content { min-height: 0; height: auto; flex: 1; --padding-top: 16px; --padding-start: 24px; --padding-end: 24px; --padding-bottom: 16px; }
+.pi-phone[data-view="chat"] ion-content.pi-content { --padding-top: 4px; --padding-start: 4px; --padding-end: 4px; --padding-bottom: 4px; }
+.pi-content-stack { display: flex; flex-direction: column; gap: 24px; min-height: 100%; }
+.pi-content-stack > * { flex-shrink: 0; }
+.pi-stack, .pi-chat-subject, .pi-walk-hero { display: flex; flex-direction: column; gap: 8px; }
+.pi-between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.pi-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.pi-muted, .pi-phone small, .pi-walk-progress, .pi-walk-hero > span { font-size: 12px; color: var(--wf-muted); }
+.pi-phone .pi-conversation-link { font-size: 12px; }
+.pi-walk-actions { gap: 8px; }
+.pi-walk-actions ion-button { flex: 1; font-size: 12px; }
+.pi-empty { color: var(--wf-muted); font-size: 13px; }
+
+/* Preserve the approved compact composer and grow only after two displayed lines. */
+.pi-composer { display: flex; flex-shrink: 0; flex-direction: column; gap: 8px; padding-top: 16px; margin-top: 16px; }
+.pi-phone[data-view="home"] .pi-composer { padding: 0; margin: 0; }
+.pi-composer-row { display: flex; gap: 4px; align-items: center; padding: 4px; border: 1px solid var(--wf-strong); border-radius: 28px; background: var(--wf-surface); box-shadow: 0 2px 4px #28201c04; transition: box-shadow 160ms ease, border-color 160ms ease; }
+.pi-composer-row:focus-within { border-color: var(--wf-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--wf-accent) 10%, transparent); }
+.pi-phone .pi-composer-row textarea { min-height: 22px; height: 22px; max-height: 120px; padding: 0 4px; font-size: 16px; line-height: 22px; resize: none; }
+.pi-phone .pi-composer-row textarea:focus-visible { outline: none; }
+.pi-voice-message { margin: 0; padding-inline: 8px; color: var(--wf-muted); font-size: 12px; line-height: 1.5; }
+.pi-conversation, .pi-chat-turn { display: flex; flex-direction: column; gap: 16px; }
+.pi-question { align-self: flex-end; padding: 12px 16px; border-radius: 20px 20px 6px 20px; background: var(--wf-selected); color: var(--wf-text); max-width: 90%; overflow-wrap: anywhere; }
+.pi-answer { display: flex; flex-direction: column; gap: 8px; padding: 4px 4px 16px; color: var(--wf-text); line-height: 1.6; overflow-wrap: anywhere; }
+.pi-answer a { align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; color: var(--wf-accent); font-size: 12px; text-decoration: underline; text-underline-offset: 3px; }
+.pi-answer a:hover { color: var(--wf-accent-hover); }
+
+/* Desktop-only system keyboard simulation. Keycaps have their own geometry;
+   ordinary Ionic app-button radii do not represent iOS keyboard keys. */
+.pi-keyboard { flex-shrink: 0; display: flex; flex-direction: column; gap: 10px; padding: 6px 3px 0; background: var(--wf-canvas); border-top: .5px solid var(--wf-border); }
+.pi-keyboard-row { display: flex; justify-content: center; gap: 6px; }
+.pi-keyboard[data-layout="letters"] .pi-keyboard-row:nth-child(2) { padding-inline: 5.15%; }
+.pi-keyboard[data-layout="letters"] .pi-keyboard-row:nth-child(3) { column-gap: 6px; }
+.pi-keyboard[data-layout="letters"] .pi-keyboard-row:nth-child(3) > :first-child { margin-right: 12px; }
+.pi-keyboard[data-layout="letters"] .pi-keyboard-row:nth-child(3) > :last-child { margin-left: 12px; }
+.pi-phone .pi-keyboard ion-button.pi-ios-button { flex: 1; min-width: 0; height: 44px; min-height: 44px; margin: 0; --border-radius: 4.6px; --border-width: 0; font-size: 21px; font-weight: 400; line-height: 1; --padding-start: 0; --padding-end: 0; --padding-top: 0; --padding-bottom: 0; --background: var(--wf-surface); --background-hover: var(--wf-hover); --background-focused: var(--wf-hover); --background-activated: var(--wf-selected); --border-color: transparent; --color: var(--wf-text); --color-activated: var(--wf-text); --box-shadow: 0 1px 0 color-mix(in srgb, var(--wf-text) 35%, transparent); }
+.pi-phone .pi-keyboard-row ion-button::part(native) { height: 42px; margin-bottom: 2px; }
+.pi-phone .pi-keyboard ion-button.pi-keyboard-modifier { flex: 0 0 11.4%; font-size: 14px; --background: var(--wf-border); }
+.pi-phone .pi-keyboard ion-button.pi-keyboard-modifier[data-shift-active="true"] { --background: var(--wf-surface); --color: var(--wf-text); }
+.pi-phone .pi-keyboard-bottom ion-button.pi-keyboard-modifier { flex: 0 0 23.75%; }
+.pi-phone .pi-keyboard ion-button.pi-keyboard-space { flex: 1; font-size: 15px; }
+.pi-keyboard-shift { width: 21px; height: 19px; --pi-symbol: url('../assets/ios18/shift.svg'); }
+.pi-keyboard-delete { width: 22px; height: 18px; --pi-symbol: url('../assets/ios18/delete.svg'); }
+.pi-keyboard-emoji { width: 27px; height: 27px; --pi-symbol: url('../assets/ios18/emoji.svg'); }
+.pi-keyboard-microphone { width: 19px; height: 28px; --pi-symbol: url('../assets/ios18/microphone.svg'); }
+.pi-keyboard-accessories { display: flex; justify-content: space-between; align-items: flex-end; height: 55px; margin-top: -10px; padding: 0 10px; }
+.pi-phone .pi-keyboard-accessories ion-button.pi-ios-button { flex: 0 0 44px; --background: transparent; --box-shadow: none; --border-radius: 22px; --color: var(--wf-muted); }
+.pi-phone .pi-keyboard ion-button.pi-keyboard-send:not(.button-disabled) { --background: var(--wf-accent); --background-hover: var(--wf-accent-hover); --background-activated: var(--wf-accent-hover); --color: var(--wf-on-accent); --color-activated: var(--wf-on-accent); }
+@media(max-width: 480px) { .studio-main.studio-main--wireframe { padding: 32px 12px 48px; } .studio-preview-heading h1 { font-size: 32px; } .pi-device { padding: 8px; border-radius: 45px; } .pi-phone { border-radius: 36px; height: 800px; } .pi-status-bar { grid-template-columns: 1fr 96px 1fr; } .pi-status-icons { padding-inline: 2px 8px; gap: 4px; } .pi-status-island { width: 96px; height: 28px; } .pi-phone ion-content.pi-content { --padding-start: 16px; --padding-end: 16px; } }
+@media(max-width: 350px) { .pi-status-bar { grid-template-columns: 1fr 80px 1fr; } .pi-status-icons { gap: 4px; } .pi-status-island { width: 80px; } .studio-preview-theme .button { padding-inline: 12px; } .pi-phone:is([data-view="home"],[data-view="chat"]) .pi-sheet { padding-inline: 12px; } }
+@media(prefers-reduced-motion: reduce) { .pi-device { animation: none; } .pi-composer-row { transition: none; } }

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore real 360-degree photography at Bank junction in London and Times Square in New York City.">
+  <title>Bank junction · Real 360° panorama</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#111418;color:#f7f5ef;font-family:Arial,Helvetica,sans-serif}
+    body{height:100svh;min-height:420px;display:flex;flex-direction:column}
+    header{flex:none;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 24px;border-bottom:1px solid #ffffff1a}
+    .location{display:flex;align-items:center;gap:16px}
+    h1{font-size:20px;letter-spacing:-.5px;font-weight:500;margin:0}
+    .city{font-size:12px;color:#b7bdc7;border-left:1px solid #ffffff30;padding-left:16px}
+    .type{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#d3dbc9;display:flex;align-items:center;gap:8px}
+    .type:before{content:"";width:6px;height:6px;background:#c5df9a;border-radius:50%}
+    main{position:relative;flex:1;min-height:0}
+    iframe{display:block;border:0;width:100%;height:100%;background:#111418}
+    footer{min-height:44px;flex:none;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;line-height:1.5;color:#b7bdc7}
+    a{color:inherit;text-underline-offset:3px;text-decoration-color:#ffffff50;transition:color .2s}
+    a:hover{color:#fff}
+    a:focus-visible{outline:2px solid #c5df9a;outline-offset:4px}
+    nav{display:flex;gap:4px;padding:4px;background:#20252c;border:1px solid #ffffff20;border-radius:8px}
+    nav button{border:0;border-radius:5px;padding:9px 13px;min-height:38px;font:inherit;font-size:12px;color:#bcc4ce;background:transparent;cursor:pointer;transition:background .2s,color .2s}
+    nav button:hover{background:#ffffff14;color:#fff}
+    nav button[aria-pressed="true"]{background:#e1e8d8;color:#152019}
+    nav button:focus-visible{outline:2px solid #c5df9a;outline-offset:3px}
+    nav button:disabled{opacity:.45;cursor:not-allowed}
+    .live{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    .direct{margin-left:12px;white-space:nowrap}
+    @media(max-width:600px){header{padding:16px;min-height:64px;gap:8px}.location{display:block}h1{font-size:19px}.city{display:block;padding:0;border:0;margin-top:5px;font-size:11px}.type{font-size:10px;letter-spacing:.04em}footer{padding:10px 16px;display:block;font-size:11px}footer .archive{display:block;margin-top:3px}.direct{margin-left:6px}}
+  </style>
+</head>
+<body>
+  <header><div class="location"><h1 id="place-name">Bank junction</h1><span class="city" id="city-name">London</span></div><nav aria-label="Choose panorama location"><button type="button" data-place="times-square" aria-pressed="false">New York</button><button type="button" data-place="bank-junction" aria-pressed="true">London</button></nav></header>
+  <main>
+    <iframe id="panorama" src="https://www.google.com/maps/embed?pb=!4v1789408999931!6m8!1m7!1sELvZHefNxddktL4ExindnQ!2m2!1d51.51342863742667!2d-0.08924795104920787!3f75!4f10!5f0.7820865974627469" title="Interactive Google Street View panorama of Bank junction in London, photographed December 2023" allow="fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </main>
+  <footer>
+    <span id="credit"><a href="https://www.google.com/streetview/" target="_blank" rel="noopener noreferrer">Photography: Google Street View</a></span>
+    <span class="archive"><span id="image-date">Image capture · December 2023</span><a id="direct-link" class="direct" href="https://www.google.com/maps/@?api=1&amp;map_action=pano&amp;pano=ELvZHefNxddktL4ExindnQ&amp;viewpoint=51.5134286%2C-0.089248&amp;heading=75&amp;pitch=10&amp;fov=90" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></span>
+  </footer>
+  <p class="live" id="view-status" aria-live="polite"></p>
+  <script>
+    const locations={
+      'bank-junction':{
+        name:'Bank junction',city:'London',
+        src:'https://www.google.com/maps/embed?pb=!4v1789408999931!6m8!1m7!1sELvZHefNxddktL4ExindnQ!2m2!1d51.51342863742667!2d-0.08924795104920787!3f75!4f10!5f0.7820865974627469',
+        title:'Interactive Google Street View panorama of Bank junction in London, photographed December 2023',
+        credit:'<a href="https://www.google.com/streetview/" target="_blank" rel="noopener noreferrer">Photography: Google Street View</a>',
+        date:'Image capture · December 2023',
+        direct:'https://www.google.com/maps/@?api=1&map_action=pano&pano=ELvZHefNxddktL4ExindnQ&viewpoint=51.5134286%2C-0.089248&heading=75&pitch=10&fov=90',
+        linkText:'Open in Google Maps ↗'
+      },
+      'times-square':{
+        name:'Times Square',city:'New York City',src:'https://360.sinaloa360.com/times-square/',
+        title:'Interactive real 360-degree Times Square photographs, daytime and nighttime',
+        credit:'<a href="https://www.mimexico360.com/times-square-nueva-york/" target="_blank" rel="noopener noreferrer">Times Square. Photography: Miguel Ángel Victoria / Mi México 360</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>',
+        date:'Archive tour · Published 2019',direct:'https://360.sinaloa360.com/times-square/',linkText:'Open full tour ↗'
+      }
+    };
+    let active='bank-junction';
+    function showPlace(key){
+      if(!locations[key]||key===active)return;
+      const place=locations[key];active=key;
+      document.getElementById('place-name').textContent=place.name;
+      document.getElementById('city-name').textContent=place.city;
+      const panorama=document.getElementById('panorama');panorama.title=place.title;panorama.src=place.src;
+      document.getElementById('credit').innerHTML=place.credit;
+      document.getElementById('image-date').textContent=place.date;
+      const direct=document.getElementById('direct-link');direct.href=place.direct;direct.textContent=place.linkText;
+      document.querySelectorAll('[data-place]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.place===key)));
+      document.title=place.name+' · Real 360° panorama';
+      document.getElementById('view-status').textContent='Showing '+place.name+', '+place.city+'.';
+    }
+    document.querySelectorAll('[data-place]').forEach(button=>button.addEventListener('click',()=>{const key=button.dataset.place;if(key===active)return;history.replaceState(null,'','#'+key);showPlace(key);}));
+    window.addEventListener('hashchange',()=>showPlace(location.hash.slice(1)||'bank-junction'));
+    showPlace(location.hash.slice(1));
+  </script>
+</body>
+</html>

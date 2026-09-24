@@ -1,0 +1,60 @@
+/* iOS component roles extend the shared Placewise theme. See docs/DESIGN_SYSTEM.md. */
+.ios-foundation {
+  --ios-background: var(--background);
+  --ios-grouped-background: var(--muted);
+  --ios-secondary-background: var(--card);
+  --ios-label: var(--foreground);
+  --ios-secondary-label: var(--muted-foreground);
+  --ios-fill: var(--secondary);
+  --ios-separator: var(--border);
+  --ios-tint: var(--primary);
+  --ios-on-tint: var(--primary-foreground);
+  --ios-destructive: var(--destructive);
+  --ios-success: var(--success);
+  --ios-radius-control: 12px;
+  --ios-radius-group: 10px;
+  --ios-row-height: 44px;
+  --ios-action-height: 50px;
+  --ios-toolbar-height: 44px;
+  --ios-inset: 16px;
+  --ios-section-gap: 32px;
+  --ios-font: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --ios-type-largeTitle: 700 2.125rem/2.5625rem var(--ios-font);
+  --ios-type-title1: 400 1.75rem/2.125rem var(--ios-font);
+  --ios-type-title2: 400 1.375rem/1.75rem var(--ios-font);
+  --ios-type-title3: 400 1.25rem/1.5625rem var(--ios-font);
+  --ios-type-headline: 600 1.0625rem/1.375rem var(--ios-font);
+  --ios-type-body: 400 1.0625rem/1.375rem var(--ios-font);
+  --ios-type-callout: 400 1rem/1.3125rem var(--ios-font);
+  --ios-type-subheadline: 400 .9375rem/1.25rem var(--ios-font);
+  --ios-type-footnote: 400 .8125rem/1.125rem var(--ios-font);
+  --ios-type-caption1: 400 .75rem/1rem var(--ios-font);
+  --ios-type-caption2: 400 .6875rem/.8125rem var(--ios-font);
+  --ios-motion-fast: var(--motion-fast);
+  --ios-motion-standard: var(--motion-normal);
+  --ios-material: color-mix(in srgb, var(--ios-background) 92%, transparent);
+  --ios-material-blur: 25px;
+  /* Simulated OS chrome is independent of the app brand palette. */
+  --ios-system-foreground: #000;
+  --ios-system-background: #fff;
+  --ios-device-width: 402px;
+  --ios-device-height: 874px;
+  --ios-device-radius: 48px;
+  --ios-device-bezel: #171719;
+  --ios-device-shadow: 0 24px 64px -24px #0004;
+  --ios-preview-top: 54px;
+  --ios-preview-bottom: 26px;
+  --ion-font-family: var(--ios-font);
+  --ion-background-color: var(--ios-background);
+  --ion-text-color: var(--ios-label);
+  --ion-color-primary: var(--ios-tint);
+  --ion-color-primary-contrast: var(--ios-on-tint);
+}
+@media (prefers-reduced-motion: reduce) {
+  .ios-foundation { --ios-motion-fast: 0ms; --ios-motion-standard: 0ms; }
+}
+
+[data-theme="dark"] .ios-foundation {
+  --ios-system-foreground: #fff;
+  --ios-system-background: #000;
+}

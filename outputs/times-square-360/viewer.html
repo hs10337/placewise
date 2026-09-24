@@ -1,0 +1,77 @@
+<div id="times-square-world" aria-label="Interactive Times Square 3D viewer">
+  <style>
+    #times-square-world{--ts-ink:#f6f3ee;--ts-muted:#b0bac8;--ts-surface:#121b2b;--ts-line:#ffffff24;position:relative;isolation:isolate;overflow:hidden;background:#101929;color:var(--ts-ink);font-family:Arial,Helvetica,sans-serif;min-width:0;color-scheme:dark}
+    #times-square-world *{box-sizing:border-box}
+    #times-square-world button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+    #times-square-world button:focus-visible,#times-square-world a:focus-visible{outline:2px solid #bfff78;outline-offset:4px}
+    #times-square-world button:disabled{opacity:.4;cursor:not-allowed}
+    #times-square-world .ts-stage{height:660px;position:relative;touch-action:none;cursor:grab;overflow:hidden}
+    #times-square-world .ts-stage:active{cursor:grabbing}
+    #times-square-world canvas{display:block;width:100%;height:100%}
+    #times-square-world .ts-head{position:absolute;z-index:2;top:0;left:0;right:0;padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none;background:linear-gradient(#101929a8,transparent)}
+    #times-square-world .ts-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#c4ccd6;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+    #times-square-world .ts-dot{width:6px;height:6px;border-radius:100%;background:#c5f397;box-shadow:0 0 12px #c5f39755}
+    #times-square-world .ts-title{font-size:42px;line-height:1.05;letter-spacing:-2px;font-weight:500;margin:0;color:#f6f3ee}
+    #times-square-world .ts-sub{font-size:12px;color:#c0c9d6;letter-spacing:.03em;margin-top:10px}
+    #times-square-world .ts-edition{text-align:right;font-size:11px;letter-spacing:.13em;line-height:1.8;color:#c0c9d6}
+    #times-square-world .ts-edition strong{display:block;font-weight:400;color:#f6f3ee;font-size:18px;letter-spacing:-.03em}
+    #times-square-world .ts-loading{position:absolute;inset:0;display:grid;place-content:center;gap:16px;text-align:center;background:#101929;z-index:5;font-size:13px;color:#c0c9d6;transition:opacity .6s}
+    #times-square-world .ts-loading[hidden]{display:none}
+    #times-square-world .ts-loading span:first-child{font-size:32px;color:#f6f3ee;letter-spacing:-1.5px}
+    #times-square-world .ts-bottom{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:24px 24px 20px;background:linear-gradient(transparent,#101929 65%);pointer-events:none}
+    #times-square-world .ts-tools{width:max-content;max-width:100%;margin:0 auto;display:flex;align-items:center;gap:4px;background:#192334f2;border:1px solid #ffffff20;border-radius:12px;padding:6px;box-shadow:0 8px 40px #0004;pointer-events:auto}
+    #times-square-world .ts-tools button{border:0;background:transparent;color:#bec8d5;padding:10px 12px;border-radius:7px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:12px;white-space:nowrap;transition:background .2s,color .2s}
+    #times-square-world .ts-tools button:hover{background:#ffffff12;color:#fff}
+    #times-square-world .ts-tools button[aria-pressed="true"]{background:#e8eddc;color:#1c2820}
+    #times-square-world .ts-tools button.ts-icon{width:38px;padding:10px;font-size:18px}
+    #times-square-world .ts-separator{height:22px;width:1px;background:#ffffff20;margin:0 3px;flex-shrink:0}
+    #times-square-world .ts-foot{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-top:18px;font-size:11px;letter-spacing:.04em;color:#aeb9c9}
+    #times-square-world .ts-foot a{color:inherit;text-decoration:none;pointer-events:auto}
+    #times-square-world .ts-foot a:hover{color:#fff;text-decoration:underline}
+    #times-square-world .ts-gesture{position:absolute;bottom:124px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.04em;color:#c5cfdf;z-index:2;white-space:nowrap;pointer-events:none;transition:opacity .5s;text-shadow:0 2px 12px #000}
+    #times-square-world .ts-compass{position:absolute;right:28px;top:126px;width:44px;height:44px;border:1px solid #ffffff30;border-radius:50%;z-index:2;display:grid;place-items:center;color:#d8e0eb;font-size:10px;pointer-events:none;background:#10192980}
+    #times-square-world .ts-compass span{display:block;position:absolute;top:5px;left:19px;font-size:9px}
+    #times-square-world .ts-compass i{width:2px;height:22px;background:linear-gradient(#c5f397 50%,#8691a6 50%);transform-origin:center;display:block}
+    #times-square-world .ts-marker{position:absolute;z-index:2;left:0;top:0;transform:translate(-50%,-100%);font-size:10px;letter-spacing:.02em;color:#dbe3ef;pointer-events:none;white-space:nowrap;text-shadow:0 1px 5px #000,0 1px 12px #000;background:#111a29b0;padding:5px 8px;border-radius:4px}
+    #times-square-world .ts-marker:after{content:"";position:absolute;bottom:-13px;left:50%;width:1px;height:13px;background:#c6d4e380}
+    #times-square-world .ts-credit{max-width:49%;text-align:right}
+    #times-square-world .ts-live{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden}
+    @media(max-width:600px){#times-square-world .ts-stage{height:610px}#times-square-world .ts-head{padding:24px}#times-square-world .ts-title{font-size:36px}#times-square-world .ts-edition{display:none}#times-square-world .ts-compass{right:24px;top:28px}#times-square-world .ts-tools{gap:2px;padding:5px;flex-wrap:wrap;justify-content:center}#times-square-world .ts-tools button{padding:10px;min-height:42px}#times-square-world .ts-tools button.ts-icon{width:32px}#times-square-world .ts-bottom{padding:24px 12px 16px}#times-square-world .ts-foot{font-size:9px;gap:8px}#times-square-world .ts-gesture{bottom:122px;font-size:10px}#times-square-world .ts-hide-mobile{display:none}#times-square-world .ts-marker{font-size:9px}}
+    @media(max-width:600px){#times-square-world .ts-stage{height:650px}#times-square-world .ts-tools{display:grid;grid-template-columns:repeat(4,1fr);width:304px;max-width:100%}#times-square-world .ts-tools button[data-action="overview"],#times-square-world .ts-tools button[data-action="street"]{grid-column:span 2}#times-square-world .ts-tools button[data-action="rotate"],#times-square-world .ts-separator{display:none}#times-square-world .ts-tools button.ts-icon{width:100%}#times-square-world .ts-foot{font-size:11px;flex-direction:column;gap:7px;margin-top:14px}#times-square-world .ts-credit{max-width:100%}#times-square-world .ts-gesture{bottom:173px}#times-square-world .ts-marker{font-size:11px}#times-square-world .ts-kicker{font-size:11px;letter-spacing:.1em}#times-square-world .ts-compass{top:103px}}
+    @media(prefers-reduced-motion:reduce){#times-square-world *{transition:none!important}}
+  </style>
+  <div class="ts-head">
+    <div><div class="ts-kicker"><span class="ts-dot"></span>New York City · Manhattan</div><h2 class="ts-title">Times Square</h2><div class="ts-sub">Broadway meets Seventh Avenue.</div></div>
+    <div class="ts-edition">A CITY IN MINIATURE<strong>Explore in 360°</strong></div>
+  </div>
+  <div class="ts-stage" role="img" aria-label="Rotatable three-dimensional reconstruction of Times Square, including One Times Square, the red TKTS steps, Marriott Marquis, and TSX Broadway. Drag to rotate and scroll or pinch to zoom. Keyboard controls are below."></div>
+  <div class="ts-compass" aria-hidden="true"><span>N</span><i></i></div>
+  <div class="ts-gesture">Drag to look around · Scroll to get closer</div>
+  <div class="ts-loading" role="status"><span>Meet me in Times Square.</span><span>Building the city…</span></div>
+  <div class="ts-bottom">
+    <div class="ts-tools" role="group" aria-label="3D view controls">
+      <button type="button" data-action="overview" aria-pressed="true">Overview</button>
+      <button type="button" data-action="street" aria-pressed="false">Street level</button>
+      <span class="ts-separator"></span>
+      <button type="button" data-action="left" class="ts-icon" aria-label="Rotate left">↶</button>
+      <button type="button" data-action="right" class="ts-icon" aria-label="Rotate right">↷</button>
+      <button type="button" data-action="zoom-in" class="ts-icon" aria-label="Zoom in">+</button>
+      <button type="button" data-action="zoom-out" class="ts-icon" aria-label="Zoom out">−</button>
+      <span class="ts-separator ts-hide-mobile"></span>
+      <button type="button" data-action="rotate" aria-pressed="false"><span aria-hidden="true">⟳</span><span class="ts-hide-mobile">Auto rotate</span></button>
+    </div>
+    <div class="ts-foot"><span>ILLUSTRATIVE 3D RECONSTRUCTION</span><span class="ts-credit"><a href="https://www.nyc.gov/assets/planning/download/pdf/applicants/env-review/eas/18dcp100m-eas.pdf" target="_blank" rel="noopener noreferrer">NYC Planning reference ↗</a></span></div>
+  </div>
+  <div class="ts-live" aria-live="polite"></div>
+  <script type="module">
+  (async()=>{
+  const root=document.getElementById('times-square-world');
+  const loading=root.querySelector('.ts-loading');
+  try {
+  const THREE=await import('https://esm.sh/three@0.160.1');
+  /* BILLBOARD_TEXTURES */
+  /* SCENE_CODE */
+  }catch(error){loading.innerHTML='<span>The 3D view could not load.</span><span>Please reopen this preview in a browser with WebGL enabled.</span>';loading.setAttribute('role','alert');console.error(error);}
+  })();
+  </script>
+</div>

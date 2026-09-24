@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Brand Guideline"
+  short_description: "Create concise brand rules for AI and coding agents"
+  default_prompt: "Use $create-brand-guideline to draft or refine actionable brand guidelines from the project context, asking any necessary clarifying questions."

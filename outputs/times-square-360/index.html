@@ -1,0 +1,1863 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Times Square 360</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Times Square 360" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Times Square 360&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;times-square-world&quot; aria-label=&quot;Interactive Times Square 3D viewer&quot;&gt;
+  &lt;style&gt;
+    #times-square-world{--ts-ink:#f6f3ee;--ts-muted:#b0bac8;--ts-surface:#121b2b;--ts-line:#ffffff24;position:relative;isolation:isolate;overflow:hidden;background:#101929;color:var(--ts-ink);font-family:Arial,Helvetica,sans-serif;min-width:0;color-scheme:dark}
+    #times-square-world *{box-sizing:border-box}
+    #times-square-world button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+    #times-square-world button:focus-visible,#times-square-world a:focus-visible{outline:2px solid #bfff78;outline-offset:4px}
+    #times-square-world button:disabled{opacity:.4;cursor:not-allowed}
+    #times-square-world .ts-stage{height:660px;position:relative;touch-action:none;cursor:grab;overflow:hidden}
+    #times-square-world .ts-stage:active{cursor:grabbing}
+    #times-square-world canvas{display:block;width:100%;height:100%}
+    #times-square-world .ts-head{position:absolute;z-index:2;top:0;left:0;right:0;padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;pointer-events:none;background:linear-gradient(#101929a8,transparent)}
+    #times-square-world .ts-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#c4ccd6;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+    #times-square-world .ts-dot{width:6px;height:6px;border-radius:100%;background:#c5f397;box-shadow:0 0 12px #c5f39755}
+    #times-square-world .ts-title{font-size:42px;line-height:1.05;letter-spacing:-2px;font-weight:500;margin:0;color:#f6f3ee}
+    #times-square-world .ts-sub{font-size:12px;color:#c0c9d6;letter-spacing:.03em;margin-top:10px}
+    #times-square-world .ts-edition{text-align:right;font-size:11px;letter-spacing:.13em;line-height:1.8;color:#c0c9d6}
+    #times-square-world .ts-edition strong{display:block;font-weight:400;color:#f6f3ee;font-size:18px;letter-spacing:-.03em}
+    #times-square-world .ts-loading{position:absolute;inset:0;display:grid;place-content:center;gap:16px;text-align:center;background:#101929;z-index:5;font-size:13px;color:#c0c9d6;transition:opacity .6s}
+    #times-square-world .ts-loading[hidden]{display:none}
+    #times-square-world .ts-loading span:first-child{font-size:32px;color:#f6f3ee;letter-spacing:-1.5px}
+    #times-square-world .ts-bottom{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:24px 24px 20px;background:linear-gradient(transparent,#101929 65%);pointer-events:none}
+    #times-square-world .ts-tools{width:max-content;max-width:100%;margin:0 auto;display:flex;align-items:center;gap:4px;background:#192334f2;border:1px solid #ffffff20;border-radius:12px;padding:6px;box-shadow:0 8px 40px #0004;pointer-events:auto}
+    #times-square-world .ts-tools button{border:0;background:transparent;color:#bec8d5;padding:10px 12px;border-radius:7px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:12px;white-space:nowrap;transition:background .2s,color .2s}
+    #times-square-world .ts-tools button:hover{background:#ffffff12;color:#fff}
+    #times-square-world .ts-tools button[aria-pressed=&quot;true&quot;]{background:#e8eddc;color:#1c2820}
+    #times-square-world .ts-tools button.ts-icon{width:38px;padding:10px;font-size:18px}
+    #times-square-world .ts-separator{height:22px;width:1px;background:#ffffff20;margin:0 3px;flex-shrink:0}
+    #times-square-world .ts-foot{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-top:18px;font-size:11px;letter-spacing:.04em;color:#aeb9c9}
+    #times-square-world .ts-foot a{color:inherit;text-decoration:none;pointer-events:auto}
+    #times-square-world .ts-foot a:hover{color:#fff;text-decoration:underline}
+    #times-square-world .ts-gesture{position:absolute;bottom:124px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.04em;color:#c5cfdf;z-index:2;white-space:nowrap;pointer-events:none;transition:opacity .5s;text-shadow:0 2px 12px #000}
+    #times-square-world .ts-compass{position:absolute;right:28px;top:126px;width:44px;height:44px;border:1px solid #ffffff30;border-radius:50%;z-index:2;display:grid;place-items:center;color:#d8e0eb;font-size:10px;pointer-events:none;background:#10192980}
+    #times-square-world .ts-compass span{display:block;position:absolute;top:5px;left:19px;font-size:9px}
+    #times-square-world .ts-compass i{width:2px;height:22px;background:linear-gradient(#c5f397 50%,#8691a6 50%);transform-origin:center;display:block}
+    #times-square-world .ts-marker{position:absolute;z-index:2;left:0;top:0;transform:translate(-50%,-100%);font-size:10px;letter-spacing:.02em;color:#dbe3ef;pointer-events:none;white-space:nowrap;text-shadow:0 1px 5px #000,0 1px 12px #000;background:#111a29b0;padding:5px 8px;border-radius:4px}
+    #times-square-world .ts-marker:after{content:&quot;&quot;;position:absolute;bottom:-13px;left:50%;width:1px;height:13px;background:#c6d4e380}
+    #times-square-world .ts-credit{max-width:49%;text-align:right}
+    #times-square-world .ts-live{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden}
+    @media(max-width:600px){#times-square-world .ts-stage{height:610px}#times-square-world .ts-head{padding:24px}#times-square-world .ts-title{font-size:36px}#times-square-world .ts-edition{display:none}#times-square-world .ts-compass{right:24px;top:28px}#times-square-world .ts-tools{gap:2px;padding:5px;flex-wrap:wrap;justify-content:center}#times-square-world .ts-tools button{padding:10px;min-height:42px}#times-square-world .ts-tools button.ts-icon{width:32px}#times-square-world .ts-bottom{padding:24px 12px 16px}#times-square-world .ts-foot{font-size:9px;gap:8px}#times-square-world .ts-gesture{bottom:122px;font-size:10px}#times-square-world .ts-hide-mobile{display:none}#times-square-world .ts-marker{font-size:9px}}
+    @media(max-width:600px){#times-square-world .ts-stage{height:650px}#times-square-world .ts-tools{display:grid;grid-template-columns:repeat(4,1fr);width:304px;max-width:100%}#times-square-world .ts-tools button[data-action=&quot;overview&quot;],#times-square-world .ts-tools button[data-action=&quot;street&quot;]{grid-column:span 2}#times-square-world .ts-tools button[data-action=&quot;rotate&quot;],#times-square-world .ts-separator{display:none}#times-square-world .ts-tools button.ts-icon{width:100%}#times-square-world .ts-foot{font-size:11px;flex-direction:column;gap:7px;margin-top:14px}#times-square-world .ts-credit{max-width:100%}#times-square-world .ts-gesture{bottom:173px}#times-square-world .ts-marker{font-size:11px}#times-square-world .ts-kicker{font-size:11px;letter-spacing:.1em}#times-square-world .ts-compass{top:103px}}
+    @media(prefers-reduced-motion:reduce){#times-square-world *{transition:none!important}}
+  &lt;/style&gt;
+  &lt;div class=&quot;ts-head&quot;&gt;
+    &lt;div&gt;&lt;div class=&quot;ts-kicker&quot;&gt;&lt;span class=&quot;ts-dot&quot;&gt;&lt;/span&gt;New York City · Manhattan&lt;/div&gt;&lt;h2 class=&quot;ts-title&quot;&gt;Times Square&lt;/h2&gt;&lt;div class=&quot;ts-sub&quot;&gt;Broadway meets Seventh Avenue.&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;ts-edition&quot;&gt;A CITY IN MINIATURE&lt;strong&gt;Explore in 360°&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ts-stage&quot; role=&quot;img&quot; aria-label=&quot;Rotatable three-dimensional reconstruction of Times Square, including One Times Square, the red TKTS steps, Marriott Marquis, and TSX Broadway. Drag to rotate and scroll or pinch to zoom. Keyboard controls are below.&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;ts-compass&quot; aria-hidden=&quot;true&quot;&gt;&lt;span&gt;N&lt;/span&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;ts-gesture&quot;&gt;Drag to look around · Scroll to get closer&lt;/div&gt;
+  &lt;div class=&quot;ts-loading&quot; role=&quot;status&quot;&gt;&lt;span&gt;Meet me in Times Square.&lt;/span&gt;&lt;span&gt;Building the city…&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;ts-bottom&quot;&gt;
+    &lt;div class=&quot;ts-tools&quot; role=&quot;group&quot; aria-label=&quot;3D view controls&quot;&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;overview&quot; aria-pressed=&quot;true&quot;&gt;Overview&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;street&quot; aria-pressed=&quot;false&quot;&gt;Street level&lt;/button&gt;
+      &lt;span class=&quot;ts-separator&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;left&quot; class=&quot;ts-icon&quot; aria-label=&quot;Rotate left&quot;&gt;↶&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;right&quot; class=&quot;ts-icon&quot; aria-label=&quot;Rotate right&quot;&gt;↷&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;zoom-in&quot; class=&quot;ts-icon&quot; aria-label=&quot;Zoom in&quot;&gt;+&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;zoom-out&quot; class=&quot;ts-icon&quot; aria-label=&quot;Zoom out&quot;&gt;−&lt;/button&gt;
+      &lt;span class=&quot;ts-separator ts-hide-mobile&quot;&gt;&lt;/span&gt;
+      &lt;button type=&quot;button&quot; data-action=&quot;rotate&quot; aria-pressed=&quot;false&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;⟳&lt;/span&gt;&lt;span class=&quot;ts-hide-mobile&quot;&gt;Auto rotate&lt;/span&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ts-foot&quot;&gt;&lt;span&gt;ILLUSTRATIVE 3D RECONSTRUCTION&lt;/span&gt;&lt;span class=&quot;ts-credit&quot;&gt;&lt;a href=&quot;https://www.nyc.gov/assets/planning/download/pdf/applicants/env-review/eas/18dcp100m-eas.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;NYC Planning reference ↗&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ts-live&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;script type=&quot;module&quot;&gt;
+  (async()=&gt;{
+  const root=document.getElementById(&#x27;times-square-world&#x27;);
+  const loading=root.querySelector(&#x27;.ts-loading&#x27;);
+  try {
+  const THREE=await import(&#x27;https://esm.sh/three@0.160.1&#x27;);
+  function createBillboardTextures(THREE) {
+  const result = {};
+  const font = &#x27;Arial, Helvetica, sans-serif&#x27;;
+  const make = (name, width, height, paint) =&gt; {
+    const canvas = document.createElement(&#x27;canvas&#x27;);
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext(&#x27;2d&#x27;);
+    paint(ctx, width, height);
+    // A fine LED matrix keeps the screens luminous without softening their type.
+    ctx.fillStyle = &#x27;rgba(0,0,0,.11)&#x27;;
+    for (let y = 0; y &lt; height; y += 5) ctx.fillRect(0, y, width, 1);
+    const texture = new THREE.CanvasTexture(canvas);
+    if (THREE.SRGBColorSpace) texture.colorSpace = THREE.SRGBColorSpace;
+    texture.anisotropy = 4;
+    result[name] = texture;
+  };
+  const type = (ctx, text, x, y, size, color, weight = 900, align = &#x27;left&#x27;) =&gt; {
+    ctx.fillStyle = color;
+    ctx.font = `${weight} ${size}px ${font}`;
+    ctx.textAlign = align;
+    ctx.textBaseline = &#x27;alphabetic&#x27;;
+    ctx.fillText(text, x, y);
+  };
+  const gradient = (ctx, width, height, colors, horizontal = false) =&gt; {
+    const g = ctx.createLinearGradient(0, 0, horizontal ? width : 0, horizontal ? 0 : height);
+    colors.forEach((c, i) =&gt; g.addColorStop(i / (colors.length - 1), c));
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, width, height);
+  };
+
+  make(&#x27;timesSquare&#x27;, 1024, 512, (ctx, w, h) =&gt; {
+    ctx.fillStyle = &#x27;#baff18&#x27;; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = &#x27;#07170f&#x27;; ctx.fillRect(694, 0, 330, h);
+    type(ctx, &#x27;NEW YORK&#x27;, 36, 64, 38, &#x27;#07170f&#x27;, 800);
+    type(ctx, &#x27;NYC&#x27;, 19, 343, 306, &#x27;#07170f&#x27;);
+    type(ctx, &#x27;ALWAYS ON.&#x27;, 39, 459, 61, &#x27;#07170f&#x27;);
+    ctx.save(); ctx.translate(853, 268); ctx.rotate(-Math.PI / 2);
+    type(ctx, &#x27;TIMES SQUARE&#x27;, 0, 26, 70, &#x27;#f7ffec&#x27;, 900, &#x27;center&#x27;); ctx.restore();
+    ctx.strokeStyle = &#x27;#baff18&#x27;; ctx.lineWidth = 9;
+    ctx.beginPath(); ctx.arc(854, 80, 24, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = &#x27;#baff18&#x27;; ctx.fillRect(733, 454, 250, 8);
+  });
+
+  make(&#x27;broadway&#x27;, 512, 512, (ctx, w, h) =&gt; {
+    ctx.fillStyle = &#x27;#ffdb21&#x27;; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = &#x27;#f13c2d&#x27;;
+    ctx.beginPath(); ctx.moveTo(256, 52); ctx.lineTo(460, 512); ctx.lineTo(51, 512); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = &#x27;#17151d&#x27;; ctx.fillRect(26, 24, 460, 44);
+    type(ctx, &#x27;THE CITY IS YOUR STAGE&#x27;, 256, 55, 23, &#x27;#ffef97&#x27;, 800, &#x27;center&#x27;);
+    type(ctx, &#x27;BROAD&#x27;, 256, 218, 108, &#x27;#17151d&#x27;, 900, &#x27;center&#x27;);
+    type(ctx, &#x27;WAY&#x27;, 256, 334, 149, &#x27;#17151d&#x27;, 900, &#x27;center&#x27;);
+    type(ctx, &#x27;LIGHTS UP.&#x27;, 256, 412, 45, &#x27;#fff6d3&#x27;, 900, &#x27;center&#x27;);
+    type(ctx, &#x27;EVERY NIGHT&#x27;, 256, 461, 26, &#x27;#17151d&#x27;, 800, &#x27;center&#x27;);
+    for (let i = 0; i &lt; 12; i++) {
+      ctx.fillStyle = &#x27;#fffce0&#x27;; ctx.beginPath(); ctx.arc(12 + i * 44, 493, 4, 0, Math.PI * 2); ctx.fill();
+    }
+  });
+
+  make(&#x27;wave&#x27;, 1024, 512, (ctx, w, h) =&gt; {
+    gradient(ctx, w, h, [&#x27;#0a0a52&#x27;, &#x27;#2114ad&#x27;, &#x27;#6605ed&#x27;], true);
+    for (let i = 25; i &gt;= 0; i--) {
+      const t = i / 25;
+      ctx.strokeStyle = `hsla(${171 + t * 65}, 100%, ${65 - t * 33}%, ${0.95 - t * 0.4})`;
+      ctx.lineWidth = 13;
+      ctx.beginPath();
+      ctx.moveTo(-100, 375 + i * 7);
+      ctx.bezierCurveTo(180, -250 + i * 12, 680, 770 - i * 8, 1120, 35 + i * 7);
+      ctx.stroke();
+    }
+    type(ctx, &#x27;FEEL&#x27;, 42, 132, 128, &#x27;#f3fcff&#x27;);
+    type(ctx, &#x27;EVERYTHING.&#x27;, 42, 236, 94, &#x27;#f3fcff&#x27;);
+    type(ctx, &#x27;A NEW FREQUENCY&#x27;, 47, 462, 30, &#x27;#95ffef&#x27;, 700);
+    ctx.strokeStyle = &#x27;#95ffef&#x27;; ctx.lineWidth = 6;
+    ctx.beginPath(); ctx.arc(935, 447, 26, 0, Math.PI * 2); ctx.stroke();
+  });
+
+  make(&#x27;fashion&#x27;, 512, 512, (ctx, w, h) =&gt; {
+    ctx.fillStyle = &#x27;#f2ede1&#x27;; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = &#x27;#df542e&#x27;; ctx.beginPath(); ctx.arc(357, 258, 160, 0, Math.PI * 2); ctx.fill();
+    // A graphic coat silhouette, intentionally illustrative rather than a real campaign.
+    ctx.fillStyle = &#x27;#17191c&#x27;;
+    ctx.beginPath(); ctx.ellipse(349, 145, 36, 45, -.12, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(318, 181); ctx.lineTo(384, 183); ctx.lineTo(424, 253);
+    ctx.lineTo(442, 367); ctx.lineTo(411, 379); ctx.lineTo(384, 285);
+    ctx.lineTo(405, 475); ctx.lineTo(282, 475); ctx.lineTo(300, 271);
+    ctx.lineTo(266, 370); ctx.lineTo(237, 359); ctx.lineTo(275, 242); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = &#x27;#aaa69f&#x27;; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(318, 189); ctx.lineTo(345, 262); ctx.lineTo(380, 188);
+    ctx.moveTo(345, 262); ctx.lineTo(341, 465); ctx.stroke();
+    type(ctx, &#x27;FORM&#x27;, 24, 91, 96, &#x27;#17191c&#x27;);
+    type(ctx, &#x27;NEW&#x27;, 29, 235, 59, &#x27;#17191c&#x27;);
+    type(ctx, &#x27;YORK&#x27;, 28, 294, 59, &#x27;#17191c&#x27;);
+    type(ctx, &#x27;IN MOTION&#x27;, 28, 337, 24, &#x27;#17191c&#x27;, 700);
+    ctx.fillStyle = &#x27;#17191c&#x27;; ctx.fillRect(0, 480, w, 32);
+    type(ctx, &#x27;THE EVERYDAY, REIMAGINED&#x27;, 256, 502, 17, &#x27;#f2ede1&#x27;, 700, &#x27;center&#x27;);
+  });
+
+  make(&#x27;garden&#x27;, 512, 512, (ctx, w, h) =&gt; {
+    gradient(ctx, w, h, [&#x27;#003e3c&#x27;, &#x27;#00764b&#x27;, &#x27;#032c2a&#x27;]);
+    const leaf = (x, y, scale, angle, color) =&gt; {
+      ctx.save(); ctx.translate(x, y); ctx.rotate(angle); ctx.scale(scale, scale);
+      ctx.fillStyle = color; ctx.beginPath(); ctx.moveTo(0, 0);
+      ctx.bezierCurveTo(-135, -50, -102, -173, 0, -230);
+      ctx.bezierCurveTo(90, -160, 105, -54, 0, 0); ctx.fill();
+      ctx.strokeStyle = &#x27;rgba(232,255,123,.4)&#x27;; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -211); ctx.stroke(); ctx.restore();
+    };
+    leaf(38, 269, 1.3, -.65, &#x27;#0ba769&#x27;);
+    leaf(206, 241, .95, -.73, &#x27;#6acf45&#x27;);
+    leaf(420, 246, 1.2, .6, &#x27;#159259&#x27;);
+    leaf(504, 478, 1.5, -.28, &#x27;#1cc179&#x27;);
+    leaf(68, 588, 1.65, .58, &#x27;#10884a&#x27;);
+    ctx.fillStyle = &#x27;rgba(0,31,25,.38)&#x27;; ctx.fillRect(0, 171, w, 192);
+    type(ctx, &#x27;BREATHE&#x27;, 256, 259, 76, &#x27;#efffba&#x27;, 900, &#x27;center&#x27;);
+    type(ctx, &#x27;A LITTLE DEEPER.&#x27;, 256, 315, 34, &#x27;#efffba&#x27;, 700, &#x27;center&#x27;);
+    type(ctx, &#x27;FIND YOUR GREEN&#x27;, 256, 471, 25, &#x27;#e0ffae&#x27;, 800, &#x27;center&#x27;);
+  });
+
+  make(&#x27;sunset&#x27;, 1024, 512, (ctx, w, h) =&gt; {
+    gradient(ctx, w, h, [&#x27;#7e1aa8&#x27;, &#x27;#f26480&#x27;, &#x27;#ffb958&#x27;]);
+    ctx.fillStyle = &#x27;#ffed98&#x27;; ctx.beginPath(); ctx.arc(743, 260, 165, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = &#x27;#733098&#x27;; ctx.beginPath(); ctx.moveTo(0, 435); ctx.lineTo(160, 319);
+    ctx.lineTo(312, 391); ctx.lineTo(510, 312); ctx.lineTo(657, 405); ctx.lineTo(857, 352);
+    ctx.lineTo(1024, 415); ctx.lineTo(1024, 512); ctx.lineTo(0, 512); ctx.fill();
+    ctx.fillStyle = &#x27;#261557&#x27;; ctx.beginPath(); ctx.moveTo(0, 443); ctx.lineTo(252, 424);
+    ctx.lineTo(425, 465); ctx.lineTo(695, 410); ctx.lineTo(1024, 457);
+    ctx.lineTo(1024, 512); ctx.lineTo(0, 512); ctx.fill();
+    type(ctx, &#x27;GO&#x27;, 37, 239, 228, &#x27;#fff7d3&#x27;);
+    type(ctx, &#x27;SOMEWHERE.&#x27;, 44, 333, 83, &#x27;#fff7d3&#x27;);
+    type(ctx, &#x27;MAKE ROOM FOR WONDER&#x27;, 45, 478, 28, &#x27;#ffc98a&#x27;, 800);
+  });
+
+  make(&#x27;cola&#x27;, 512, 512, (ctx, w, h) =&gt; {
+    gradient(ctx, w, h, [&#x27;#ed122d&#x27;, &#x27;#ec3035&#x27;, &#x27;#bc0020&#x27;]);
+    ctx.save(); ctx.translate(256, 263); ctx.rotate(-.13);
+    ctx.strokeStyle = &#x27;#ff797a&#x27;; ctx.lineWidth = 32;
+    ctx.beginPath(); ctx.arc(0, 0, 211, 0, Math.PI * 2); ctx.stroke();
+    type(ctx, &#x27;POP!&#x27;, 0, 36, 166, &#x27;#fff7e7&#x27;, 900, &#x27;center&#x27;); ctx.restore();
+    type(ctx, &#x27;BRIGHTEN&#x27;, 256, 86, 43, &#x27;#fff7e7&#x27;, 900, &#x27;center&#x27;);
+    type(ctx, &#x27;YOUR NIGHT&#x27;, 256, 137, 43, &#x27;#fff7e7&#x27;, 900, &#x27;center&#x27;);
+    type(ctx, &#x27;OPEN THE MOMENT&#x27;, 256, 458, 29, &#x27;#fff7e7&#x27;, 800, &#x27;center&#x27;);
+    for (let i = 0; i &lt; 12; i++) {
+      const x = 20 + ((i * 137) % 476), y = 148 + ((i * 79) % 215);
+      ctx.fillStyle = &#x27;rgba(255,244,208,.62)&#x27;; ctx.beginPath(); ctx.arc(x, y, 3 + i % 5, 0, Math.PI * 2); ctx.fill();
+    }
+  });
+
+  make(&#x27;ticker&#x27;, 1024, 128, (ctx, w, h) =&gt; {
+    ctx.fillStyle = &#x27;#080d16&#x27;; ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = &#x27;#fdb832&#x27;; ctx.fillRect(0, 0, w, 5); ctx.fillRect(0, h - 5, w, 5);
+    type(ctx, &#x27;NEW YORK  /  THE CITY NEVER SLEEPS&#x27;, 28, 85, 48, &#x27;#ffc443&#x27;, 800);
+  });
+
+  return result;
+}
+
+  const stage=root.querySelector(&#x27;.ts-stage&#x27;);
+const reducedMotion=matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(&#x27;#101929&#x27;);
+scene.fog=new THREE.Fog(&#x27;#101929&#x27;,1300,2200);
+const camera=new THREE.PerspectiveCamera(38,1,.1,1600);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:&#x27;high-performance&#x27;});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure=1.25;
+renderer.shadowMap.enabled=true;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+stage.appendChild(renderer.domElement);
+const world=new THREE.Group();scene.add(world);
+const hemi=new THREE.HemisphereLight(&#x27;#b8d3ff&#x27;,&#x27;#747784&#x27;,2.1);scene.add(hemi);
+const moon=new THREE.DirectionalLight(&#x27;#b4c9ff&#x27;,2.9);moon.position.set(-160,240,120);moon.castShadow=true;
+moon.shadow.mapSize.set(2048,2048);Object.assign(moon.shadow.camera,{left:-220,right:220,top:240,bottom:-240,near:1,far:700});moon.shadow.bias=-.0007;moon.shadow.normalBias=.3;scene.add(moon);
+const rim=new THREE.DirectionalLight(&#x27;#efb7a0&#x27;,1.8);rim.position.set(200,90,-110);scene.add(rim);
+let seed=217;function rand(){seed=(seed*1664525+1013904223)&gt;&gt;&gt;0;return seed/4294967296;}
+const materials=new Map();
+function mat(color,roughness=.78,metalness=.1){const key=color+&#x27;:&#x27;+roughness+&#x27;:&#x27;+metalness;if(!materials.has(key))materials.set(key,new THREE.MeshStandardMaterial({color,roughness,metalness}));return materials.get(key);}
+const unitBox=new THREE.BoxGeometry(1,1,1);
+function box(parent,w,h,d,x,y,z,material,shadow=true){const mesh=new THREE.Mesh(unitBox,material);mesh.scale.set(w,h,d);mesh.position.set(x,y,z);mesh.castShadow=shadow;mesh.receiveShadow=true;parent.add(mesh);return mesh;}
+function cylinder(parent,r1,r2,h,x,y,z,material,sides=12){const mesh=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,h,sides),material);mesh.position.set(x,y,z);mesh.castShadow=true;parent.add(mesh);return mesh;}
+const dark=mat(&#x27;#252f40&#x27;),concrete=mat(&#x27;#a0a8b6&#x27;),roofMat=mat(&#x27;#48515f&#x27;),steel=mat(&#x27;#67768b&#x27;,.42,.55);
+function canvasTexture(w,h,draw){const c=document.createElement(&#x27;canvas&#x27;);c.width=w;c.height=h;draw(c.getContext(&#x27;2d&#x27;),w,h);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(renderer.capabilities.getMaxAnisotropy(),8);return t;}
+const signs=createBillboardTextures(THREE);
+Object.values(signs).forEach(t=&gt;{t.anisotropy=8;});
+const facadeTextures={};
+for(const style of [&#x27;glass&#x27;,&#x27;stone&#x27;,&#x27;dark&#x27;,&#x27;brick&#x27;]){
+ facadeTextures[style]=canvasTexture(512,1024,(c,w,h)=&gt;{
+   const bg={glass:&#x27;#3d5367&#x27;,stone:&#x27;#9b9c9b&#x27;,dark:&#x27;#445063&#x27;,brick:&#x27;#857667&#x27;}[style];c.fillStyle=bg;c.fillRect(0,0,w,h);
+   const cols=style===&#x27;glass&#x27;?12:8,rows=32,cw=w/cols,rh=h/rows;
+   for(let row=0;row&lt;rows;row++)for(let col=0;col&lt;cols;col++){
+    const r=rand();c.fillStyle=r&gt;.82?&#x27;#fff0bd&#x27;:r&gt;.62?&#x27;#b5c3c0&#x27;:r&gt;.35?&#x27;#405b70&#x27;:&#x27;#263b50&#x27;;
+    c.fillRect(col*cw+cw*.19,row*rh+rh*.15,cw*.61,rh*.72);
+    c.fillStyle=&#x27;#1d2c3930&#x27;;c.fillRect(col*cw+cw*.19,row*rh+rh*.65,cw*.61,rh*.12);
+   }
+   if(style===&#x27;glass&#x27;){c.fillStyle=&#x27;#adb9c838&#x27;;for(let i=0;i&lt;cols;i++)c.fillRect(i*cw,0,2,h);c.fillStyle=&#x27;#87a1b228&#x27;;for(let r=0;r&lt;rows;r++)c.fillRect(0,r*rh,w,2);}
+ });
+}
+function building(name,x,z,w,d,h,style=&#x27;glass&#x27;,color=&#x27;#bac4d1&#x27;){
+ const g=new THREE.Group();g.position.set(x,0,z);g.name=name;world.add(g);
+ const face=new THREE.MeshStandardMaterial({color,map:facadeTextures[style],emissive:&#x27;#a2aec6&#x27;,emissiveMap:facadeTextures[style],emissiveIntensity:.14,roughness:style===&#x27;glass&#x27;?.34:.75,metalness:style===&#x27;glass&#x27;?.3:.12});
+ box(g,w,h,d,0,h/2+1,0,[face,face,roofMat,roofMat,face,face]);
+ box(g,w+1.2,1.3,d+1.2,0,h+1,0,roofMat);
+ box(g,w+1,1,d+1,0,1,0,concrete);
+ for(const side of [-1,1]){box(g,w,.7,.7,0,h+2,side*d/2,steel);box(g,.7,.7,d,side*w/2,h+2,0,steel);}
+ box(g,w*.32,3,d*.3,w*.12,h+2.5,0,mat(&#x27;#596373&#x27;));
+ for(let i=0;i&lt;3;i++){box(g,2.4,1.5,3.3,-w*.22+i*3,h+2,-d*.22,mat(&#x27;#8a97a4&#x27;));}
+ if(style!==&#x27;glass&#x27;)for(let y=12;y&lt;h;y+=12)box(g,w+.45,.35,d+.45,0,y,0,concrete,false);
+ return g;
+}
+const screenMaterials=[];
+function screen(parent,texture,w,h,x,y,z,angle=0){
+ const group=new THREE.Group();group.position.set(x,y,z);group.rotation.y=angle;parent.add(group);
+ box(group,w+.9,h+.9,1,0,0,-.65,dark);
+ const material=new THREE.MeshBasicMaterial({map:typeof texture===&#x27;string&#x27;?signs[texture]:texture,toneMapped:false});screenMaterials.push(material);
+ const plane=new THREE.Mesh(new THREE.PlaneGeometry(w,h),material);group.add(plane);
+ // Narrow lit edges give screens a physical frame without hiding the artwork.
+ const edge=new THREE.MeshBasicMaterial({color:&#x27;#d5ebff&#x27;,transparent:true,opacity:.35});
+ box(group,w,.12,.1,0,h/2,.1,edge,false);box(group,w,.12,.1,0,-h/2,.1,edge,false);
+ return group;
+}
+const groundTex=canvasTexture(2048,2048,(c,w,h)=&gt;{
+ const sx=w/300,sy=h/340,X=x=&gt;(x+150)*sx,Z=z=&gt;(z+170)*sy;
+ c.fillStyle=&#x27;#747c87&#x27;;c.fillRect(0,0,w,h);
+ // Paving joints across each block.
+ c.strokeStyle=&#x27;#505d7030&#x27;;c.lineWidth=1;
+ for(let x=-150;x&lt;150;x+=4){c.beginPath();c.moveTo(X(x),0);c.lineTo(X(x),h);c.stroke();}
+ for(let z=-170;z&lt;170;z+=4){c.beginPath();c.moveTo(0,Z(z));c.lineTo(w,Z(z));c.stroke();}
+ function line(points,width,color){c.beginPath();points.forEach((p,i)=&gt;i?c.lineTo(X(p[0]),Z(p[1])):c.moveTo(X(p[0]),Z(p[1])));c.strokeStyle=color;c.lineWidth=width*sx;c.stroke();}
+ line([[3,-170],[3,170]],19,&#x27;#252d3b&#x27;);line([[-58,-170],[58,170]],19,&#x27;#2c3441&#x27;);
+ const cross=[-117,-66,-15,36,87,138];
+ cross.forEach(z=&gt;line([[-150,z],[150,z]],13,&#x27;#2c3441&#x27;));
+ line([[3,-170],[3,170]],.25,&#x27;#e2c687&#x27;);
+ for(let z=-166;z&lt;165;z+=8){line([[8,z],[8,z+3]],.22,&#x27;#bcc5c7&#x27;);line([[-2,z],[-2,z+3]],.22,&#x27;#bcc5c7&#x27;);}
+ cross.forEach(z=&gt;{
+  for(const x of [3,z*.34])for(const offset of [-12,12]){
+   for(let k=-6;k&lt;=6;k+=2.4){c.fillStyle=&#x27;#c4ccd0&#x27;;c.fillRect(X(x+k),Z(z+offset),1.2*sx,4*sy);}
+  }
+  c.fillStyle=&#x27;#c9d0d4&#x27;;c.font=&#x27;500 22px Arial&#x27;;c.textAlign=&#x27;left&#x27;;c.fillText(&#x27;W &#x27;+Math.round(44-(z-36)/51)+&#x27; ST&#x27;,X(-129),Z(z+1.5));
+ });
+ // Pedestrian areas follow the bowtie between the two avenues.
+ c.fillStyle=&#x27;#b7b9b8&#x27;;c.beginPath();[[-26,-99],[-8,-99],[-8,-42]].forEach((p,i)=&gt;i?c.lineTo(X(p[0]),Z(p[1])):c.moveTo(X(p[0]),Z(p[1])));c.closePath();c.fill();
+ c.fillStyle=&#x27;#a1a9ac&#x27;;c.beginPath();[[14,46],[31,102],[14,102]].forEach((p,i)=&gt;i?c.lineTo(X(p[0]),Z(p[1])):c.moveTo(X(p[0]),Z(p[1])));c.closePath();c.fill();
+});
+box(world,300,5,340,0,-2.5,0,mat(&#x27;#2d3748&#x27;));
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(300,340),new THREE.MeshStandardMaterial({map:groundTex,roughness:.93}));ground.rotation.x=-Math.PI/2;ground.position.y=.08;ground.receiveShadow=true;world.add(ground);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(3000,3000),mat(&#x27;#101929&#x27;,.95,0));floor.rotation.x=-Math.PI/2;floor.position.y=-6;floor.receiveShadow=true;scene.add(floor);
+
+// Landmark positions and silhouettes are simplified from NYC Planning references.
+const one=building(&#x27;One Times Square&#x27;,24,108,19,30,83,&#x27;dark&#x27;);
+screen(one,&#x27;timesSquare&#x27;,18,28,0,61,-15.6,Math.PI);
+screen(one,&#x27;wave&#x27;,18,22,0,34,-15.6,Math.PI);
+screen(one,&#x27;cola&#x27;,18,13,0,15,-15.6,Math.PI);
+screen(one,&#x27;fashion&#x27;,25,30,-10.2,58,0,-Math.PI/2);
+screen(one,&#x27;garden&#x27;,25,22,-10.2,29,0,-Math.PI/2);
+screen(one,&#x27;broadway&#x27;,25,36,10.2,52,0,Math.PI/2);
+screen(one,&#x27;timesSquare&#x27;,18,15,0,73,15.6,0);
+screen(one,&#x27;fashion&#x27;,18,26,0,50,15.6,0);
+screen(one,&#x27;cola&#x27;,18,16,0,25,15.6,0);
+box(one,12,5,17,0,87,0,dark);
+cylinder(one,.38,.38,16,0,97,-6,steel);
+const ball=new THREE.Mesh(new THREE.IcosahedronGeometry(2.9,2),new THREE.MeshStandardMaterial({color:&#x27;#d7ffff&#x27;,emissive:&#x27;#9effff&#x27;,emissiveIntensity:1.7,metalness:.65,roughness:.2}));ball.position.set(0,101,-6);one.add(ball);
+const ballWire=new THREE.LineSegments(new THREE.EdgesGeometry(ball.geometry),new THREE.LineBasicMaterial({color:&#x27;#e1ffff&#x27;}));ball.add(ballWire);
+
+const two=building(&#x27;Two Times Square&#x27;,-14,-136,31,28,67,&#x27;stone&#x27;);
+screen(two,&#x27;cola&#x27;,31,16,0,64,14.7);screen(two,&#x27;wave&#x27;,31,20,0,45,14.7);screen(two,&#x27;broadway&#x27;,31,17,0,24,14.7);screen(two,&#x27;ticker&#x27;,31,5,0,11,14.8);
+screen(two,&#x27;fashion&#x27;,25,35,16.2,43,0,Math.PI/2);screen(two,&#x27;garden&#x27;,25,30,-16.2,42,0,-Math.PI/2);
+const tsx=building(&#x27;TSX Broadway&#x27;,41,-91,38,38,113,&#x27;glass&#x27;,&#x27;#9baabd&#x27;);
+box(tsx,42,21,43,0,12,0,dark);screen(tsx,&#x27;wave&#x27;,42,18,0,22,22);screen(tsx,&#x27;wave&#x27;,42,18,-21.8,22,0,-Math.PI/2);
+screen(tsx,&#x27;fashion&#x27;,28,34,-19.8,56,0,-Math.PI/2);screen(tsx,&#x27;garden&#x27;,28,34,0,56,19.8);
+const marquis=building(&#x27;Marriott Marquis&#x27;,-69,-38,56,47,100,&#x27;stone&#x27;,&#x27;#a0adb8&#x27;);
+box(marquis,18,105,43,0,53,1,mat(&#x27;#34485c&#x27;,.35,.3));
+for(let y=15;y&lt;100;y+=4)box(marquis,18.5,.5,44,0,y,1,steel,false);
+box(marquis,61,17,52,0,9,0,dark);screen(marquis,&#x27;sunset&#x27;,48,17,30.9,20,0,Math.PI/2);
+screen(marquis,&#x27;timesSquare&#x27;,44,14,0,17,26.6);
+const wHotel=building(&#x27;W Times Square&#x27;,-69,-91,30,38,96,&#x27;glass&#x27;,&#x27;#abb9c9&#x27;);
+screen(wHotel,&#x27;fashion&#x27;,29,25,0,28,19.7);screen(wHotel,&#x27;cola&#x27;,32,26,15.7,28,0,Math.PI/2);
+const paramount=building(&#x27;Paramount Building&#x27;,-51,69,39,36,64,&#x27;stone&#x27;,&#x27;#c1b5a4&#x27;);
+box(paramount,28,20,27,0,75,0,mat(&#x27;#b8ac9b&#x27;));box(paramount,21,16,20,0,92,0,mat(&#x27;#c6baa7&#x27;));box(paramount,15,12,15,0,106,0,mat(&#x27;#c2b6a7&#x27;));
+const clockTex=canvasTexture(256,256,(c,w,h)=&gt;{c.fillStyle=&#x27;#dcd4be&#x27;;c.fillRect(0,0,w,h);c.strokeStyle=&#x27;#333f4b&#x27;;c.lineWidth=9;c.beginPath();c.arc(128,128,113,0,Math.PI*2);c.stroke();for(let i=0;i&lt;12;i++){let a=i*Math.PI/6;c.beginPath();c.moveTo(128+Math.sin(a)*92,128-Math.cos(a)*92);c.lineTo(128+Math.sin(a)*103,128-Math.cos(a)*103);c.stroke();}c.lineWidth=10;c.beginPath();c.moveTo(83,100);c.lineTo(128,128);c.lineTo(163,60);c.stroke();});
+for(let i=0;i&lt;4;i++){let a=i*Math.PI/2;screen(paramount,clockTex,9,9,Math.sin(a)*7.8,106,Math.cos(a)*7.8,a);}
+cylinder(paramount,0,8,13,0,118,0,mat(&#x27;#687b82&#x27;),4);
+const globe=new THREE.Mesh(new THREE.SphereGeometry(3.4,16,12),mat(&#x27;#bedee1&#x27;,.3,.4));globe.position.set(0,127,0);paramount.add(globe);
+screen(paramount,&#x27;broadway&#x27;,31,14,20.2,19,0,Math.PI/2);
+
+// Context buildings make the square a street canyon from every direction.
+const context=[
+ [-115,-128,28,35,54,&#x27;brick&#x27;],[-112,-78,31,45,79,&#x27;stone&#x27;],[-120,-22,24,42,43,&#x27;brick&#x27;],[-112,28,29,32,66,&#x27;glass&#x27;],[-112,77,35,41,49,&#x27;stone&#x27;],[-112,126,30,27,37,&#x27;brick&#x27;],
+ [103,-133,36,27,73,&#x27;stone&#x27;],[111,-90,36,42,88,&#x27;glass&#x27;],[104,-37,41,41,54,&#x27;stone&#x27;],[108,20,37,40,70,&#x27;glass&#x27;],[112,76,31,40,93,&#x27;dark&#x27;],[105,127,40,32,49,&#x27;stone&#x27;],
+ [47,-40,38,40,58,&#x27;dark&#x27;],[45,15,37,37,67,&#x27;stone&#x27;],[65,70,27,38,51,&#x27;glass&#x27;],[70,126,26,30,34,&#x27;brick&#x27;],[-57,16,45,37,42,&#x27;brick&#x27;],[-63,124,46,31,38,&#x27;stone&#x27;],[43,-142,29,23,51,&#x27;glass&#x27;],[-73,-142,45,26,60,&#x27;stone&#x27;]
+];
+context.forEach((b,i)=&gt;{const dims=[...b];if(i&lt;12)dims[4]*=.74;const g=building(&#x27;Midtown block &#x27;+(i+1),...dims);if(i&gt;11){const side=b[0]&gt;0?-1:1;screen(g,[&#x27;garden&#x27;,&#x27;sunset&#x27;,&#x27;fashion&#x27;,&#x27;broadway&#x27;][i%4],b[3]*.8,15,side*(b[2]/2+.6),16,0,side*Math.PI/2);if(i%2)screen(g,&#x27;ticker&#x27;,b[2]*.85,5,0,6,b[3]/2+.65);}});
+
+// TKTS: red glass steps climb north, with silver handrails.
+const steps=new THREE.Group();steps.position.set(-19,0,-96);world.add(steps);
+const stepMat=new THREE.MeshStandardMaterial({color:&#x27;#bd143c&#x27;,emissive:&#x27;#ff2340&#x27;,emissiveIntensity:.36,roughness:.45});
+for(let i=0;i&lt;13;i++){box(steps,15,.34*(i+1),1.25,0,.17*(i+1)+.15,8-i*1.25,stepMat);box(steps,15,.08,.1,0,.34*(i+1)+.17,8.6-i*1.25,mat(&#x27;#fa526b&#x27;),false);}
+for(const x of [-7.2,0,7.2])for(let i=0;i&lt;7;i++)cylinder(steps,.06,.06,1.1,x,.7+i*.65,8-i*2.5,steel,6);
+const tktsTex=canvasTexture(512,256,(c,w,h)=&gt;{c.fillStyle=&#x27;#a8102b&#x27;;c.fillRect(0,0,w,h);c.fillStyle=&#x27;#fff3eb&#x27;;c.font=&#x27;bold 130px Arial&#x27;;c.textAlign=&#x27;center&#x27;;c.fillText(&#x27;tkts&#x27;,w/2,170);});
+screen(steps,tktsTex,12,3.8,0,2,-8.5,Math.PI);
+function statue(x,z){box(world,2,2,2,x,1,z,mat(&#x27;#bac0c3&#x27;));cylinder(world,.42,.62,2.8,x,3.3,z,mat(&#x27;#526969&#x27;),8);const head=new THREE.Mesh(new THREE.SphereGeometry(.44,8,8),mat(&#x27;#647a73&#x27;));head.position.set(x,5,z);world.add(head);}
+statue(-19,-76);statue(-9,-32);
+
+// Street furniture and warm lights at human scale.
+const lampMaterial=new THREE.MeshBasicMaterial({color:&#x27;#ffdf9d&#x27;});
+for(const z of [-109,-79,-49,-19,11,41,71,101,131])for(const side of [-1,1]){
+ const x=side&lt;0?z*.34-11:15;
+ cylinder(world,.15,.22,7,x,3.5,z,steel,8);box(world,2.8,.2,.25,x+1.3,7,z,steel,false);box(world,1,.25,.5,x+2.2,6.9,z,lampMaterial,false);
+}
+for(const z of [-66,-15,36,87])for(const x of [-8,14]){
+ cylinder(world,.13,.13,5,x,2.5,z-8,steel,6);box(world,.7,1.7,.6,x,4.8,z-8,mat(&#x27;#ca9a34&#x27;));box(world,.4,.4,.08,x,5.3,z-7.65,new THREE.MeshBasicMaterial({color:&#x27;#f56143&#x27;}),false);
+}
+for(let z=-105;z&lt;133;z+=6){for(const x of [14,z*.34-11])cylinder(world,.22,.28,.85,x,.42,z,steel,6);}
+const leaf=mat(&#x27;#596e58&#x27;),planter=mat(&#x27;#727f89&#x27;);
+for(const [x,z] of [[-16,-57],[-24,-104],[-9,-21],[20,57],[28,89],[-42,30],[28,-48],[27,-17]]){
+ cylinder(world,1.2,1.2,1,x,.5,z,planter);cylinder(world,.11,.17,3.4,x,2.1,z,mat(&#x27;#706050&#x27;),6);
+ const crown=new THREE.Mesh(new THREE.IcosahedronGeometry(1.7,1),leaf);crown.position.set(x,4,z);world.add(crown);
+}
+for(let i=0;i&lt;12;i++){const z=-95+i*5.2,x=-9.5+rand()*2;cylinder(world,.7,.7,.12,x,.95,z,mat(&#x27;#deca79&#x27;),10);cylinder(world,.1,.12,.85,x,.43,z,steel,6);}
+
+// Instanced people preserve detail without hundreds of separate draw calls.
+const peopleGeo=new THREE.CylinderGeometry(.25,.31,1.05,6);
+const people=new THREE.InstancedMesh(peopleGeo,mat(&#x27;#b8c3cf&#x27;),220);
+const heads=new THREE.InstancedMesh(new THREE.SphereGeometry(.2,6,5),mat(&#x27;#c9af96&#x27;),220);
+const dummy=new THREE.Object3D();const personColors=[&#x27;#ecb69e&#x27;,&#x27;#d7dfdd&#x27;,&#x27;#d7a333&#x27;,&#x27;#809bae&#x27;,&#x27;#854861&#x27;,&#x27;#c5c9a8&#x27;,&#x27;#566575&#x27;];
+for(let i=0;i&lt;220;i++){
+ let z=-110+rand()*240,x;
+ if(i&lt;90){z=-104+rand()*65;x=z*.34+10+rand()*Math.max(2,-z*.34-18);}
+ else{x=rand()&gt;.5?17+rand()*3:z*.34-15-rand()*3;}
+ dummy.position.set(x,.82,z);dummy.scale.setScalar(.85+rand()*.25);dummy.updateMatrix();people.setMatrixAt(i,dummy.matrix);people.setColorAt(i,new THREE.Color(personColors[i%personColors.length]));dummy.position.y=1.53;dummy.updateMatrix();heads.setMatrixAt(i,dummy.matrix);
+}
+world.add(people,heads);
+const traffic=[];
+function car(x,z,color,speed){const g=new THREE.Group();world.add(g);g.position.set(x,0,z);box(g,1.8,.7,4.1,0,.65,0,mat(color,.32,.35));box(g,1.55,.6,2.2,0,1.2,-.05,mat(&#x27;#617b8f&#x27;,.2,.5));box(g,1.5,.1,1.8,0,1.55,-.05,mat(color));for(const a of [-1,1])for(const b of [-1,1]){const wheel=cylinder(g,.35,.35,.2,a*.87,.4,b*1.2,dark,8);wheel.rotation.z=Math.PI/2;}for(const a of [-1,1]){box(g,.4,.2,.1,a*.5,.7,2.06,new THREE.MeshBasicMaterial({color:&#x27;#ffe2b2&#x27;}),false);box(g,.4,.2,.1,a*.5,.7,-2.06,new THREE.MeshBasicMaterial({color:&#x27;#ff524f&#x27;}),false);}if(color===&#x27;#e4ac38&#x27;)box(g,.7,.2,.4,0,1.7,0,mat(&#x27;#fff5d1&#x27;));traffic.push({g,speed});}
+for(let i=0;i&lt;14;i++)car(i%2?-.8:7,-155+i*22,i%3?&#x27;#e4ac38&#x27;:&#x27;#8995a4&#x27;,i%2?-2.3:2.8);
+for(const [x,y,z,color,intensity,range] of [[-4,14,-116,&#x27;#f94789&#x27;,190,55],[20,18,-75,&#x27;#6bbfff&#x27;,180,55],[-37,14,-34,&#x27;#f7b169&#x27;,180,50],[12,15,78,&#x27;#9c80ff&#x27;,150,55]]){const l=new THREE.PointLight(color,intensity,range,2);l.position.set(x,y,z);world.add(l);}
+
+const labelData=[
+ [&#x27;One Times Square&#x27;,24,106,108],[&#x27;TKTS red steps&#x27;,-19,9,-96],[&#x27;TSX Broadway&#x27;,41,122,-91],[&#x27;Paramount&#x27;,-51,137,69]
+];
+const labels=labelData.map(([text,x,y,z])=&gt;{const el=document.createElement(&#x27;div&#x27;);el.className=&#x27;ts-marker&#x27;;el.textContent=text;el.setAttribute(&#x27;aria-hidden&#x27;,&#x27;true&#x27;);root.appendChild(el);return {el,p:new THREE.Vector3(x,y,z)};});
+let width=0,height=0,mode=&#x27;overview&#x27;,autoRotate=false,hasInteracted=false,lastTime=0,visible=true,frame=0;
+const view={theta:.32,phi:.87,radius:460,target:new THREE.Vector3(0,33,0),fov:38};
+const goal={theta:.32,phi:.87,radius:460,target:new THREE.Vector3(0,33,0),fov:38};
+function announce(text){root.querySelector(&#x27;.ts-live&#x27;).textContent=text;}
+function interact(){hasInteracted=true;root.querySelector(&#x27;.ts-gesture&#x27;).style.opacity=&#x27;0&#x27;;}
+function overviewRadius(){return THREE.MathUtils.clamp(470*Math.max(1,980/width),470,1000);}
+function size(){width=stage.clientWidth;height=stage.clientHeight;renderer.setSize(width,height);camera.aspect=width/height;camera.updateProjectionMatrix();if(mode===&#x27;overview&#x27;){goal.radius=overviewRadius();}}
+const resizeObserver=new ResizeObserver(size);resizeObserver.observe(stage);size();view.radius=goal.radius;
+const clamp=THREE.MathUtils.clamp;
+function setMode(next){mode=next;interact();autoRotate=false;root.querySelector(&#x27;[data-action=&quot;rotate&quot;]&#x27;).setAttribute(&#x27;aria-pressed&#x27;,&#x27;false&#x27;);root.querySelector(&#x27;[data-action=&quot;overview&quot;]&#x27;).setAttribute(&#x27;aria-pressed&#x27;,String(next===&#x27;overview&#x27;));root.querySelector(&#x27;[data-action=&quot;street&quot;]&#x27;).setAttribute(&#x27;aria-pressed&#x27;,String(next===&#x27;street&#x27;));
+ if(next===&#x27;street&#x27;){goal.target.set(-14,2.3,-69);goal.theta=0;goal.phi=1.7;goal.radius=.1;goal.fov=76;announce(&#x27;Street level. Drag to look around from Duffy Square.&#x27;);}
+ else{goal.target.set(0,33,0);goal.theta=.32;goal.phi=.87;goal.radius=overviewRadius();goal.fov=38;announce(&#x27;Overview. Drag to rotate the model.&#x27;);}
+}
+function zoom(delta){interact();if(mode===&#x27;street&#x27;)goal.fov=clamp(goal.fov+delta*15,35,95);else goal.radius=clamp(goal.radius*(1+delta*.25),150,850);}
+root.querySelector(&#x27;.ts-tools&#x27;).addEventListener(&#x27;click&#x27;,event=&gt;{const b=event.target.closest(&#x27;button&#x27;);if(!b)return;const a=b.dataset.action;interact();if(a===&#x27;overview&#x27;||a===&#x27;street&#x27;)setMode(a);if(a===&#x27;left&#x27;)goal.theta-=Math.PI/6;if(a===&#x27;right&#x27;)goal.theta+=Math.PI/6;if(a===&#x27;zoom-in&#x27;)zoom(-1);if(a===&#x27;zoom-out&#x27;)zoom(1);if(a===&#x27;rotate&#x27;){autoRotate=!autoRotate;b.setAttribute(&#x27;aria-pressed&#x27;,String(autoRotate));announce(autoRotate?&#x27;Automatic rotation on.&#x27;:&#x27;Automatic rotation off.&#x27;);}});
+const pointers=new Map();let previousDistance=0;
+stage.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{interact();autoRotate=false;root.querySelector(&#x27;[data-action=&quot;rotate&quot;]&#x27;).setAttribute(&#x27;aria-pressed&#x27;,&#x27;false&#x27;);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});stage.setPointerCapture(e.pointerId);previousDistance=0;});
+stage.addEventListener(&#x27;pointermove&#x27;,e=&gt;{if(!pointers.has(e.pointerId))return;const old=pointers.get(e.pointerId);const dx=e.clientX-old.x,dy=e.clientY-old.y;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===1){goal.theta-=dx*.005;goal.phi=clamp(goal.phi+dy*.004,mode===&#x27;street&#x27;?.2:.25,mode===&#x27;street&#x27;?2.65:1.47);}else{const p=[...pointers.values()];const d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);if(previousDistance){if(mode===&#x27;street&#x27;)goal.fov=clamp(goal.fov*previousDistance/d,35,95);else goal.radius=clamp(goal.radius*previousDistance/d,150,850);}previousDistance=d;}});
+function endPointer(e){pointers.delete(e.pointerId);previousDistance=0;}
+stage.addEventListener(&#x27;pointerup&#x27;,endPointer);stage.addEventListener(&#x27;pointercancel&#x27;,endPointer);stage.addEventListener(&#x27;lostpointercapture&#x27;,endPointer);
+// Some embedded browsers expose mouse dragging without Pointer Events.
+let mouseDrag=null;
+stage.addEventListener(&#x27;mousedown&#x27;,e=&gt;{if(pointers.size||e.button!==0)return;interact();mouseDrag={x:e.clientX,y:e.clientY};});
+stage.addEventListener(&#x27;mousemove&#x27;,e=&gt;{if(!mouseDrag||pointers.size)return;goal.theta-=(e.clientX-mouseDrag.x)*.005;goal.phi=clamp(goal.phi+(e.clientY-mouseDrag.y)*.004,mode===&#x27;street&#x27;?.2:.25,mode===&#x27;street&#x27;?2.65:1.47);mouseDrag={x:e.clientX,y:e.clientY};});
+stage.addEventListener(&#x27;mouseup&#x27;,()=&gt;{mouseDrag=null;});stage.addEventListener(&#x27;mouseleave&#x27;,()=&gt;{mouseDrag=null;});
+stage.addEventListener(&#x27;wheel&#x27;,e=&gt;{e.preventDefault();zoom(clamp(e.deltaY*.004,-.5,.5));},{passive:false});
+root.addEventListener(&#x27;keydown&#x27;,e=&gt;{if(![&#x27;ArrowLeft&#x27;,&#x27;ArrowRight&#x27;,&#x27;ArrowUp&#x27;,&#x27;ArrowDown&#x27;,&#x27;+&#x27;,&#x27;-&#x27;].includes(e.key))return;e.preventDefault();interact();if(e.key===&#x27;ArrowLeft&#x27;)goal.theta-=.12;if(e.key===&#x27;ArrowRight&#x27;)goal.theta+=.12;if(e.key===&#x27;ArrowUp&#x27;)goal.phi=clamp(goal.phi-.08,.25,mode===&#x27;street&#x27;?2.65:1.47);if(e.key===&#x27;ArrowDown&#x27;)goal.phi=clamp(goal.phi+.08,.25,mode===&#x27;street&#x27;?2.65:1.47);if(e.key===&#x27;+&#x27;)zoom(-1);if(e.key===&#x27;-&#x27;)zoom(1);});
+const compass=root.querySelector(&#x27;.ts-compass i&#x27;);
+const projected=new THREE.Vector3();
+function updateLabels(){const used=[];labels.forEach(({el,p})=&gt;{projected.copy(p).project(camera);const x=(projected.x*.5+.5)*width,y=(-projected.y*.5+.5)*height;
+ let show=mode===&#x27;overview&#x27;&amp;&amp;projected.z&lt;1&amp;&amp;x&gt;50&amp;&amp;x&lt;width-50&amp;&amp;y&gt;155&amp;&amp;y&lt;height-150;
+ if(width&lt;500&amp;&amp;el.textContent!==&#x27;TKTS red steps&#x27;&amp;&amp;el.textContent!==&#x27;One Times Square&#x27;)show=false;
+ if(used.some(q=&gt;Math.abs(x-q.x)&lt;125&amp;&amp;Math.abs(y-q.y)&lt;35))show=false;
+ el.style.display=show?&#x27;block&#x27;:&#x27;none&#x27;;if(show){el.style.left=x+&#x27;px&#x27;;el.style.top=y+&#x27;px&#x27;;used.push({x,y});}
+ });}
+function animate(time){if(!root.isConnected){dispose();return;}frame=requestAnimationFrame(animate);if(!visible)return;const dt=Math.min((time-lastTime)/1000,.05);lastTime=time;
+ if(autoRotate)goal.theta+=dt*.12;
+ const s=reducedMotion?1:1-Math.exp(-dt*8);
+ for(const key of [&#x27;theta&#x27;,&#x27;phi&#x27;,&#x27;radius&#x27;,&#x27;fov&#x27;])view[key]+=(goal[key]-view[key])*s;
+ view.target.lerp(goal.target,s);
+ if(mode===&#x27;street&#x27;&amp;&amp;view.radius&lt;1){camera.position.copy(view.target);const direction=new THREE.Vector3(Math.sin(view.phi)*Math.sin(view.theta),-Math.cos(view.phi),-Math.sin(view.phi)*Math.cos(view.theta));camera.lookAt(view.target.clone().add(direction));}
+ else{camera.position.set(view.target.x+view.radius*Math.sin(view.phi)*Math.sin(view.theta),view.target.y+view.radius*Math.cos(view.phi),view.target.z+view.radius*Math.sin(view.phi)*Math.cos(view.theta));camera.lookAt(view.target);}
+ if(Math.abs(camera.fov-view.fov)&gt;.01){camera.fov=view.fov;camera.updateProjectionMatrix();}
+ if(!reducedMotion)traffic.forEach(({g,speed})=&gt;{g.position.z+=speed*dt;if(g.position.z&gt;165)g.position.z=-165;if(g.position.z&lt; -165)g.position.z=165;});
+ compass.style.transform=&#x27;rotate(&#x27;+(-view.theta)+&#x27;rad)&#x27;;renderer.render(scene,camera);updateLabels();
+}
+const observer=new IntersectionObserver(entries=&gt;{visible=entries[0].isIntersecting;lastTime=performance.now();});observer.observe(root);
+let disposed=false;
+function dispose(){if(disposed)return;disposed=true;cancelAnimationFrame(frame);resizeObserver.disconnect();observer.disconnect();const geometries=new Set(),mats=new Set(),textures=new Set();scene.traverse(o=&gt;{if(o.geometry)geometries.add(o.geometry);if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=&gt;mats.add(m));});mats.forEach(m=&gt;{if(m.map)textures.add(m.map);if(m.emissiveMap)textures.add(m.emissiveMap);m.dispose();});geometries.forEach(g=&gt;g.dispose());textures.forEach(t=&gt;t.dispose());renderer.dispose();}
+renderer.domElement.addEventListener(&#x27;webglcontextlost&#x27;,e=&gt;{e.preventDefault();loading.hidden=false;loading.innerHTML=&#x27;&lt;span&gt;The 3D view was paused.&lt;/span&gt;&lt;span&gt;Reopen the preview to continue exploring.&lt;/span&gt;&#x27;;});
+lastTime=performance.now();animate(lastTime);loading.hidden=true;
+root.dataset.ready=&#x27;true&#x27;;
+
+  }catch(error){loading.innerHTML=&#x27;&lt;span&gt;The 3D view could not load.&lt;/span&gt;&lt;span&gt;Please reopen this preview in a browser with WebGL enabled.&lt;/span&gt;&#x27;;loading.setAttribute(&#x27;role&#x27;,&#x27;alert&#x27;);console.error(error);}
+  })();
+  &lt;/script&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>

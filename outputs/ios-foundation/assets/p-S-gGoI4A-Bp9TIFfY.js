@@ -1,0 +1,3 @@
+import{r as m,n as g,w as v}from"./ios-foundation-B5tx17jq.js";/*!
+ * (C) Ionic http://ionicframework.com - MIT License
+ */const M=(r,p,w,X,f)=>{const c=r.ownerDocument.defaultView;let o=m(r);const l=t=>o?-t.deltaX:t.deltaX;return g({el:r,gestureName:"goback-swipe",gesturePriority:101,threshold:10,canStart:t=>(o=m(r),(e=>{const{startX:n}=e;return o?n>=c.innerWidth-50:n<=50})(t)&&p()),onStart:w,onMove:t=>{const e=l(t);X(e/c.innerWidth)},onEnd:t=>{const e=l(t),n=c.innerWidth,i=e/n,s=(a=>o?-a.velocityX:a.velocityX)(t),d=s>=0&&(s>.2||e>n/2),h=(d?1-i:i)*n;let u=0;if(h>5){const a=h/Math.abs(s);u=Math.min(a,540)}f(d,i<=0?.01:v(0,i,.9999),u)}})};export{M as createSwipeBackGesture};

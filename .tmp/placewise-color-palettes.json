@@ -1,0 +1,72 @@
+[
+  {
+    "id": "teal",
+    "name": "Teal Mist",
+    "mood": "Clear \u00b7 open \u00b7 familiar",
+    "bg": "#F9FDFF",
+    "ink": "#062B2B",
+    "primary": "#14B8A6",
+    "onPrimary": "#062B2B",
+    "soft": "#C3ECDF",
+    "muted": "#E4F2F2",
+    "bodyContrast": 14.78,
+    "buttonContrast": 6.08,
+    "softContrast": 11.8
+  },
+  {
+    "id": "brick",
+    "name": "Chalk & Brick",
+    "mood": "Warm \u00b7 observant \u00b7 grounded",
+    "bg": "#FBF8F3",
+    "ink": "#303531",
+    "primary": "#AF4935",
+    "onPrimary": "#FFFFFF",
+    "soft": "#EDD5C5",
+    "muted": "#F1EAE1",
+    "bodyContrast": 11.8,
+    "buttonContrast": 5.49,
+    "softContrast": 8.89
+  },
+  {
+    "id": "blue",
+    "name": "Harbor Blue",
+    "mood": "Clear \u00b7 thoughtful \u00b7 urban",
+    "bg": "#F7F9FC",
+    "ink": "#243249",
+    "primary": "#355EB8",
+    "onPrimary": "#FFFFFF",
+    "soft": "#D4E3F3",
+    "muted": "#E9EEF5",
+    "bodyContrast": 12.23,
+    "buttonContrast": 6.1,
+    "softContrast": 9.88
+  },
+  {
+    "id": "olive",
+    "name": "Olive & Citron",
+    "mood": "Curious \u00b7 fresh \u00b7 lightly playful",
+    "bg": "#FAFAF3",
+    "ink": "#303A27",
+    "primary": "#D8E67D",
+    "onPrimary": "#303A27",
+    "soft": "#DFE6D3",
+    "muted": "#ECEEE2",
+    "bodyContrast": 11.38,
+    "buttonContrast": 8.83,
+    "softContrast": 9.32
+  },
+  {
+    "id": "plum",
+    "name": "Plum & Apricot",
+    "mood": "Thoughtful \u00b7 warm \u00b7 unexpected",
+    "bg": "#FBF8FA",
+    "ink": "#392C42",
+    "primary": "#EFBC91",
+    "onPrimary": "#392C42",
+    "soft": "#E6DAE9",
+    "muted": "#F0E9F1",
+    "bodyContrast": 12.34,
+    "buttonContrast": 7.61,
+    "softContrast": 9.65
+  }
+]

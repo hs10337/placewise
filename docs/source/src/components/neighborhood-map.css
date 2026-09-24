@@ -1,0 +1,257 @@
+.neighborhood-map {
+  --map-land: #edf4f1;
+  --map-block: #f4f8f6;
+  --map-block-border: #dfe9e4;
+  --map-road: #fbfefd;
+  --map-garden: #e1eddf;
+  --map-park: #d9e8d6;
+  --map-park-border: #bccfb8;
+  --map-park-detail: #7b977c;
+  --map-park-label: #536e57;
+  --map-tree: #a3bfa0;
+  --map-water: #d2eee9;
+  --map-water-edge: #bcded7;
+  --map-water-detail: #70a79e;
+  --map-water-label: #547d76;
+  --map-label: #637871;
+  --map-ink: #183c3c;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--map-land);
+  color: var(--foreground, #183c3c);
+  font-family: inherit;
+}
+
+.neighborhood-map--compact {
+  position: absolute;
+  inset: 0;
+}
+
+.neighborhood-map__scene {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: max(100%, 560px);
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.neighborhood-map--compact .neighborhood-map__scene {
+  width: max(100%, 340px);
+}
+
+.neighborhood-map__drawing {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.neighborhood-map__street-label {
+  letter-spacing: .9px;
+  font-weight: 450;
+}
+
+.neighborhood-map__marker {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  width: max-content;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border: 0;
+  border-radius: 24px;
+  background: transparent;
+  color: var(--foreground, #183c3c);
+  cursor: pointer;
+  transform: translate(-22px, -22px);
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.neighborhood-map__pin {
+  position: relative;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  place-items: center;
+  border: 1px solid var(--background, #f9fdff);
+  border-radius: 50%;
+  background: var(--background, #f9fdff);
+  color: var(--foreground, #183c3c);
+  box-shadow: 0 0 0 1px rgb(29 87 77 / 16%), 0 2px 5px rgb(29 87 77 / 8%);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .2px;
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.neighborhood-map__place-name {
+  display: block;
+  padding: 6px 8px;
+  border: 1px solid var(--border, #dae3e4);
+  border-radius: 6px;
+  background: var(--background, #f9fdff);
+  color: var(--foreground, #183c3c);
+  box-shadow: 0 2px 4px rgb(29 87 77 / 4%);
+  font-size: 11px;
+  font-weight: 550;
+  line-height: 1.3;
+  white-space: nowrap;
+  transition: background-color 220ms ease, border-color 220ms ease;
+}
+
+.neighborhood-map__marker--coit {
+  flex-direction: column;
+  gap: 8px;
+  transform: translate(-50%, -22px);
+}
+
+.neighborhood-map__marker--hill {
+  flex-direction: row-reverse;
+  transform: translate(calc(-100% + 22px), -22px);
+}
+
+.neighborhood-map--compact .neighborhood-map__marker {
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0;
+  padding: 6px;
+  transform: translate(-50%, -50%);
+}
+
+.neighborhood-map--compact .neighborhood-map__marker:not(.is-selected) .neighborhood-map__place-name {
+  display: none;
+}
+
+.neighborhood-map--compact .neighborhood-map__place-name {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.neighborhood-map--compact .neighborhood-map__marker--hill .neighborhood-map__place-name {
+  left: 0;
+  transform: none;
+}
+
+.neighborhood-map--compact .neighborhood-map__marker--steps .neighborhood-map__place-name {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
+.neighborhood-map__marker.is-selected {
+  z-index: 3;
+}
+
+.neighborhood-map__marker.is-selected .neighborhood-map__pin {
+  background: var(--primary, oklch(0.704 0.14 182.503));
+  border-color: var(--background, #f9fdff);
+  color: var(--primary-foreground);
+  box-shadow: 0 0 0 3px var(--background, #f9fdff), 0 0 0 4px var(--primary, oklch(0.704 0.14 182.503)), 0 3px 6px rgb(29 87 77 / 10%);
+}
+
+.neighborhood-map__marker.is-selected .neighborhood-map__place-name {
+  background: var(--accent, #c3ecdf);
+  border-color: var(--primary, oklch(0.704 0.14 182.503));
+}
+
+.neighborhood-map__marker:hover .neighborhood-map__pin {
+  transform: translateY(-2px);
+  background: var(--accent, #c3ecdf);
+}
+
+.neighborhood-map__marker.is-selected:hover .neighborhood-map__pin {
+  background: var(--primary-hover);
+}
+
+.neighborhood-map__marker:focus-visible {
+  /* The illustration keeps its light geography in both UI modes. */
+  outline: var(--focus-width) solid var(--map-ink);
+  outline-offset: 4px;
+}
+
+.neighborhood-map__marker:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.neighborhood-map__marker:disabled .neighborhood-map__pin {
+  transform: none;
+}
+
+.neighborhood-map__compass {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--map-ink);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.neighborhood-map__compass svg {
+  width: 16px;
+  height: 24px;
+}
+
+.neighborhood-map__caption {
+  position: absolute;
+  z-index: 1;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+  padding: 4px 8px;
+  border: 1px solid var(--border, #dae3e4);
+  border-radius: 4px;
+  background: var(--background, #f9fdff);
+  color: var(--muted-foreground, #526b6a);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .1px;
+}
+
+.neighborhood-map__caption span {
+  padding-inline: 4px;
+}
+
+@media (max-width: 600px) {
+  .neighborhood-map__compass {
+    top: 16px;
+    left: 16px;
+  }
+
+  .neighborhood-map__place-name {
+    font-size: 10px;
+    padding: 6px 7px;
+  }
+
+  .neighborhood-map__marker--steps,
+  .neighborhood-map__marker--hill {
+    flex-direction: column;
+    gap: 8px;
+    transform: translate(-50%, -22px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .neighborhood-map__pin,
+  .neighborhood-map__place-name {
+    transition: none;
+  }
+}

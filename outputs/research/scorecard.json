@@ -1,0 +1,1223 @@
+[
+  {
+    "name": "VoiceMap",
+    "url": "https://voicemap.me/",
+    "model": "Paid audio-tour marketplace",
+    "market": "Vancouver route and US/Mexico city catalogs",
+    "detail": "https://voicemap.me/tour/vancouver/from-industrial-hub-to-artistic-haven-a-granville-island-walking-tour",
+    "scores": [
+      4.5,
+      4.5,
+      4.5,
+      4.5,
+      5,
+      null,
+      4.5
+    ],
+    "works": "A full-bleed walking photograph establishes the activity immediately. Big white sans-serif type, a central destination search and a restrained red accent create a clear focal point. The mobile hero keeps search and the app link prominent. Individual tours expose duration, distance, price, producer and a route preview before purchase.",
+    "weak": "The cookie panel covers much of the mobile screen until dismissed. The product-page typography is less distinctive than the homepage, and long tour titles require substantial vertical space. This is primarily a planned-route product, so its catalog structure could make spontaneous discovery feel like homework.",
+    "adapt": "Borrow the visible search, human authorship and preview-before-purchase sequence. For Placewise, make the first preview a single nearby story rather than a 60-minute route.",
+    "journey": "Vancouver → Granville Island → Preview Tour opened a list of locations with a transcript, Play Audio and directions. The inspected route showed $9.99 and 24 offline locations. Purchase completion was not tested.",
+    "motion": "The inspected interactions were conventional navigation and content preview. No distinctive map animation was established; timing, easing and reduced-motion behavior remain untested.",
+    "proof": "Named producer Max Hill, location-level preview text, map link, practical start information and tour reviews make the experience inspectable.",
+    "positioning": "The human-guide promise is backed by producer identity and a specific local perspective.",
+    "palette": [
+      "#263c42",
+      "#f32643",
+      "#f6faf7"
+    ],
+    "search": [
+      {
+        "q": "Q1",
+        "position": 2,
+        "url": "https://blog.voicemap.me/2024/03/best-self-guided-audio-tour-apps-nyc/"
+      },
+      {
+        "q": "Q2",
+        "position": 3,
+        "url": "https://voicemap.me/tour/vancouver"
+      },
+      {
+        "q": "Q4",
+        "position": 1,
+        "url": "https://voicemap.me/tour/mexico-city"
+      },
+      {
+        "q": "Q6",
+        "position": 8,
+        "url": "https://voicemap.me/"
+      },
+      {
+        "q": "Q8",
+        "position": 3,
+        "url": "https://voicemap.me/walking-tour-app"
+      }
+    ],
+    "coverage": 95,
+    "observed": 91.1,
+    "bounds": [
+      86.5,
+      91.5
+    ],
+    "common": 91.3,
+    "store": "https://apps.apple.com/us/app/voicemap/id852027939",
+    "rating": "4.8/5 · 3.4K ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://voicemap.me/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/voicemap/id852027939",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://voicemap.me/tour/vancouver",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://voicemap.me/tour/vancouver/from-industrial-hub-to-artistic-haven-a-granville-island-walking-tour",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 1,
+    "group": "top",
+    "tie": false
+  },
+  {
+    "name": "Questo",
+    "url": "https://questoapp.com/",
+    "model": "Paid city exploration games",
+    "market": "New York City quests; Canada storefront",
+    "detail": "https://questoapp.com/new-york-city/secret-societies-of-manhattan-walking-tour-and-escape-game",
+    "scores": [
+      4.5,
+      4.5,
+      4.5,
+      3.5,
+      3,
+      null,
+      4
+    ],
+    "works": "A dark street photograph creates depth without making the interface itself three-dimensional. Large editorial serif type carries the headline; orange italic emphasis and a white search pill focus attention. Popular-city chips shorten the next decision. Mobile retains the hierarchy, and the quest page has a persistent purchase button with its price.",
+    "weak": "The hero is busy with several scale statistics, a live badge, video link and city chips. The homepage displayed a euro starting price while its currency control showed USD. The detail page returns to a different purple/green visual treatment. Cookie consent temporarily dominated the mobile screen.",
+    "adapt": "Use destination chips and a compact, price-aware action on detail pages. Keep one proof signal near the CTA and maintain the same visual language between landing and product.",
+    "journey": "New York City → Secret Societies of Manhattan exposed reviews, route context and a $12.99 purchase CTA on mobile. City results also offer a map/list choice. No purchase was completed.",
+    "motion": "Image-gallery controls and ordinary page transitions were observed. The hero photograph supplies spatial depth; no live 3D city model was verified.",
+    "proof": "A specific quest, visible route lengths and times in city results, player reviews and price make the offer concrete. Counts displayed by Questo are self-reported.",
+    "positioning": "A walk becomes a puzzle-driven story game, with distinct visitor and local pathways on the city page.",
+    "palette": [
+      "#0b1a27",
+      "#ff922d",
+      "#f8f6f0"
+    ],
+    "search": [
+      {
+        "q": "Q1",
+        "position": 7,
+        "url": "https://questoapp.com/self-guided-walking-tours/new-york-city"
+      },
+      {
+        "q": "Q7",
+        "position": 1,
+        "url": "https://questoapp.com/"
+      },
+      {
+        "q": "Q7",
+        "position": 7,
+        "url": "https://questoapp.com/countries"
+      }
+    ],
+    "coverage": 95,
+    "observed": 83.2,
+    "bounds": [
+      79.0,
+      84.0
+    ],
+    "common": 85.6,
+    "store": "https://apps.apple.com/ca/app/questo-walking-tours-games/id1216630504",
+    "rating": "4.6/5 · 320 ratings · Apple Canada",
+    "inspected": [
+      {
+        "url": "https://questoapp.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/ca/app/questo-walking-tours-games/id1216630504",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://questoapp.com/new-york-city",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://questoapp.com/new-york-city/secret-societies-of-manhattan-walking-tour-and-escape-game",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 2,
+    "group": "top",
+    "tie": false
+  },
+  {
+    "name": "Autio",
+    "url": "https://autio.com/",
+    "model": "Location-aware audio subscription",
+    "market": "Stories across the US; San Francisco sample",
+    "detail": "https://autio.com/explore",
+    "scores": [
+      4.5,
+      4,
+      4.5,
+      4.5,
+      2,
+      4.5,
+      4
+    ],
+    "works": "The most useful spatial landing-page reference in the direct cohort. A mountain photograph curves into a deep navy field, a dotted route links map pins, and a phone presents a specific San Francisco story. Large serif headlines and smaller plain interface text separate emotion from utility. On mobile, the same composition stacks into a readable headline, action and story preview.",
+    "weak": "The first screen emphasizes road trips more than everyday neighborhood walks. The gift banner competes with the main promise, and the phone becomes a tall block on mobile. A homepage story-count claim differs from an app-store description, so scale copy needs a single source of truth.",
+    "adapt": "Borrow the composition: landscape or street image, simplified route, one clearly named story and one primary action. Replace road-trip grandeur with an ordinary block made interesting.",
+    "journey": "The homepage presents download/video actions and a named audio sample. Explore opens a US story-map page. The verified Apple listing describes in-app purchases and trial access; installing, location playback and subscription checkout were outside this website review.",
+    "motion": "The route and pins visually connect the sections. Their exact animation mechanics were not verified. Treat this as a composition reference, not evidence for a particular animation library or timing.",
+    "proof": "The San Francisco sample names Kevin Costner and identifies the location, category and story subject. Apple independently displays an Editors’ Choice badge.",
+    "positioning": "Stories encountered along a journey are close to Placewise’s intended use; the current presentation particularly targets drivers.",
+    "palette": [
+      "#07113f",
+      "#e8ebf0",
+      "#8faaa6"
+    ],
+    "search": [
+      {
+        "q": "Q6",
+        "position": 1,
+        "url": "https://autio.com/"
+      }
+    ],
+    "coverage": 100,
+    "observed": 82.5,
+    "bounds": [
+      82.5,
+      82.5
+    ],
+    "common": 80.6,
+    "store": "https://apps.apple.com/us/app/id1300494609",
+    "rating": "4.8/5 · 4.3K ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://autio.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/id1300494609",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://autio.com/explore",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 3,
+    "group": "top",
+    "tie": false
+  },
+  {
+    "name": "ExploreHere",
+    "url": "https://explorehere.app/",
+    "model": "Nearby markers and location-aware stories; optional Pro",
+    "market": "America-focused marker and road-trip discovery",
+    "detail": "https://journal.explorehere.app/pricing",
+    "scores": [
+      4.5,
+      3.5,
+      5,
+      4,
+      2,
+      null,
+      4
+    ],
+    "works": "Olive terrain contours, warm yellow, handwritten display lettering and layered travel photographs create a cohesive field-journal feel. The composition surrounds one simple promise with examples of places rather than abstract app features. On mobile the collage becomes a framed central panel with a large action and store badges. The product explanation uses Download, Drive and Discover alongside a phone example.",
+    "weak": "Handwriting and typewriter-style body text are slower to scan than a plain UI font. The desktop hero pushes its explanation low. More materially, the homepage says no subscription, while the linked pricing page describes optional Pro subscriptions and lifetime access; the Apple listing also shows in-app purchases. That distinction needs clearer copy.",
+    "adapt": "Borrow the no-planning positioning and tactile map texture. Use a more restrained display face, normal sans-serif story text, and explicit free-versus-paid wording.",
+    "journey": "See How It Works moved to the illustrated product sequence. The iOS download link resolved to the verified ExploreHere Apple listing. The separate pricing page distinguishes free historical-marker reading from optional paid features.",
+    "motion": "The how-it-works control moved the page into the Download/Drive/Discover sequence. Layered images and staged content support the explanation; exact timing and reduced-motion behavior were not measured.",
+    "proof": "The homepage demonstrates a marker story on a phone and describes specific content categories. Apple identifies Wesley Vance as the developer; the website’s audience and story totals are self-reports.",
+    "positioning": "The clearest expression of spontaneous discovery in the sample, without requiring a destination itinerary.",
+    "palette": [
+      "#3b5030",
+      "#ffcc55",
+      "#f4ecdc"
+    ],
+    "search": [
+      {
+        "q": "Q3",
+        "position": 5,
+        "url": "https://explorehere.app/"
+      }
+    ],
+    "coverage": 95,
+    "observed": 80.0,
+    "bounds": [
+      76.0,
+      81.0
+    ],
+    "common": 80.0,
+    "store": "https://apps.apple.com/us/app/explorehere-roadtrip-guide/id1485772125",
+    "rating": "4.7/5 · 804 ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://explorehere.app/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://journal.explorehere.app/pricing",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://explorehere.app/download?store=ios",
+        "kind": "external app store"
+      }
+    ],
+    "rank": 4,
+    "group": "top",
+    "tie": false
+  },
+  {
+    "name": "GuideAlong",
+    "url": "https://guidealong.com/",
+    "model": "Paid GPS driving tours and bundles",
+    "market": "Acadia National Park and US/Canada tours",
+    "detail": "https://guidealong.com/tour/acadia-national-park/",
+    "scores": [
+      3.5,
+      4.5,
+      4,
+      null,
+      3,
+      null,
+      4.5
+    ],
+    "works": "An aerial coastal road gives the page a natural visual route. A large white wordmark and simple sans-serif hierarchy hold their own against the photograph. The Acadia page combines an audio-preview action, a clearly displayed $19.99 price, route guidance, suggested start points and realistic time requirements. Mobile keeps the offer readable.",
+    "weak": "Four similarly prominent desktop hero actions compete: Listen, Tours, How It Works and Gift Card. The hero foregrounds the brand more than the visitor outcome. It is a strong purchase-information reference, but less distinctive than Autio or ExploreHere for visual storytelling.",
+    "adapt": "Keep the preview and practical trip information near the decision. Reduce the landing page to one primary action and one secondary sample.",
+    "journey": "Homepage → Acadia tour exposes Listen Now, price, Buy This Tour and bundle alternatives, then route planning and FAQs. Checkout was not completed. App-store reputation was not independently retrieved for this business, so it remains Unknown.",
+    "motion": "The aerial image implies movement through a place without requiring animation. No distinctive live motion behavior was verified in this inspection.",
+    "proof": "The tour page describes two route loops, start locations, distance and expected duration, and offers an audio sample. Its quoted review remains an on-site testimonial.",
+    "positioning": "A focused companion for scenic driving rather than short neighborhood fact discovery.",
+    "palette": [
+      "#fc334d",
+      "#ff795f",
+      "#f4f5f3"
+    ],
+    "search": [
+      {
+        "q": "Q2",
+        "position": 4,
+        "url": "https://guidealong.com/?srsltid=AfmBOoqAwbVtAiTXKUsgaY2TNIc1r5vikbSej4klDL1X-pgepVjZk15U"
+      },
+      {
+        "q": "Q6",
+        "position": 2,
+        "url": "https://guidealong.com/?srsltid=AfmBOoqKHXdhcjCkJhuoXB_ktZZuHMfITjHCWZ_C_gLmgjGRdwrN-Spd"
+      }
+    ],
+    "coverage": 80,
+    "observed": 76.9,
+    "bounds": [
+      61.5,
+      81.5
+    ],
+    "common": 76.9,
+    "store": null,
+    "rating": null,
+    "inspected": [
+      {
+        "url": "https://guidealong.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://guidealong.com/tour/acadia-national-park/",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 5,
+    "group": "top",
+    "tie": false
+  },
+  {
+    "name": "On This Spot",
+    "url": "https://onthisspot.ca/",
+    "model": "Free historical exploration with destination partners",
+    "market": "Vancouver and Canadian communities",
+    "detail": "https://onthisspot.ca/cities/vancouver",
+    "scores": [
+      4,
+      3.5,
+      4.5,
+      3.5,
+      2,
+      null,
+      5
+    ],
+    "works": "A blue palette, broad whitespace and a large then-and-now composite make the historical value immediately visible. The Vancouver page provides rich archival images with direct archive credits. This is a stronger factual-content reference than many more polished tour marketplaces.",
+    "weak": "Traveler and partner CTAs share the hero. The blue treatment feels closer to tourism software than a distinctive neighborhood publication. The long archival gallery asks visitors to do more sorting before they reach an individual story.",
+    "adapt": "Make a historical image comparison one optional story format. Keep source links next to the image and place institutional sales on a separate path.",
+    "journey": "The homepage exposes Explore and app-store links. Vancouver provides archival comparisons and credits. Mobile stacks the promise and actions before the large image; the whole first-screen experience takes more vertical space.",
+    "motion": "The inspected hero was a composite image; a draggable before/after slider was not verified. Do not treat that effect as established behavior.",
+    "proof": "Direct Vancouver Archives links and many specific historic views provide unusually strong inspectable source context.",
+    "positioning": "Canadian local history and historical photography give the product a distinct reason to exist.",
+    "palette": [
+      "#073b70",
+      "#009aff",
+      "#eef6fc"
+    ],
+    "search": [
+      {
+        "q": "Q8",
+        "position": 8,
+        "url": "https://onthisspot.ca/"
+      }
+    ],
+    "coverage": 95,
+    "observed": 74.7,
+    "bounds": [
+      71.0,
+      76.0
+    ],
+    "common": 75.6,
+    "store": "https://apps.apple.com/ca/app/on-this-spot/id1120981925",
+    "rating": "4.7/5 · 136 ratings · Apple Canada",
+    "inspected": [
+      {
+        "url": "https://onthisspot.ca/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/ca/app/on-this-spot/id1120981925",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://onthisspot.ca/cities/vancouver",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 6,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "Shaka Guide",
+    "url": "https://www.shakaguide.com/",
+    "model": "Paid GPS audio tours",
+    "market": "Beacon Hill, Boston and US destinations",
+    "detail": "https://www.shakaguide.com/tours/new-england/beacon-hill-walking-tour",
+    "scores": [
+      4,
+      4,
+      4,
+      5,
+      1,
+      null,
+      4.5
+    ],
+    "works": "Large destination photography, teal accents and confident display type make the product feel like a travel experience. Tour pages expose audio previews, maps, stops and purchase actions. The Beacon Hill page gives a specific neighborhood example rather than only a national-park pitch.",
+    "weak": "The hero carousel changed destination during inspection, so its main message is less stable than a single scene. Cookie consent occupies much of a narrow screen. A very large rating count appears on an individual tour page without immediately clear scope; it should not be read as that tour’s own review count.",
+    "adapt": "Use strong neighborhood imagery and a preview map, but keep the first story stable. Label product-wide and story-specific ratings separately.",
+    "journey": "Beacon Hill offers Preview Tour Audio, a $9.99 action, a tour map and a stop list. Cart and payment were not completed.",
+    "motion": "An automatically changing hero carousel was observed. Exact interval, easing, pause controls and reduced-motion support were not evaluated.",
+    "proof": "A local route with 17 advertised stops, map links and audio preview is inspectable. Apple US shows strong volume independently of on-site totals.",
+    "positioning": "A clear audio companion for visitors, with a recognizable playful travel brand.",
+    "palette": [
+      "#16434d",
+      "#32c4c6",
+      "#f8f8f4"
+    ],
+    "search": [],
+    "coverage": 95,
+    "observed": 77.4,
+    "bounds": [
+      73.5,
+      78.5
+    ],
+    "common": 73.1,
+    "store": "https://apps.apple.com/us/app/shaka-guide-gps-driving-tours/id1585055145",
+    "rating": "4.9/5 · 15K ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://www.shakaguide.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://www.shakaguide.com/tours/new-england/beacon-hill-walking-tour",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/shaka-guide-gps-driving-tours/id1585055145",
+        "kind": "external app store"
+      }
+    ],
+    "rank": 7,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "GPSmyCity",
+    "url": "https://www.gpsmycity.com/",
+    "model": "Self-guided city walks and navigation app",
+    "market": "Toronto, New York and Mexico City pages",
+    "detail": "https://www.gpsmycity.com/tours/toronto-downtwon-walking-tour-1386.html",
+    "scores": [
+      3,
+      4,
+      3.5,
+      null,
+      4,
+      null,
+      4
+    ],
+    "works": "The hero shows both people walking and a phone map, so the category is explicit. Red accents distinguish actions and links. Detailed destination pages provide extensive readable local content and download links.",
+    "weak": "The hero layers text strips, map UI and store badges over photography. Small map labels create visual noise, and the editorial material is dense. A QR code appears even in the narrow layout, where an ordinary store link is more useful.",
+    "adapt": "Expose a real map preview and indexable local stories, then simplify the hero to one active pin and a much shorter introduction.",
+    "journey": "The Toronto walking-tour page includes local context and app deep links. Its long introduction precedes much of the actionable material.",
+    "motion": "No distinctive animation verified. Static product communication is the useful element.",
+    "proof": "A specific Toronto walk and detailed stops demonstrate content depth; editorial accuracy was not independently audited.",
+    "positioning": "Breadth of city walks and offline navigation are clear, but less specific to spontaneous curiosity.",
+    "palette": [
+      "#e55347",
+      "#ffffff",
+      "#2b3436"
+    ],
+    "search": [
+      {
+        "q": "Q1",
+        "position": 1,
+        "url": "https://www.gpsmycity.com/gps-tour-guides/new-york-1915.html"
+      },
+      {
+        "q": "Q2",
+        "position": 7,
+        "url": "https://www.gpsmycity.com/gps-tour-guides/vancouver-548.html"
+      },
+      {
+        "q": "Q4",
+        "position": 6,
+        "url": "https://www.gpsmycity.com/gps-tour-guides/mexico-city-563.html"
+      }
+    ],
+    "coverage": 80,
+    "observed": 70.6,
+    "bounds": [
+      56.5,
+      76.5
+    ],
+    "common": 70.6,
+    "store": null,
+    "rating": null,
+    "inspected": [
+      {
+        "url": "https://www.gpsmycity.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://www.gpsmycity.com/tours/toronto-downtwon-walking-tour-1386.html",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 8,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "Let's Roam",
+    "url": "https://www.letsroam.com/",
+    "model": "City scavenger hunts, parties and team events",
+    "market": "New York City and many US/Canada city pages",
+    "detail": "https://www.letsroam.com/things-to-do/new-york-city-ny",
+    "scores": [
+      3.5,
+      4,
+      3.5,
+      null,
+      2,
+      null,
+      4
+    ],
+    "works": "One large city-search box over travel photography makes the first action obvious. Orange consistently identifies primary actions. The mobile layout keeps the search intact, and the New York page groups many specific neighborhood activities.",
+    "weak": "Outdoor activities, home games, parties and corporate events compete in the navigation. The headline is long on desktop and broad marketing copy weakens specificity. Large on-site review totals were not independently confirmed in this review.",
+    "adapt": "Use location search and neighborhood-specific result pages. Keep the landing page focused on the individual explorer’s next few minutes.",
+    "journey": "New York results provide named hunts, neighborhood labels, on-site reviews and Learn More links. This review inspected discovery rather than event checkout.",
+    "motion": "No distinctive map or spatial animation verified.",
+    "proof": "Specific neighborhood products demonstrate inventory. Displayed review numbers remain on-site claims.",
+    "positioning": "Group fun and event use cases are clear, but they are a different motivation from learning a local fact.",
+    "palette": [
+      "#f2842c",
+      "#282e32",
+      "#ffffff"
+    ],
+    "search": [
+      {
+        "q": "Q7",
+        "position": 10,
+        "url": "https://www.letsroam.com/scavenger_hunt_app?srsltid=AfmBOoqncOFFQl4Den-yxF2cvXWJ0ubG1CnRl48fLSVUD5v330dbRtqT"
+      }
+    ],
+    "coverage": 80,
+    "observed": 69.4,
+    "bounds": [
+      55.5,
+      75.5
+    ],
+    "common": 69.4,
+    "store": null,
+    "rating": null,
+    "inspected": [
+      {
+        "url": "https://www.letsroam.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://www.letsroam.com/things-to-do/new-york-city-ny",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 9,
+    "group": "middle",
+    "tie": true
+  },
+  {
+    "name": "TravelStorys",
+    "url": "https://travelstorys.com/",
+    "model": "Partner-produced audio tours for consumers",
+    "market": "Current US tour directory across many states",
+    "detail": "https://travelstorys.com/tours",
+    "scores": [
+      3.5,
+      3.5,
+      3.5,
+      4.5,
+      3,
+      null,
+      4
+    ],
+    "works": "Dark teal, a large serif headline and an image of a person listening form a clear two-column composition. The phone-based how-to section explains the product, and the directory gives named places and free/premium context.",
+    "weak": "Build a Tour is visually stronger than Find a Tour. A delayed newsletter panel covered part of the desktop content. The homepage combines partner acquisition with traveler discovery, which is reasonable for its business but dilutes the consumer path.",
+    "adapt": "Borrow the three-step explanation and place-specific directory. Give Placewise visitors the dominant action; move creator or partner tools into a separate route.",
+    "journey": "The directory offers a map control and filters for latest, premium, language and state. The home explains download, choose a tour and automatic playback. No paid tour was purchased.",
+    "motion": "The page reveals imagery and later shows a newsletter prompt; detailed animation mechanics were not measured.",
+    "proof": "Named current US tours and platform reviews support product availability. The 160+ organization claim is self-reported.",
+    "positioning": "A platform for both organizations and travelers, rather than a consumer-only brand.",
+    "palette": [
+      "#0b414d",
+      "#fa6147",
+      "#48c3c5"
+    ],
+    "search": [
+      {
+        "q": "Q6",
+        "position": 3,
+        "url": "https://travelstorys.com/"
+      },
+      {
+        "q": "Q8",
+        "position": 6,
+        "url": "https://travelstorys.com/"
+      }
+    ],
+    "coverage": 95,
+    "observed": 72.6,
+    "bounds": [
+      69.0,
+      74.0
+    ],
+    "common": 69.4,
+    "store": "https://apps.apple.com/us/app/travelstorys-audio-guides/id543710299",
+    "rating": "4.9/5 · 1.7K ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://travelstorys.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/travelstorys-audio-guides/id543710299",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://travelstorys.com/tours",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 9,
+    "group": "middle",
+    "tie": true
+  },
+  {
+    "name": "Just Ahead",
+    "url": "https://www.justahead.com/",
+    "model": "GPS driving audio guides with in-app purchase",
+    "market": "Long Beach, California and US parks",
+    "detail": "https://www.justahead.com/tours/long-beach-california/",
+    "scores": [
+      3,
+      4,
+      4,
+      3.5,
+      2,
+      null,
+      4
+    ],
+    "works": "A straightforward road photograph and download badges communicate the app quickly. The Long Beach page offers short named audio samples and credits its writer. Pricing/trial context is visible on the homepage.",
+    "weak": "The design uses many boxed color bands, oversized icon panels and repeated download blocks. The result is more functional than art-directed. On desktop, content occupies a relatively narrow central column.",
+    "adapt": "Borrow short local audio samples and writer credits. Use a calmer section rhythm and replace generic exploration language with one specific neighborhood payoff.",
+    "journey": "Long Beach offers a narrated city guide, named samples and direct store links. App purchase and playback while driving were not tested.",
+    "motion": "No distinctive spatial animation verified; the demo is a separate video.",
+    "proof": "A specific city guide, credited writer and multiple accessible audio-sample links provide concrete product evidence.",
+    "positioning": "A focused road-trip assistant with a useful urban example.",
+    "palette": [
+      "#009dc2",
+      "#51bf78",
+      "#ffffff"
+    ],
+    "search": [
+      {
+        "q": "Q6",
+        "position": 9,
+        "url": "https://www.justahead.com/"
+      }
+    ],
+    "coverage": 95,
+    "observed": 67.9,
+    "bounds": [
+      64.5,
+      69.5
+    ],
+    "common": 67.5,
+    "store": "https://itunes.apple.com/us/app/just-ahead-gps-audio-guides/id814596586?mt=8",
+    "rating": "4.7/5 · 339 ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://www.justahead.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://www.justahead.com/tours/long-beach-california/",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://itunes.apple.com/us/app/just-ahead-gps-audio-guides/id814596586?mt=8",
+        "kind": "external app store"
+      }
+    ],
+    "rank": 11,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "Action Tour Guide",
+    "url": "https://actiontourguide.com/",
+    "model": "Paid driving/walking tours and subscription bundles",
+    "market": "US routes and international catalog",
+    "detail": "https://actiontourguide.com/how-it-works/",
+    "scores": [
+      3.5,
+      4,
+      3.5,
+      4.5,
+      1,
+      null,
+      4
+    ],
+    "works": "A coastal-road photograph and direct sightseeing headline establish the activity. Search, tour access and bundle options support distinct purchase states. The how-it-works page explains matching the purchase email, downloading a route and starting at the location.",
+    "weak": "The desktop navigation wraps into multiple rows. Several primary-looking actions compete, and a large cookie panel obscures the lower hero on mobile. Much of the messaging overlaps other GPS audio products.",
+    "adapt": "Explain exactly how a purchase becomes usable in the app. Keep existing-customer access visually secondary on the marketing page.",
+    "journey": "The product instructions cover website purchase, partner-booking passwords, download and offline touring. No transaction was attempted.",
+    "motion": "Initial layout shifts settled after loading. They were not counted as permanent failures or as a measured performance result.",
+    "proof": "Concrete access instructions and named destinations support repeatable delivery; ratings were separately verified on Apple US.",
+    "positioning": "An understandable guide/map/tour-book bundle, with limited brand distinction in this cohort.",
+    "palette": [
+      "#038baa",
+      "#ffffff",
+      "#28373f"
+    ],
+    "search": [],
+    "coverage": 95,
+    "observed": 70.5,
+    "bounds": [
+      67.0,
+      72.0
+    ],
+    "common": 66.9,
+    "store": "https://apps.apple.com/us/app/action-tour-guide/id1460565736",
+    "rating": "4.8/5 · 12K ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://actiontourguide.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://actiontourguide.com/how-it-works/",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/action-tour-guide/id1460565736",
+        "kind": "external app store"
+      }
+    ],
+    "rank": 12,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "SmartGuide",
+    "url": "https://www.smart-guide.org/",
+    "model": "Consumer guides plus destination/creator platform",
+    "market": "Vancouver destination page",
+    "detail": "https://www.smart-guide.org/en/travelers",
+    "scores": [
+      3,
+      3,
+      3.5,
+      null,
+      3,
+      null,
+      3.5
+    ],
+    "works": "The traveler page uses an uncomplicated three-word headline, green action and a phone-based explanation. A separate destination catalog provides real geographical coverage.",
+    "weak": "The main domain currently prioritizes organizations, adding an audience-selection step for consumers. The traveler page uses a different visual treatment. Narrow desktop resizing did not reliably emulate its mobile layout, so those results were treated as inconclusive.",
+    "adapt": "Separate partner acquisition from consumer discovery. Preserve a consistent design and destination context when moving between the landing page and catalog.",
+    "journey": "The traveler page offers Get the App, browse guides and subscription information; a live Vancouver page confirms Canadian coverage. App installation was not tested.",
+    "motion": "No distinctive spatial motion verified. Responsive behavior on a physical phone remains untested.",
+    "proof": "A retrieved traveler product page and directly inspected Vancouver catalog support the offer; large total-content claims are self-reported.",
+    "positioning": "A locally sourced audio guide promise, divided between consumer and organization buyers.",
+    "palette": [
+      "#00c53d",
+      "#142d24",
+      "#ffffff"
+    ],
+    "search": [
+      {
+        "q": "Q2",
+        "position": 5,
+        "url": "https://www.smart-guide.org/destinations/en/vancouver/"
+      },
+      {
+        "q": "Q4",
+        "position": 2,
+        "url": "https://www.smart-guide.org/destinations/en/mexico-city/"
+      }
+    ],
+    "coverage": 80,
+    "observed": 62.5,
+    "bounds": [
+      50.0,
+      70.0
+    ],
+    "common": 62.5,
+    "store": null,
+    "rating": null,
+    "inspected": [
+      {
+        "url": "https://www.smart-guide.org/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://www.smart-guide.org/en/travelers",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 13,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "WalknTours",
+    "url": "https://www.walkntours.com/",
+    "model": "Paid GPS walking and driving tours",
+    "market": "Dubuque, Iowa and US city routes",
+    "detail": "https://www.walkntours.com/walking-tours/dubuques-historic-downtown-walking-tour",
+    "scores": [
+      3.5,
+      3,
+      3.5,
+      4.5,
+      1,
+      null,
+      3.5
+    ],
+    "works": "A left-aligned green headline and travel image give the page a clear focal point. The Dubuque detail page answers practical questions about route length, pauses, admission costs and family suitability.",
+    "weak": "The destination input was initially disabled during loading, so readiness needs clear feedback. Important time/distance fields were empty in extraction although the FAQ supplied the information. Narrow desktop resizing was inconclusive for this site; it is not evidence of a broken mobile site.",
+    "adapt": "Keep practical FAQs, but surface the same details beside the purchase action and show a clear loading state for destination search.",
+    "journey": "The Dubuque page exposes Buy Tour actions and detailed suitability questions. No transaction was completed; values absent from the extracted summary were cross-checked against its FAQ.",
+    "motion": "No distinctive spatial animation verified. Responsive behavior needs a real mobile-user-agent check.",
+    "proof": "Specific local stops and detailed route FAQs support a real product; Apple reviews were verified separately.",
+    "positioning": "A clear GPS storytelling offer with broad walking and driving coverage.",
+    "palette": [
+      "#176a39",
+      "#f6f7f5",
+      "#1d2b27"
+    ],
+    "search": [],
+    "coverage": 95,
+    "observed": 65.8,
+    "bounds": [
+      62.5,
+      67.5
+    ],
+    "common": 61.3,
+    "store": "https://apps.apple.com/us/app/walkntours/id1457662600",
+    "rating": "4.8/5 · 1.9K ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://www.walkntours.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://www.walkntours.com/walking-tours/dubuques-historic-downtown-walking-tour",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/walkntours/id1457662600",
+        "kind": "external app store"
+      }
+    ],
+    "rank": 14,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "izi.TRAVEL",
+    "url": "https://izi.travel/en",
+    "model": "Free and paid audio-guide marketplace",
+    "market": "New York and San Francisco guides",
+    "detail": "https://izi.travel/en/browse/4c072666-e1a2-431a-ad11-d57023c7e4cb/en",
+    "scores": [
+      3,
+      3.5,
+      3,
+      null,
+      1,
+      null,
+      4
+    ],
+    "works": "Simple red actions and compact tour cards make browsing easy. On mobile, a single Listen action replaces the desktop Listen/Create split. Tour pages expose locations and audio text.",
+    "weak": "The hero leads with platform scale instead of a compelling visitor outcome. Different tour images vary widely in style, reducing cohesion. Audio compatibility messages in extracted content were not verified as actual browser failures and were not scored as such.",
+    "adapt": "Use a consistent story-card format and make the first promise about the place around the visitor. Keep creator tools secondary.",
+    "journey": "An inspected New York guide shows a price, purchase link, language choices and 46 sights. No purchase was completed.",
+    "motion": "No distinctive motion verified. Horizontal card strips provide the main browsing rhythm.",
+    "proof": "A specific multi-stop New York guide and audio text demonstrate inventory. Historical claims inside third-party tours were not fact-checked.",
+    "positioning": "A broad listening platform with less specific differentiation for neighborhoods.",
+    "palette": [
+      "#e70e49",
+      "#204c56",
+      "#ffffff"
+    ],
+    "search": [],
+    "coverage": 80,
+    "observed": 58.8,
+    "bounds": [
+      47.0,
+      67.0
+    ],
+    "common": 58.8,
+    "store": null,
+    "rating": null,
+    "inspected": [
+      {
+        "url": "https://izi.travel/en",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://izi.travel/en/browse/4c072666-e1a2-431a-ad11-d57023c7e4cb/en",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 15,
+    "group": "middle",
+    "tie": false
+  },
+  {
+    "name": "Clio",
+    "url": "https://theclio.com/",
+    "model": "Free nonprofit history discovery and tours",
+    "market": "Marshall University, West Virginia and US historical entries",
+    "detail": "https://theclio.com/tour/99",
+    "scores": [
+      2.5,
+      3,
+      4,
+      3.5,
+      1,
+      null,
+      5
+    ],
+    "works": "The content is a major strength: historical entries, oral histories, named places and substantial source context. Its mobile tour list is compact and usable, with a clear Start button. Free access suits casual curiosity.",
+    "weak": "The homepage combines an icon rail, large introductory text, a feed and institutional panels. This weakens hierarchy for a new visitor. With location unavailable, a modal interrupted the desktop experience; visitors would benefit from an immediately obvious manual-city fallback.",
+    "adapt": "Borrow the seriousness of the historical content and the simple tour list. Put a single story ahead of institutional tools, and offer a manual location before an error-style dialog.",
+    "journey": "Marshall University’s tour presents a sequence of historical entries and oral-history items. Start was exercised. The homepage and app-store listing provide a free consumer path; no account was created.",
+    "motion": "No decorative spatial animation was verified. The meaningful interaction is moving from nearby entries into a story or tour.",
+    "proof": "A substantial local tour with historical descriptions and oral histories demonstrates content depth. Its lower website rank is not a judgment that the historical product is inferior.",
+    "positioning": "An unusually direct match for learning the history around you, with an educational nonprofit model.",
+    "palette": [
+      "#a7c9e7",
+      "#74c9aa",
+      "#f4f5f8"
+    ],
+    "search": [],
+    "coverage": 95,
+    "observed": 59.5,
+    "bounds": [
+      56.5,
+      61.5
+    ],
+    "common": 57.5,
+    "store": "https://itunes.apple.com/us/app/the-clio/id897995724",
+    "rating": "4.9/5 · 100 ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://theclio.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://itunes.apple.com/us/app/the-clio/id897995724",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://theclio.com/tour/99",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 16,
+    "group": "lower",
+    "tie": false
+  },
+  {
+    "name": "Story City",
+    "url": "https://storycity.app/",
+    "model": "Location-based fiction, games and interactive stories",
+    "market": "Atlanta/Austin examples in verified app listing",
+    "detail": "https://storycity.app/how-to-play",
+    "scores": [
+      3,
+      2.5,
+      3.5,
+      2,
+      2,
+      null,
+      3
+    ],
+    "works": "Dark indigo, illustrated worlds and bold sans-serif type give the product a recognizable gaming identity. The how-to page shows a real map/phone concept and a clear app-download action. Location-based branching fiction is a useful adjacent model.",
+    "weak": "The first hero promotes a particular fantasy episode before explaining where a new visitor can play. The homepage carousel and early newsletter request divide attention. Narrow resizing produced unstable results on the homepage; the how-to page was readable, so no blanket mobile-failure claim is made.",
+    "adapt": "Borrow themed discovery and optional narrative trails. Lead first-time visitors with location and a short sample, then promote longer stories to returning users.",
+    "journey": "How to Play describes installing, finding a map location, creating an account and adding a story to a library. The first-slide episode and store links are available. Only five ratings were visible in the Canada storefront, too few for a strong reputation conclusion.",
+    "motion": "A six-slide hero carousel was present. Exact auto-advance timing and reduced-motion behavior were not established.",
+    "proof": "The how-to sequence and verified store description establish the experience; this review did not play a complete location-based episode.",
+    "positioning": "Strong fantasy identity, but onboarding assumes more interest in the series than a new explorer may have.",
+    "palette": [
+      "#151238",
+      "#f4f0fa",
+      "#ffd956"
+    ],
+    "search": [
+      {
+        "q": "Q7",
+        "position": 8,
+        "url": "https://storycity.app/"
+      }
+    ],
+    "coverage": 95,
+    "observed": 54.2,
+    "bounds": [
+      51.5,
+      56.5
+    ],
+    "common": 56.9,
+    "store": "https://apps.apple.com/ca/app/story-city/id1605647002",
+    "rating": "5.0/5 · 5 ratings · Apple Canada",
+    "inspected": [
+      {
+        "url": "https://storycity.app/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/ca/app/story-city/id1605647002",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://storycity.app/how-to-play",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 17,
+    "group": "lower",
+    "tie": false
+  },
+  {
+    "name": "Audioguías MX",
+    "url": "https://audioguiasmexicotour.com/",
+    "model": "Cultural audio-guide downloads in Mexico",
+    "market": "Otumba, Mexico City and Mexican destinations",
+    "detail": "https://audioguiasmexicotour.com/shop-2/audioguia-otumba-estado-de-mexico/",
+    "scores": [
+      2.5,
+      3,
+      3.5,
+      null,
+      2,
+      null,
+      3.5
+    ],
+    "works": "The Mexican geographical focus is explicit, and the catalog supports locations and cultural categories. Product options distinguish individual, couple and family downloads as well as languages. The detail form is vertically stacked and usable at a narrow width.",
+    "weak": "A tall header, multi-row navigation and repeated introductory claims delay the first experience. Pale lime text and buttons are less legible against white by visual inspection; contrast ratios were not measured. A location dropdown with only one applicable option adds an avoidable choice.",
+    "adapt": "Keep cultural categories and clear language availability. Preselect fixed attributes, use a darker action color, and lead with one local story instead of an institutional network description.",
+    "journey": "Otumba shows a $9.99–$24.99 range and three selectors. Individual, Spanish and Estado de México were selected, enabling the cart action. No cart addition or payment occurred. Currency denomination should be explicit for a cross-border audience.",
+    "motion": "An embedded video was present. Playback quality and spatial animation were not evaluated.",
+    "proof": "A specific purchasable cultural guide, catalog coverage and language variants make the product concrete. Independent customer reputation remains Unknown.",
+    "positioning": "Strong market specificity, but consumer exploration and institutional services share the introduction.",
+    "palette": [
+      "#a4df43",
+      "#252a2d",
+      "#faf7f3"
+    ],
+    "search": [
+      {
+        "q": "Q5",
+        "position": 5,
+        "url": "https://audioguiasmexicotour.com/"
+      }
+    ],
+    "coverage": 80,
+    "observed": 56.3,
+    "bounds": [
+      45.0,
+      65.0
+    ],
+    "common": 56.3,
+    "store": null,
+    "rating": null,
+    "inspected": [
+      {
+        "url": "https://audioguiasmexicotour.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://audioguiasmexicotour.com/catalogo/",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://audioguiasmexicotour.com/shop-2/audioguia-otumba-estado-de-mexico/",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 18,
+    "group": "lower",
+    "tie": false
+  },
+  {
+    "name": "UCPlaces",
+    "url": "https://ucplaces.com/",
+    "model": "GPS tour marketplace with creator tools",
+    "market": "Montreal driving tour and US routes",
+    "detail": "https://ucplaces.com/usertourinfo/2794-montreals-best-self-guided-driving-tour-of-iconic-landmarks",
+    "scores": [
+      2.5,
+      3.5,
+      3,
+      1.5,
+      1,
+      null,
+      4
+    ],
+    "works": "Unlike most higher-ranked sites, the hero actually demonstrates a navigation map inside a phone. Destination search is visible. The Montreal product page supplies a route map, 32 POIs, duration, language options and detailed start instructions.",
+    "weak": "The phone frame, map colors, multi-line headline and destination categories compete. Cookie and chat overlays crowd the mobile search/store area. Buying the inspected tour leads into login before checkout. The content is useful, but the composition asks visitors to sort too much at once.",
+    "adapt": "Show the real map, then reduce it to one highlighted place and one story. Keep navigation controls out of the marketing illustration and postpone chat overlays.",
+    "journey": "Montreal → Buy This Tour ($24) opened a login form with email, password and social options. The route identifies its creator as UCPlaces AI and includes other-language versions. No credentials were entered.",
+    "motion": "The hero phone demonstration changed its navigation state during inspection. That is a product demo, not evidence of an interactive map in the hero itself.",
+    "proof": "The route, POIs, creator attribution and preview player are substantial. A 3.3 rating from 37 Apple US ratings is a limited, mixed external signal, not a market-wide verdict.",
+    "positioning": "Take, create and sell tours are combined early, making the consumer promise less focused.",
+    "palette": [
+      "#02b5d6",
+      "#ff7029",
+      "#073652"
+    ],
+    "search": [],
+    "coverage": 95,
+    "observed": 51.1,
+    "bounds": [
+      48.5,
+      53.5
+    ],
+    "common": 55.0,
+    "store": "https://apps.apple.com/us/app/ucplaces/id1424277513",
+    "rating": "3.3/5 · 37 ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://ucplaces.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/ucplaces/id1424277513",
+        "kind": "external app store"
+      },
+      {
+        "url": "https://ucplaces.com/usertourinfo/2794-montreals-best-self-guided-driving-tour-of-iconic-landmarks",
+        "kind": "product/conversion"
+      }
+    ],
+    "rank": 19,
+    "group": "lower",
+    "tie": false
+  },
+  {
+    "name": "Geotourist",
+    "url": "https://geotourist.com/",
+    "model": "Free location-triggered audio and creator platform",
+    "market": "Arizona Biltmore, Phoenix and other US tours",
+    "detail": "https://geotourist.com/tours/401/Arizona_Biltmore_History_Tour",
+    "scores": [
+      3,
+      3,
+      2.5,
+      1,
+      1,
+      null,
+      3.5
+    ],
+    "works": "A cream background, light travel illustrations and green action are approachable. The Arizona Biltmore tour provides named authorship, a map, a list of points and an Explore At Home option. Its product detail is more informative than the generic hero suggests.",
+    "weak": "The main promise could describe almost any travel app. Decorative balloons and landmarks occupy space that could explain a real story. The tour page presents 0 Stars for a tour with no reviews, which can be misread as negative feedback. Small illustrations and pale store badges weaken contrast on mobile.",
+    "adapt": "Use the map/story relationship and remote preview, but show a real place in the hero. Say No reviews yet instead of displaying an apparent zero-star rating.",
+    "journey": "Arizona Biltmore exposes 11 points, Start Tour and Explore At Home; the latter was exercised. A later free-start action leads to login. No account was created.",
+    "motion": "The illustrated hero supplies atmosphere. Precise motion timing and reduced-motion behavior were not verified; the at-home preview is the more useful interaction.",
+    "proof": "A named venue author, point descriptions and map establish a real US experience. The displayed tour date is August 2015; current on-site conditions were not verified.",
+    "positioning": "Discover and create are combined in a broad environment-exploration promise.",
+    "palette": [
+      "#fffaf0",
+      "#00b98f",
+      "#f4696e"
+    ],
+    "search": [],
+    "coverage": 95,
+    "observed": 48.4,
+    "bounds": [
+      46.0,
+      51.0
+    ],
+    "common": 53.8,
+    "store": "https://apps.apple.com/us/app/geotourist/id948290494",
+    "rating": "3.0/5 · 15 ratings · Apple US",
+    "inspected": [
+      {
+        "url": "https://geotourist.com/",
+        "kind": "homepage"
+      },
+      {
+        "url": "https://geotourist.com/tours/401/Arizona_Biltmore_History_Tour",
+        "kind": "product/conversion"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/geotourist/id948290494",
+        "kind": "external app store"
+      }
+    ],
+    "rank": 20,
+    "group": "lower",
+    "tie": false
+  }
+]

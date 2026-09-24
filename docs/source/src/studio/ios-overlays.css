@@ -1,0 +1,31 @@
+/* Real Ionic overlays are contained by their owning phone, never the studio viewport. */
+.pi-phone ion-popover.pi-phone-popover {
+  position: absolute; inset: 0; width: 100%; height: 100%; border-radius: inherit; overflow: hidden;
+  --background: var(--wf-surface); --box-shadow: var(--wf-shadow); --max-width: calc(100% - 32px);
+  --backdrop-opacity: .25; --ion-background-color: var(--wf-surface); --ion-text-color: var(--wf-text);
+  --ion-item-background: var(--wf-surface); --ion-item-color: var(--wf-text);
+  --ion-border-color: var(--wf-border); --ion-item-border-color: var(--wf-border);
+  color: var(--wf-text); font: inherit;
+}
+.pi-phone-popover::part(backdrop) { border-radius: inherit; }
+.pi-phone-popover::part(content) { overscroll-behavior: contain; }
+.pi-phone-popover .pi-popover-content { min-width: 0; }
+.pi-phone-popover :is(ion-list, ion-item, ion-radio, ion-checkbox, ion-select-popover) { font: inherit; color: var(--wf-text); }
+.pi-phone-popover ion-list { margin: 0; padding: 0; background: var(--wf-surface); }
+.pi-phone-popover ion-item {
+  --background: var(--wf-surface); --color: var(--wf-text); --border-color: var(--wf-border);
+  --background-hover: var(--wf-hover); --background-hover-opacity: 1;
+  --background-focused: var(--wf-hover); --background-focused-opacity: 1;
+  --background-activated: var(--wf-active); --background-activated-opacity: 1;
+  --color-hover: var(--wf-text); --color-focused: var(--wf-text); --color-activated: var(--wf-text);
+}
+.pi-phone-popover ion-item::part(native):focus-visible { outline: 2px solid var(--wf-accent); outline-offset: -3px; }
+.pi-phone-popover ion-radio { --color: var(--wf-strong); --color-checked: var(--wf-accent); }
+
+/* iPhone Menu / Default: 250px panel, 12px corners, 44px full-width rows. */
+.pi-phone ion-popover.pi-phone-popover { --width: 250px; }
+.pi-phone-popover::part(content) { border-radius: 12px; }
+.pi-phone-popover ion-item { --min-height: 44px; --padding-start: 16px; --inner-padding-end: 16px; --inner-border-width: 0 0 .5px 0; }
+.pi-phone-popover ion-item[lines="none"] { --inner-border-width: 0; }
+.pi-phone-popover ion-item ion-icon[slot="end"] { width: 20px; height: 20px; margin-inline: 12px 0; }
+.pi-phone-popover ion-item ion-label { margin-block: 11px; }
